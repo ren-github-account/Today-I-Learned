@@ -20,3 +20,7 @@
 例
 
 `echo "Hello World!",PHP_EOL;`
+
+**注意点**
+
+htmlやjavascriptで文言を出力する時に、PHP_EOLを使うとうまくいかない場合がある。
