@@ -15,3 +15,31 @@
      default:
      実行する処理
      }
+
+**具体例**
+
+    <?php
+
+    $a[0] = 1;
+    $a[1] = 2;
+    $a[2] = 3;
+
+    switch($a){
+    
+     case 1:
+     echo "$a[0]番目の配列だよ～ん";
+     break;
+
+     case 2:
+     echo "$a[1]番目の配列だよ～ん";
+     break;
+
+     case 3:
+     echo "$a[2]番目の配列だよ～ん";
+     break;
+
+     default:
+     echo "なんもないやんけ!";
+     break;
+    
+    ?>
