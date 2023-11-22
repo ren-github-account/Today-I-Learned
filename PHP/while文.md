@@ -24,3 +24,24 @@
 
 ### 実践的なwhile文
 
+```
+<?php
+
+$sum = 0;
+$index = 0;
+$item = array();
+
+$item[0] = array("price" => 7980);
+$item[1] = array("price" => 2980);
+$item[2] = array("price" => 4400);
+
+while(isset($item[$index])){
+
+  $sum += $item[$index]["price"];
+  $index ++;
+}
+
+echo "合計金額:￥".$sum;
+
+?>
+```
