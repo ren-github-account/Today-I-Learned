@@ -50,3 +50,37 @@ foreach($item as $key => $value){
 
 3個目の商品:4400円
 ```
+
+**「配列のキー」の部分は省略できる**
+
+「○○個目の商品」という部分が不要なら、以下のように省略することもできる。
+
+```
+<?php
+
+// $sum = 0;
+// $index = 0;
+$item = array();
+
+$item[0] = array("price" => 7980);
+$item[1] = array("price" => 2980);
+$item[2] = array("price" => 4400);
+
+foreach($item as $value){
+  echo "<p>".$value["price"]."円"."</p>";
+  
+}
+
+?>
+```
+
+**実行結果**
+
+```
+7980円
+
+2980円
+
+4400円
+```
+
