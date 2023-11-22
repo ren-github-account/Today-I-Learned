@@ -1,7 +1,7 @@
 *目次*
 * [基本](#基本)
 * [実践的なwhile文](#実践的なwhile文)
-* [do while文](#do while文)
+* [do~while文](#do~while文)
 
 ### 基本
 
@@ -57,7 +57,7 @@ echo "合計金額:￥".$sum;
 
 isset関数は引数で渡した変数が存在するかをチェックする。存在する場合は「true」を、存在しない場合は「false」を返す。
 
-### do while文
+### do~while文
 
 ```
 do {
