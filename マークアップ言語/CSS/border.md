@@ -7,7 +7,7 @@ border:スタイル 太さ 色;
 **具体例**
 
 ```
-border:1px solid #d3d3d3;
+border:solid 1px #d3d3d3;
 ```
 
 ### 線の種類
