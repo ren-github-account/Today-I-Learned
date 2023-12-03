@@ -11,7 +11,7 @@ Common Gateway Interfaceの略。
 |-|-|
 |Common|共通の|
 |Gateway|玄関|
-|Interface|接点|
+|Interface|接点。転じて、「コンピュータと人間を仲介するプログラムや装置」といった意味がある。|
 
 ### cgiの具体例
 
