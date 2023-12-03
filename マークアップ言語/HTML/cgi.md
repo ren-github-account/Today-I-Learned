@@ -15,4 +15,8 @@ Common Gateway Interfaceの略。
 
 ### cgiの具体例
 
+cgiを使うと以下のことができるようになる。
+* アクセスカウンター
+* 掲示板
+
 
