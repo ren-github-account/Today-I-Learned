@@ -11,5 +11,16 @@ ApacheでPerlを動かすにはいくつか設定を行う必要がある。
 >AddHandler cgi-script .cgi .pl
 >と書き加えます。
 
-|||
+* **コードの意味**
+
+AddHandlerを使った記述のルールを見ていく。
+
+```
+AddHandler handler-name extension
+```
+
+||意味|
 |-|-|
+|AddHandler|ハンドラを設定するという意味。ハンドラとは「動作の総称」のこと。|
+|handler-name|ハンドラの名前。|
+|extension|ハンドラを設定する対象の拡張子を入力。複数指定する場合は半角スペースで区切る。|
