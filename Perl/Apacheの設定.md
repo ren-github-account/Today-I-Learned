@@ -11,6 +11,8 @@ ApacheでPerlを動かすにはいくつか設定を行う必要がある。
 >AddHandler cgi-script .cgi .pl
 >と書き加えます。
 
+`httod.conf`は`apache\conf\httpd.conf`の場所にある。
+
 * **コードの意味**
 
 AddHandlerを使った記述のルールを見ていく。
