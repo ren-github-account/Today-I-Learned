@@ -6,9 +6,9 @@ ApacheでPerlを動かすにはいくつか設定を行う必要がある。
 
 まず、
 >httpd.confを開いてください。
-httpd.confの最終行に
-AddHandler cgi-script .cgi .pl
-と書き加えます。
+>httpd.confの最終行に
+>AddHandler cgi-script .cgi .pl
+>と書き加えます。
 
 |||
 |-|-|
