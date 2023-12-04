@@ -25,3 +25,4 @@ PHPと同じスクリプト言語の一種で、コンパイルの必要がな�
 
 pythonのスローガンが`There should be one-- and preferably only one --obvious way to do it.`(Deeplの訳:やり方は1つ--できれば1つだけ-- 明白であるべきです)であることから、よく引き合いに出されることがある。
 
+pythonはスローガンにある通り、誰が書いても基本的に1通りしかならないように作られているそうだ。
