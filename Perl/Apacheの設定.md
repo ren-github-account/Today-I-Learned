@@ -15,6 +15,7 @@ ApacheでPerlを動かすにはいくつか設定を行う必要がある。
 
 AddHandlerを使った記述のルールを見ていく。
 
+**基本**
 ```
 AddHandler handler-name extension
 ```
