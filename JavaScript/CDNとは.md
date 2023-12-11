@@ -95,6 +95,7 @@ crossorigin属性の値には以下の2種類がある。
 |`use-credentials`|CookieやSSL証明書、HTTP認証などの信用情報が送信される。credentialは「証明書」の意味。|
 
 * **WordPressでCORSのトラブル!?**
+
 ちなみにwebサイトを作成する際によく使われるWordPressを利用しているユーザーの中には、CORSの制限によって、サイトに画像が表示されないトラブルが発生している人もいた。
 
 
