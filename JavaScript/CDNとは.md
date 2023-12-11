@@ -65,7 +65,7 @@ SRIとはJavaScriptのライブラリが改ざんされていないかどうか�
 <script src="URL" integrity="ハッシュ関数-ハッシュ値" crossorigin="anonymous"></script>
 ```
 
-integrity属性で指定するハッシュ関数とハッシュ値は、SRI Hash Generator(https://www.srihash.org/)というツールを使用すると生成してくれる。
+integrity属性で指定するハッシュ関数とハッシュ値は、SRI Hash Generator(https://www.srihash.org/) というツールを使用すると生成してくれる。
 
 ### integrity属性
 
