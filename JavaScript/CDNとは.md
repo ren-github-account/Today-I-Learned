@@ -3,6 +3,9 @@
 * [必要になった背景](#必要になった背景)
 * [デメリット](#デメリット)
 * [セキュリティ](#セキュリティ)
+* [SRIを使ったCDNの利用方法](#SRIを使ったCDNの利用方法)
+* [integrity属性](#integrity属性)
+* [crossorigin属性](#crossorigin属性)
 
 ### CDNとは
 
