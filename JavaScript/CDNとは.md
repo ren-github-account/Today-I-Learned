@@ -84,6 +84,16 @@ crossorigin属性とは、JavaScriptや画像などを他のドメインから�
 
 違うドメインから画像などを読み込むことを、**クロスオリジン**と呼び、クロスオリジンで利用することを**CORS**(Cross-Origin Resource Sharing)という。
 
+通常は、Webページの脆弱性を防ぐため、同一ドメインのリソース(JavaScriptや画像)のみアクセスできるように制限がかかっている。  
+crossorigin属性を指定してあげることで、その制限を解除することができる。
+
+crossorigin属性の値には以下の2種類がある。
+
+||意味|
+|-|-|
+|`anonymous`|CookieやSSL証明書、HTTP認証などの信用情報は送信されない。|
+|`use-credentials`|CookieやSSL証明書、HTTP認証などの信用情報が送信される。credentialは「証明書」の意味。|
+
 
 
 
