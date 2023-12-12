@@ -208,10 +208,11 @@ cdnjsからJavaScriptライブラリを読み込むには、`script`タグを使
 
 一方、`script`タグ内でcrossorigin属性を指定した場合は、CORSが使用されるようになる。
 
-そもそもCORSが使われないことから、JavaScriptライブラリのChart.jsで、`canvas`を使って描画してもSOPの制限は受けないことになる。  
-なので、**JavaScriptライブラリのChart.jsで`canvas`タグを使う時は、SOPの制限やCORSについては考えなくてよいってこだね。**
+そもそもCORSが使われないことから、JavaScriptライブラリのChart.jsで、`canvas`を使って描画しても、SOPの制限のところで出てきた「CORSによる許可」がどうたらの話は関わってこない。
+なので、**JavaScriptライブラリのChart.jsで`canvas`タグを使う時は、SOPの制限やCORSについては考えなくてよいことになる。**
 
-以下の引用は、cdnjsから`script`タグを使ってライブラリを読み込む時に、crossorigin属性が必要かどうかという文脈で書かれた文章。
+**関連**
+以下の引用は、cdnjsから`script`タグを使ってライブラリを読み込む時に、crossorigin属性が必要かどうかという文脈で書かれた文章である。
 
 >制限するのは同一オリジンポリシー(Same origin policy)で、それを適宜緩めるのがCORSです。
 >
@@ -222,5 +223,3 @@ cdnjsからJavaScriptライブラリを読み込むには、`script`タグを使
 要約すると、SOPの制限をてきぎ緩めのがCORSで、
 script要素によるJavaScriptの実行はSOPの制限を受けないことから、わざわざCORSを使って、SOPの制限を緩める必要がないことになる。(つまりCORSを使う必要がない)  
 そのため、CORSを設定するための属性であるcrossorigin属性は書かなくてよいことになる。
-
-
