@@ -134,7 +134,7 @@ URLは変わるけど、URN(名前)はずっと変わらない点に注意。
 
 ### CORSとは
 
-別のオリジンのサーバーへのアクセスをオリジン間のHTTPリクエストによって許可できる仕組みのこと。Cross-Origin Resource Sharing の略
+別のオリジンのサーバーへのアクセスをHTTPリクエストによって許可できる仕組みのこと。Cross-Origin Resource Sharing の略
 
 要するに、HTTPリクエストを送ることで別のオリジンにある画像やJavaScriptにアクセスできるようになる仕組みってことだね。
 
