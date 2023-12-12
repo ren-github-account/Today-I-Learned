@@ -211,7 +211,7 @@ cdnjsからJavaScriptライブラリを読み込むには、`script`タグを使
 
 一方、`script`タグ内でcrossorigin属性を指定した場合は、CORSが使用されるようになる。
 
-そもそもCORSが使われないことから、JavaScriptライブラリのChart.jsで、`canvas`を使って描画しても、SOPの制限のところで出てきた「CORSによる許可」がどうたらの話は関わってこない。
+話を戻すと、そもそもCORSが使われないことから、JavaScriptライブラリのChart.jsで、`canvas`を使って描画しても、SOPの制限のところで出てきた「CORSによる許可」がどうたらの話は関わってこない。
 なので、**JavaScriptライブラリのChart.jsで`canvas`タグを使う時は、SOPの制限やCORSについては考えなくてよいことになる。**
 
 **関連**
