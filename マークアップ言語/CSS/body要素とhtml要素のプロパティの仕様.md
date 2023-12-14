@@ -1,3 +1,8 @@
+*目次*
+* [そもそもbody要素とは](#そもそもbody要素とは)
+* [html要素とbody要素の両方にbackgroundプロパティを指定した場合](#html要素とbody要素の両方にbackgroundプロパティを指定した場合)
+* [body要素のみにbackgroundを指定した場合](#body要素のみにbackgroundを指定した場合)
+
 ### そもそもbody要素とは
 
 実際にブラウザの画面上に表示される内容を指定するための要素。
@@ -15,7 +20,7 @@ body要素の大きさは、その表示される量によって可変(大きく
 </body>
 ```
 
-### html要素とbody要素の両方にbackgroundプロパティを使用した場合
+### html要素とbody要素の両方にbackgroundプロパティを指定した場合
 
 上記のbody要素の意味とその性質をふまえた上で、両方にbackgroundプロパティを指定すると面白いことが起きる。
 
