@@ -6,6 +6,7 @@
 * [ルート要素とは](#ルート要素とは)
 * [displayプロパティとは](#displayプロパティとは)
 * [ブロック要素](#ブロック要素)
+* [参考](#参考)
 
 ### そもそもbody要素とは
 
@@ -80,6 +81,16 @@ displayプロパティの値が`block`の要素群の昔の呼び方。
 ・div要素
 ・h1などの見出し要素
 ```
+
+### 参考
+
+body要素とhtml要素の違いを理解するにあたって以下のページが参考になった。
+
+(https://qiita.com/kazhashimoto/items/9a097d07626adc9eccb8)
+
+(https://qiita.com/nekotadon/items/f5b11d6a8e13ec1c6e53)
+
+(https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q12161330442)
 
 
 
