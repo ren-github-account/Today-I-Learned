@@ -3,10 +3,10 @@
 そのため、わからない用語などが出てきたらpart1を参照されたし。
 
 *目次*
-* [第9章 ビジュアルフォーマットモデル](#第9章 ビジュアルフォーマットモデル)
-* [box dimensionsとtyoe](#box dimensionsとtyoe)
+* [第9章 ビジュアルフォーマットモデル](#第9章ビジュアルフォーマットモデル)
+* [box dimensionsとtyoe](#boxdimensionsとtyoe)
 
-### 第9章 ビジュアルフォーマットモデル
+### 第9章ビジュアルフォーマットモデル
 
 >In the visual formatting model, each element in the document tree generates zero or more boxes according to the box model. The layout of these boxes is governed by:
 >
@@ -28,7 +28,7 @@
 >
 >・ 外部情報 (例: ビューポートサイズ、画像の固有の寸法など)。
 
-### box dimensionsとtyoe
+### boxdimensionsとtyoe
 
 「box dimensions」はpart1で見た通り、ボックスの中にあるmargin, padding, boder, contentの4つの領域のこと。
 
