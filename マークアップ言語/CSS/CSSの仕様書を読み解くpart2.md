@@ -68,7 +68,7 @@ typeについて仕様書CSS2.1での記述は以下の通り。
 >
 >「block」、「list-item」、「table」。
 
-つまり、displayプロパティの値が以下の3つのいずれかの場合、その要素はブロックレベル要素となる。
+つまり、displayプロパティの値が以下の3つのいずれかの場合、**その要素はブロックレベル要素となる。**
 
 ||値|
 |-|-|
@@ -84,14 +84,39 @@ typeについて仕様書CSS2.1での記述は以下の通り。
 >
 >Some block-level elements may generate additional boxes in addition to the principal box: 'list-item' elements. These additional boxes are placed with respect to the principal box.
 >
->ブロックレベルのボックスは、ブロックフォーマットコンテキストに参加するボックスです。
+>ブロックレベルボックスは、ブロックフォーマットコンテキストに参加するボックスです。
 >
->各ブロック レベル要素は、子孫ボックスと生成されたコンテンツを含む主要なブロック レベル ボックスを生成し、また、任意の位置決めスキームに関与するボックスでもあります。
+>各ブロックレベル要素は、子孫ボックスと生成されたコンテンツを含む主要なブロックレベルボックスを生成し、また、任意の位置決めスキームに関与するボックスでもあります。
 >
 >一部のブロックレベル要素は、主要なボックスである「list-item」要素に加えて追加のボックスを生成する場合があります。 これらの追加のボックスは、主ボックスに対して配置されます。
 
-ブロックフォーマットコンテキストは、仕様書CSS2.1の邦訳版では「ブロック整形コンテキスト」と訳されている。
+ちなみにブロックフォーマットコンテキストは、仕様書CSS2.1の邦訳版では「ブロック整形コンテキスト」と訳されている。
 
-ブロックレベルのボックスとは、**ブロックレベル要素が生成したボックスのこと。**
+ブロックレベルボックスとは、**ブロックレベル要素が生成したボックスのこと。**
 
 そして、この「ブロックレベル要素が生成したボックス」は**ブロックフォーマットコンテキストに含まれる。**
+
+### ブロックボックスの定義
+
+続き。
+
+>Except for table boxes, which are described in a later chapter, and replaced elements, a block-level box is also a block container box.
+>
+>A block container box either contains only block-level boxes or establishes an inline formatting context and thus contains only inline-level boxes.
+>
+>Not all block container boxes are block-level boxes: non-replaced inline blocks and non-replaced table cells are block containers but not block-level boxes.
+>
+>Block-level boxes that are also block containers are called block boxes.
+>
+>The three terms "block-level box," "block container box," and "block box" are sometimes abbreviated as "block" where unambiguous.
+>
+>後の章で説明するテーブル ボックスと置換要素を除き、ブロック レベル ボックスはブロック コンテナ ボックスでもあります。
+>
+>ブロック コンテナ ボックスには、ブロック レベルのボックスのみが含まれるか、インライン フォーマット コンテキストが確立されてインライン レベルのボックスのみが含まれます。
+>
+>すべてのブロック コンテナ ボックスがブロック レベル ボックスであるわけではありません。
+>
+>非置換インライン ブロックと非置換テーブル セルはブロック コンテナですが、ブロック レベル ボックスではありません。
+>ブロックコンテナでもあるブロックレベルのボックスは、ブロックボックスと呼ばれます。
+>
+>「ブロックレベルボックス」、「ブロックコンテナボックス」、および「ブロックボックス」という 3 つの用語は、明確な場合には「ブロック」と省略されることがあります。
