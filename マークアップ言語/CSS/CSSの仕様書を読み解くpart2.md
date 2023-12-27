@@ -64,3 +64,18 @@ typeについて仕様書CSS2.1での記述は以下の通り。
 |②|`list-item`|
 |③|`table`|
 
+続き。
+
+>Block-level boxes are boxes that participate in a block formatting context.
+>
+>Each block-level element generates a principal block-level box that contains descendant boxes and generated content and is also the box involved in any positioning scheme.
+>
+>Some block-level elements may generate additional boxes in addition to the principal box: 'list-item' elements. These additional boxes are placed with respect to the principal box.
+>
+>ブロックレベルのボックスは、ブロックフォーマットコンテキストに参加するボックスです。
+>
+>各ブロック レベル要素は、子孫ボックスと生成されたコンテンツを含む主要なブロック レベル ボックスを生成し、また、任意の位置決めスキームに関与するボックスでもあります。
+>
+>一部のブロックレベル要素は、主要なボックスである「list-item」要素に加えて追加のボックスを生成する場合があります。 これらの追加のボックスは、主ボックスに対して配置されます。
+
+ブロックフォーマットコンテキストは、仕様書CSS2.1の邦訳版では「ブロック整形コンテキスト」と訳されている。
