@@ -20,4 +20,24 @@
 >
 >・ 外部情報 (例: ビューポートサイズ、画像の固有の寸法など)。
 
+### box dimensionsとtyoe
+
 「box dimensions」はpart1で見た通り、ボックスの中にあるmargin, padding, boder, contentの4つの領域のこと。
+
+typeについてはこれから詳しくみていく。
+
+typeについて仕様書CSS2.1での記述は以下の通り。
+
+>9.2 Controlling box generation
+>
+>The following sections describe the types of boxes that may be generated in CSS 2.1. A box's type affects, in part, its behavior in the visual formatting model.
+>
+>The 'display' property, described below, specifies a box's type.
+>
+>9.2 ボックス生成の制御
+>
+>次のセクションでは、CSS 2.1 で生成されるボックスのタイプについて説明します。 ボックスのタイプは、視覚的書式設定モデルでの動作に部分的に影響します。
+>
+>以下で説明する「display」プロパティは、ボックスのタイプを指定します。
+
+
