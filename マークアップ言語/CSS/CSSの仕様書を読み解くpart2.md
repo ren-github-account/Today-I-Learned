@@ -2,6 +2,10 @@
 
 そのため、わからない用語などが出てきたらpart1を参照されたし。
 
+*目次*
+* [第9章 ビジュアルフォーマットモデル](#第9章 ビジュアルフォーマットモデル)
+* [box dimensionsとtyoe](#box dimensionsとtyoe)
+
 ### 第9章 ビジュアルフォーマットモデル
 
 >In the visual formatting model, each element in the document tree generates zero or more boxes according to the box model. The layout of these boxes is governed by:
