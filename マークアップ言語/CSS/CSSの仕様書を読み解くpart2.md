@@ -42,3 +42,17 @@ typeについて仕様書CSS2.1での記述は以下の通り。
 
 つまり、ボックスのタイプ(type)は、displayプロパティによって指定されることがわかる。
 
+続き。
+
+>9.2.1 Block-level elements and block boxes
+>
+>Block-level elements are those elements of the source document that are formatted visually as blocks (e.g., paragraphs). The following values of the 'display' property make an >element block-level: 'block', 'list-item', and 'table'.
+>
+>9.2.1 ブロックレベル要素とブロックボックス
+>
+>ブロックレベル要素は、ブロック (段落など) として視覚的にフォーマットされたソースドキュメントの要素です。
+>
+>「display」プロパティの次の値は、要素をブロック レベルにします:
+>
+>「block」、「list-item」、「table」。
+
