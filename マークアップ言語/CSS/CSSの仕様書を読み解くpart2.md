@@ -1,3 +1,7 @@
+このページはpart1の続きとなっている。そのため、part1で既に説明した部分に関しては省略しているところがある。
+
+そのため、わからない用語などが出てきたらpart1を参照されたし。
+
 ### 第9章 ビジュアルフォーマットモデル
 
 >In the visual formatting model, each element in the document tree generates zero or more boxes according to the box model. The layout of these boxes is governed by:
