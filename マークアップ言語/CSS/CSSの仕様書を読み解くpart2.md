@@ -289,6 +289,8 @@ singleは「only one(唯一の)」といった意味で、opaqueはtransparent(�
 
 そして、残り2つの「文字を」と「するよ」のテキストは、emやspanなどのインラインレベル要素を持たないため、**「匿名インラインボックス」** と呼ばれる。
 
+#### インラインボックスとは
+
 インラインボックスの意味をもう一度おさらいしておくと、以下になる。
 
 >An inline box is one that is both inline-level and whose contents participate in its containing inline formatting context.
@@ -299,7 +301,9 @@ singleは「only one(唯一の)」といった意味で、opaqueはtransparent(�
 
 >「display」プロパティの値「inline」、「inline-table」、および「inline-block」は、要素をインラインレベルにします。
 
-つまり、インラインボックスとは、displayプロパティの値が、inline, inline-table, inline-blockのどれかであり、インラインフォーマットコンテキストにもとづいているボックスのこと。
+つまり、**インラインボックスとは、displayプロパティの値が、inline, inline-table, inline-blockのどれかであり、インラインフォーマットコンテキストにもとづいているボックスのこと。**
+
+
 
 
 
