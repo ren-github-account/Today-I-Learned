@@ -182,7 +182,7 @@ typeについて仕様書CSS2.1での記述は以下の通り。
 >9.2.2 Inline-level elements and inline boxes
 >
 >Inline-level elements are those elements of the source document that do not form new blocks of content;
-
+>
 >the content is distributed in lines (e.g., emphasized pieces of text >within a paragraph, inline images, etc.). The following values of the 'display' property make an element inline-level:
 >
 > 'inline', 'inline-table', and 'inline-block'. Inline-level elements generate inline-level boxes, which are boxes that participate in an inline formatting context.
