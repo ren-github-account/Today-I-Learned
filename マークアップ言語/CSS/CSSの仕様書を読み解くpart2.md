@@ -218,12 +218,12 @@ typeについて仕様書CSS2.1での記述は以下の通り。
 インラインレベル要素は、インラインレベルボックスを生成する。  
 そしてインラインレベルボックスはインラインフォーマットコンテキストに従う。
 
-singleは「only one(唯一の)」といった意味で、opaqueはtransparent(透明)の対義語(English opposite word)となっていることから  
+singleは「only one(唯一の)」といった意味で、opaqueはtransparent(透明)の対義語となっていることから、
 以下の記述は、**独立した透明ではない(Anonymous block boxesやAnonymous inline boxesなどではない)ボックス**とも訳せる。
 
 >a single opaque box.
 
-
+ちなみに、対義語のことを英語でEnglish opposite(反対の) wordと言う。
 
 
 
