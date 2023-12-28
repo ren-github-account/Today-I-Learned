@@ -9,6 +9,7 @@
 * [ブロックボックスの定義](#ブロックボックスの定義)
 * [ブロックボックスの具体例](#ブロックボックスの具体例)
 * [3つの用語の使い分け](#使い分け)
+* [インラインレベル要素とインラインボックス](#インラインレベル要素とインラインボックス)
 
 ### 第9章ビジュアルフォーマットモデル
 
@@ -175,6 +176,36 @@ typeについて仕様書CSS2.1での記述は以下の通り。
 |ブロックレベルボックス|divやpなどのブロックレベル要素が生成するボックスのこと。|
 |ブロックコンテナボックス|ブロックレベルボックスの中にp要素などが含まれるような時、そのブロックレベルボックスはブロックコンテナボックスとなる。つまり、ブロックが入るコンテナ **(容器)**　と考えてok。|
 |ブロックボックス|ブロックレベルボックスはブロックコンテナボックスとなる時、別名:ブロックボックスと呼ばれる。|
+
+### インラインレベル要素とインラインボックス
+
+>9.2.2 Inline-level elements and inline boxes
+>
+>Inline-level elements are those elements of the source document that do not form new blocks of content;
+
+>the content is distributed in lines (e.g., emphasized pieces of text >within a paragraph, inline images, etc.). The following values of the 'display' property make an element inline-level:
+>
+> 'inline', 'inline-table', and 'inline-block'. Inline-level elements generate inline-level boxes, which are boxes that participate in an inline formatting context.
+>
+>An inline box is one that is both inline-level and whose contents participate in its containing inline formatting context.
+>
+>A non-replaced element with a 'display' value of 'inline' generates an inline box.
+>
+> Inline-level boxes that are not inline boxes (such as replaced inline-level elements, inline-block elements, and inline-table elements) are called atomic inline-level boxes because they participate in their inline formatting context as a single opaque box.
+>
+>9.2.2 インラインレベル要素とインラインボックス
+>
+>インライン レベルの要素は、コンテンツの新しいブロックを形成しないソース ドキュメントの要素です。
+> 
+>コンテンツは行単位で分散されます (段落内の強調されたテキスト部分、インライン画像など)。
+>
+>「display」プロパティの値「inline」、「inline-table」、および「inline-block」は、要素をインライン レベルにします。 インライン レベルの要素は、インライン フォーマット コンテキストに参加するボックスであるインライン レベルのボックスを生成します。
+>
+>インラインボックスは、インラインレベルであり、その内容がそのボックスを含むインライン書式設定コンテキストに参加しているボックスです。
+>
+>'display' 値が 'inline' である非置換要素は、インライン ボックスを生成します。
+>
+>インライン ボックスではないインライン レベル ボックス (置換されたインライン レベル要素、インライン ブロック要素、インライン テーブル要素など) は、単一の不透明なボックスとしてインライン書式設定コンテキストに参加するため、アトミックインラインレベルボックスと呼ばれます。
 
 
 
