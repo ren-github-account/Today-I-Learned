@@ -13,8 +13,7 @@
 仕様書CSS2.1には以下のように書かれている。
 
 >Floats, absolutely positioned elements, block containers () that are not block boxes, and block boxes with 'overflow' other than 'visible' () establish new block formatting contexts for their contents.
->
->※分の流れをわかりやすくするため、いったん()内の記述は省略した。
+>※文の流れをわかりやすくするため、いったん()内の記述は省略した。
 >
 >フロート、絶対配置要素、ブロック ボックスではないブロック コンテナ ()、および 'visible' 以外の 'overflow' を持つブロック ボックス () は、その内容に対して新しいブロック フォーマット コンテキストを確立します。
 
