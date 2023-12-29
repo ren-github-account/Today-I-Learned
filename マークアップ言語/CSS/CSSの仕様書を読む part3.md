@@ -56,6 +56,8 @@
 
 ### displayプロパティのinlineblockの仕様
 
+`inline-block`の説明に入る前に、前提としてdisplayプロパティの役割を改めて確認しておく。
+
 仕様書CSS2.1の「第9章 ビジュアルフォーマットモデル」の9.2節「Controlling box generation(ボックス生成の制御)」に以下の記述がある。
 
 >The 'display' property, described below, specifies a box's type.
