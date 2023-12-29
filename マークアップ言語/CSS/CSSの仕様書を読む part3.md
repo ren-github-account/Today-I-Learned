@@ -37,6 +37,10 @@
 |③|ブロックボックスではないブロックコンテナ。例:inline-blocks, table-cells, and table-captionsなど。|
 |④|overflowプロパティの値がvisible(初期値)以外のブロックボックス。つまり、`overflow:visible`の時はブロックフォーマットコンテキストを確立しない。|
 
+**④の補足**
+
+ブロックレベル要素はブロックレベルボックスを生成し、それはブロックフォーマットコンテキストにもとづくが、例外として`overflow:visible`の時はブロックフォーマットコンテキストにもとづかない(ブロックフォーマットコンテキストの影響下にない状態になる)。
+
 続き。
 
 >In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block.
