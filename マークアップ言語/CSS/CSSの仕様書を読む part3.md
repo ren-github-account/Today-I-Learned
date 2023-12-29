@@ -36,3 +36,15 @@
 |②|absolutely positioned elements(絶対配置要素)|
 |③|inline-blocks, table-cells, and table-captions|
 |④|overflowプロパティの値がvisible(初期値)以外の時|
+
+続き。
+
+>In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block.
+>
+>The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse.
+>
+>ブロックフォーマットコンテキストの内部で、ボックスは、含まれるブロックの上部から始めて垂直方向に次々にレイアウトされます。
+>
+> 2 つの兄弟ボックス間の垂直距離は、「マージン」プロパティによって決まります。
+>
+>ブロックフォーマットコンテキスト内の隣接するブロックレベルボックス間の垂直方向のマージンは相殺します。
