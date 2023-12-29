@@ -34,8 +34,8 @@
 |-|-|
 |①|float|
 |②|absolutely positioned elements(絶対配置要素)|
-|③|inline-blocks, table-cells, and table-captions|
-|④|overflowプロパティの値がvisible(初期値)以外の時|
+|③|ブロックボックスではないブロックコンテナ。例:inline-blocks, table-cells, and table-captionsなど。|
+|④|overflowプロパティの値がvisible(初期値)以外のブロックボックス。つまり、`overflow:visible`の時はブロックフォーマットコンテキストを確立しない。|
 
 続き。
 
