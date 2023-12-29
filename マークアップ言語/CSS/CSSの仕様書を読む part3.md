@@ -35,4 +35,4 @@
 |①|float|
 |②|absolutely positioned elements(絶対配置要素)|
 |③|inline-blocks, table-cells, and table-captions|
-|④|overflowプロパティの値がvisible(初期値)以外|
+|④|overflowプロパティの値がvisible(初期値)以外の時|
