@@ -48,7 +48,7 @@
 >
 >The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse.
 >
->ブロックフォーマットコンテキストの内部で、ボックスは、含まれるブロックの上部から始めて垂直方向に次々にレイアウトされます。
+>ブロックフォーマットコンテキストの内部で、ボックスは、containing blockの上部から始めて垂直方向に次々にレイアウトされます。
 >
 > 2 つの兄弟ボックス間の垂直距離は、「マージン」プロパティによって決まります。
 >
@@ -68,11 +68,22 @@
 
 **つまり、HTMLのすべての要素はボックスを生成し、そのボックスのタイプはdisplayプロパティによって指定される**ことになる。
 
-html要素やbody要素もボックス生成し、そのボックスのタイプはdisplayプロパティによって決まる。
+もちろん、html要素やbody要素もボックス生成し、そのボックスのタイプはdisplayプロパティによって決まる。
 
 実際に、chromeブラウザのデベロッパーツールを使用すると、html要素とbody要素にデフォルトで`display:block`が指定されているのが確認できる。
 
 このデフォルトのCSSは「デフォルトCSS」と呼ばれ、ブラウザによって自動的に指定される。
 
-言い換えると、自分たちが普段見ているwebページは、**各要素によって生成されたボックスの集合体**と見ることもできる。  
+言い換えると、自分たちが普段見ているwebページは、**各要素によって生成されたボックスの集合体**とも見ることができる。  
 そして、そのボックスを制御するのがCSSの役割というわけだ。
+
+#### inlineblock
+
+>inline-block
+>
+>This value causes an element to generate an inline-level block container. The inside of an inline-block is formatted as a block box, and the element itself is formatted as an atomic inline-level box.
+>
+>インラインブロック
+>
+>この値により、要素はインラインレベルのブロックコンテナーを生成します。インラインブロックの内部はブロックボックスとしてフォーマットされ、要素自体はアトミックインラインレベルボックスとしてフォーマットされます。
+
