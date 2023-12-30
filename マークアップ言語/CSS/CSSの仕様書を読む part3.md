@@ -120,7 +120,7 @@
 
 #### marginの相殺
 
-このアトミックインラインレベルボックスは、独立した不透なボックス(他から影響を受けない独立した空間)となるので、**`display:inline-block`の時、他のボックスとのマージンの相殺などは起きない。**
+**`display:inline-block`の時、他のボックスとのマージンの相殺などは起きない。**
 
 実際に、仕様書「8.3.1 Collapsing margins」節に以下の記述がある。
 
@@ -129,4 +129,19 @@
 >インラインブロックボックスのマージンは折りたたまれません (フロー内の子であっても同様)。
 
 つまり、インラインブロックにおいて、marginの相殺は起きないことを意味している。(インラインブロックの要素自体はもちろんのこと、インラインブロックの内部においても相殺は起きない)
+
+#### marginの相殺ブロックフォーマットコンテキストの場合
+
+ブロックフォーマットコンテキストにおいても同様の仕様がある。
+
+仕様書「8.3.1 Collapsing margins」節に以下のように書かれている。
+
+>Margins of elements that establish new block formatting contexts (such as floats and elements with 'overflow' other than 'visible') do not collapse with their in-flow children.
+>
+>新しいブロックフォーマットコンテキストを確立する要素のマージン (float や、「visible」以外の「overflow」を持つ要素など) は、フロー内の子と一緒に折りたたまれません。
+
+
+
+
+
 
