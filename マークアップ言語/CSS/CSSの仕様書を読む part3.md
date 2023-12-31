@@ -40,7 +40,7 @@
 ||種類|
 |-|-|
 |①|float|
-|②|absolutely positioned elements(絶対配置要素)|
+|②|absolutely positioned elements(絶対配置された要素)|
 |③|ブロックボックスではないブロックコンテナ。例:inline-blocks, table-cells, and table-captionsなど。|
 |④|overflowプロパティの値がvisible(初期値)以外のブロックボックス。つまり、`overflow:visible`の時はブロックフォーマットコンテキストを確立しない。|
 
