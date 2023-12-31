@@ -160,6 +160,32 @@ div.child{
 
 長くなった上に色々とっちらかってわかりずらくなったため、ここでこれまでの内容を整理してみる。
 
+まず、包含ブロックは大きく分けて以下の2つに分けられる。
+
+**①ルート要素が存在する包含ブロック**
+**②その他の要素が存在する包含ブロック**
+
+順番に見ていく。
+
+**①ルート要素が存在する包含ブロック**
+ルート要素とはhtml要素ツリーの中で一番上にある要素のことで、具体的にはhtml要素のことをいう。
+
+そして、**ルート要素は初期包含ブロックの中に存在する。**
+
+**②その他の要素が存在する包含ブロック**
+
+先ほど引用した仕様書の記述をもう一度見てみる。
+
+>For other elements, if the element's position is 'relative' or 'static', the containing block is formed by the content edge of the nearest block container ancestor box.
+>
+>他の要素の場合、要素のpositionプロパティの値が「`relative`」または「`static`」の場合、包含ブロックは最も近いブロックコンテナ祖先ボックスのコンテンツエッジによって形成されます。
+
+
+
+
+
+
+
 
 
 
