@@ -184,16 +184,20 @@ statementは「スピーチや文章で何かを明確に表現すること。�
 >The perimeter of each of the four areas (content, padding, border, and margin) is called an "edge", so each box has four edges:
 >
 >content edge or inner edge
-    The content edge surrounds the rectangle given by the width and height of the box, which often depend on the element's rendered content. The four content edges define the box's content box. 
+>
+>The content edge surrounds the rectangle given by the width and height of the box, which often depend on the element's rendered content. The four content edges define the box's content box. 
 >
 >padding edge
-    The padding edge surrounds the box padding. If the padding has 0 width, the padding edge is the same as the content edge. The four padding edges define the box's padding box. 
+>
+>The padding edge surrounds the box padding. If the padding has 0 width, the padding edge is the same as the content edge. The four padding edges define the box's padding box. 
 >
 >border edge
-    The border edge surrounds the box's border. If the border has 0 width, the border edge is the same as the padding edge. The four border edges define the box's border box. 
+>
+>The border edge surrounds the box's border. If the border has 0 width, the border edge is the same as the padding edge. The four border edges define the box's border box. 
 >
 >margin edge or outer edge
-    The margin edge surrounds the box margin. If the margin has 0 width, the margin edge is the same as the border edge. The four margin edges define the box's margin box. 
+>
+>The margin edge surrounds the box margin. If the margin has 0 width, the margin edge is the same as the border edge. The four margin edges define the box's margin box. 
 
 >4 つの領域 (コンテンツ、パディング、ボーダー、マージン) のそれぞれの周囲は「エッジ」と呼ばれるため、各ボックスには 4 つのエッジがあります。
 >
@@ -228,9 +232,9 @@ statementは「スピーチや文章で何かを明確に表現すること。�
 さらに上記の記述から以下のことがわかる。
 
 
-**①パディングが0の場合、パディングはコンテンツと一致する。**  
-**②ボーダーが0の場合、ボーダーはパディングと一致する。**  
-**③マージンが0の場合、マージンはボーダーと一致する。**
+**①パディングが0の場合、パディングエッジはコンテンツエッジと一致する。**  
+**②ボーダーが0の場合、ボーダーエッジはパディングエッジと一致する。**  
+**③マージンが0の場合、マージンエッジはボーダーエッジと一致する。**
 
 続きを引用。
 
