@@ -102,9 +102,41 @@ schemeには「計画」といった意味がある。
 
 ここでは、先ほどの文章を読み解くために必要な「`static`」「`relative`」について見ていく。
 
-|値|意味|
-|-|-|
-|`static`||
-|`relative`||
+#### static
+`static`は、positionプロパティの初期値(つまり、何も設定しない場合はこの`static`になっている)で、この値の時は、通常の動きで画面に配置される。
+
+通常の動きなので、シンプルに普通の動きをすると考えてok。
+
+#### relative
+
+この`relative`を理解するためには、その反対の動きをする`absolute`を理解するのが近道だ。
+
+そこで、この`relative`については`absolute`と対比しながら見ていく。
+
+この`relative`と`absolute`の違いについては実際にコードを書いたほうがわかりやすいので、以下にテストコードを書いてみた。
+
+```
+<!--HTMLのbody内に書く-->
+<div class="parent">
+ <div class="child">
+ </div>
+</div>
+
+/*CSS内に書く*/
+div.parent{
+ background:#a0d8ef; /*そら色*/
+ width:500px;
+ height:300px;
+ margin-top:80px;
+ margin-left:80px;
+}
+
+div.child{
+ background:#83ccd2; /*そらみどり*/
+ width:150px;
+ height:150px;
+ position:relative; top:20px; left:150px;　/*ここをrelativeにしたり、abosoluteにしたりすると位置が変化することがわかる*/
+}
+```
 
 
