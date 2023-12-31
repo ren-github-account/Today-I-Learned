@@ -86,4 +86,12 @@ Containing block(包含ブロック)の定義は以下のように書かれて�
 
 >9.3.1 Choosing a positioning scheme: 'position' property
 >
->The 'position' and 'float' properties determine which of the CSS 2.1 positioning algorithms is used to calculate the position of a box. 
+>The 'position' and 'float' properties determine which of the CSS 2.1 positioning algorithms is used to calculate the position of a box.
+>
+>9.3.1 位置決めスキームを選ぶ: 'position' プロパティ
+>
+>「position」プロパティと「float」プロパティは、ボックスの位置の計算に CSS 2.1 位置決めアルゴリズムのどれを使用するかを決定します。
+
+schemeには「計画」といった意味がある。
+
+つまり、**positionプロパティとは、ボックスの位置の計算に使う位置決めアルゴリズムを決定するためのプロパティ。**(floatプロパティについても同様。)
