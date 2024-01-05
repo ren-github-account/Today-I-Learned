@@ -164,14 +164,17 @@ div.child{
 
 仕様書CSS2.1の10.1節には以下のように書かれている。
 
+>The position and size of an element's box(es) are sometimes calculated relative to a certain rectangle, called the containing block of the element.
+>
 >要素のボックスの位置とサイズは、要素の「包含ブロック」と呼ばれる特定の長方形を基準にして計算されることがあります。
 
-前提として、すべての要素はボックスを生成するのだった。そして、その生成されたボックスのには4つの領域(margin, border, padding, content)がある。(part1参照)
+**前提として、すべての要素はボックスを生成するのだった。** そして、その生成されたボックスのには4つの領域 **(margin, border, padding, content)** がある。(part1参照)
 
 我々は、その4つの領域に色をつけたり太さをつけたりすることでデザインを作っていく。
 
+今述べた前提と、10.1節の記述を合わせると以下の結論が導ける。
 
-
+**要素によって生成されたボックスの位置とサイズは、包含ブロックによって決まる。**
 
 包含ブロックは大きく分けて以下の2つに分けられる。
 
