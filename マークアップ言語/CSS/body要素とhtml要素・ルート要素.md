@@ -74,6 +74,10 @@ body{
 この場合は、**body要素のbackgroundプロパティの設定が、html要素にも適用されることになる。**  
 CSS2.1の仕様にこのように定められているようだ。
 
+具体的には仕様書「CSS Backgrounds and Borders Module Level 3」の2.11.2節に以下のように書かれている。
+
+>
+
 ### 関連事項
 #### ルート要素とは
 
