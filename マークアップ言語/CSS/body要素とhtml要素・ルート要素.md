@@ -76,7 +76,33 @@ CSS2.1の仕様にこのように定められているようだ。
 
 具体的には仕様書「CSS Backgrounds and Borders Module Level 3」の2.11.2節に以下のように書かれている。
 
+>2.11.2. The Canvas Background and the HTML <body> Element
 >
+>For documents whose root element is an HTML HTML element or an XHTML html element [HTML]:
+>
+>if the computed value of background-image on the root element is none and its background-color is transparent,
+>
+>user agents must instead propagate the computed values of the background properties from that element’s first HTML BODY or XHTML body child element.
+>
+>The used values of that BODY element’s background properties are their initial values,
+>
+>and the propagated values are treated as if they were specified on the root element.
+>
+>2.11.2. Canvas の背景と HTML の <body> 要素
+>
+>ルート要素が HTML HTML 要素または XHTML html 要素であるドキュメントの場合 [HTML]:
+>
+>ルート要素のbackground-imageの計算値が none で、そのbackground-colorがtransparentの場合、
+>
+>ユーザー エージェントは代わりに、その要素の最初の HTML BODY または XHTML body 子要素から背景プロパティの計算値を伝播する必要があります。
+>
+>その BODY 要素の背景プロパティで使用される値は初期値であり、伝播された値はルート要素で指定されたものとして扱われます。
+
+`background-image:none;`と`background-color:transparent`はともに初期値。
+
+ともに初期値なので「ルート要素のbackground-imageの計算値が none で、そのbackground-colorがtransparentの場合、」の意味は、背景画像と背景色に何も設定されていないデフォルトの状態という意味。
+
+つまり、**html要素の背景色と背景画像に何も設定されていない場合、body要素のbackgroundプロパティの値がルート要素で指定されたものとして扱われる。**
 
 ### 関連事項
 #### ルート要素とは
