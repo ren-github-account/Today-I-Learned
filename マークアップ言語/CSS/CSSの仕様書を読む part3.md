@@ -125,6 +125,30 @@
 
 ここで重要なのは、**非置換インラインブロックは、ブロックコンテナであるが、ブロックレベルボックスではない**の部分だ。
 
+#### 非置換とは
+
+上記の引用で登場した「非置換」という言葉の意味を確認しておく。
+
+「非置換」を理解するためには、まず「置換要素」について理解する必要がある。
+
+置換要素とは何かというと、**`<img>`で指定する画像などのようにcontentが置き換えられる要素のことをいう。**
+
+仕様書には以下のように書かれている。
+
+>Replaced element
+>
+>An element whose content is outside the scope of the CSS formatting model, such as an image, embedded document, or applet. For example, the content of the HTML IMG element is often replaced by the image that its "src" attribute designates.
+>
+>Replaced elements often have intrinsic dimensions: an intrinsic width, an intrinsic height, and an intrinsic ratio.
+>
+>交換された要素
+>
+>画像、埋め込みドキュメント、アプレットなど、内容がCSS書式設定モデルの影響の外側にある要素。
+>
+>たとえば、HTML IMG 要素のコンテンツは、その「src」属性が指定する画像に置き換えられることがよくあります。
+>
+>置換された要素には、多くの場合、固有の幅、固有の高さ、固有の比率などの固有の寸法があります。
+
 そして、**インラインブロックとは、インラインレベルボックスであるブロックコンテナボックスであると解釈できる。**
 
 つまり、「要素はインラインレベルのブロックコンテナーを生成します。」の部分は**インラインブロックのことを指している**と解釈できる。そして、非置換であるならブロックレベルボックスではないといえる。
