@@ -435,6 +435,8 @@ html要素のコンテンツエッジのwidthは筆者の環境の場合、さ�
 
 ### 包含ブロックの定義
 
+ここで包含ブロックの定義について、全文を引用してみる。
+
 >10.1 Definition of "containing block"
 >
 >The position and size of an element's box(es) are sometimes calculated relative to a certain rectangle, called the containing block of the element. The containing block of an element is defined as follows:
@@ -447,11 +449,30 @@ html要素のコンテンツエッジのwidthは筆者の環境の場合、さ�
 >
 >4.  If the element has 'position: absolute', the containing block is established by the nearest ancestor with a 'position' of 'absolute', 'relative' or 'fixed', in the following way:
 >
-        >1.In the case that the ancestor is an inline element, the containing block is the bounding box around the padding boxes of the first and the last inline boxes generated for that element. In CSS 2.1, if the inline element is split across multiple lines, the containing block is undefined.
+>1.In the case that the ancestor is an inline element, the containing block is the bounding box around the padding boxes of the first and the last inline boxes generated for that element. In CSS 2.1, if the inline element is split across multiple lines, the containing block is undefined.
 >
-       >2. Otherwise, the containing block is formed by the padding edge of the ancestor.
+>2. Otherwise, the containing block is formed by the padding edge of the ancestor.
 >
-    >If there is no such ancestor, the containing block is the initial containing block.
+>If there is no such ancestor, the containing block is the initial containing block.
+>
+>10.1 「包含ブロック」の定義
+>
+>要素のボックスの位置とサイズは、要素を含むブロックと呼ばれる特定の四角形を基準にして計算されることがあります。 要素を含むブロックは次のように定義されます。
+>
+>  1. ルート要素が存在する包含ブロックは、初期包含ブロックと呼ばれる四角形です。 連続メディアの場合、ビューポートの寸法を持ち、キャンバスの原点に固定されます。 これは、ページ化されたメディアのページ領域です。 最初の包含ブロックの「方向」プロパティは、ルート要素の場合と同じです。
+>
+>  2. 他の要素の場合、要素の位置が「相対」または「静的」の場合、包含ブロックは最も近いブロック コンテナ祖先ボックスのコンテンツ エッジによって形成されます。
+>
+> 3. 要素に「位置:固定」がある場合、包含ブロックは、連続メディアの場合はビューポートによって、ページ化メディアの場合はページ領域によって確立されます。
+>
+> 4. 要素に「位置: 絶対」がある場合、包含ブロックは、「絶対」、「相対」、または「固定」の「位置」を持つ最も近い祖先によって次のように確立されます。
+>
+>1.祖先がインライン要素である場合、包含ブロックは、その要素に対して生成された最初と最後のインライン ボックスのパディング ボックスの周囲の境界ボックスです。 CSS 2.1 では、インライン要素が複数行に分割されている場合、それを含むブロックは未定義になります。
+> 
+>2. それ以外の場合、包含ブロックは祖先のパディングエッジによって形成されます。
+>
+>そのような祖先が存在しない場合、包含ブロックが最初の包含ブロックになります。
+
 
 
 
