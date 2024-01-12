@@ -66,13 +66,21 @@
 
 >In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block.
 >
->The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse.
+>The vertical distance between two sibling boxes is determined by the 'margin' properties.
+>
+>Vertical margins between adjacent block-level boxes in a block formatting context collapse.
 >
 >ブロックフォーマットコンテキストの内部で、ボックスは、containing blockの上部から始めて垂直方向に次々にレイアウトされます。
 >
 > 2 つの兄弟ボックス間の垂直距離は、「マージン」プロパティによって決まります。
 >
 >ブロックフォーマットコンテキスト内の隣接するブロックレベルボックス間の垂直方向のマージンは相殺します。
+
+ブロックフォーマットコンテキスト内で、ボックスは包含ブロックの上部から初めて縦に次々に配置されていく。(包含ブロックについてはpart1-2を参照)
+
+2つのsibling boxes間の垂直距離、つまり共通の親要素を持つボックスの縦の距離は「マージン」によって決まる。
+
+上下に隣あっているボックス間のマージンが重なっている場合、相殺が働く。
 
 ### displayプロパティのinlineblockの仕様
 
