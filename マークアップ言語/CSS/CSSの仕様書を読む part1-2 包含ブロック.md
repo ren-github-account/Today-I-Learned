@@ -118,7 +118,7 @@ schemeには「計画」といった意味がある。
 
 positionプロパティは、実際には単体で使うのではなく以下のように4つのプロパティ`top`, `right`, `bottom`, `left`と組み合わせて使われる。
 
-この4つのプロパティ`top`, `right`, `bottom`, `left`は、まとめてボックスオフセットとも呼ばれる。
+この4つのプロパティ`top`, `right`, `bottom`, `left`は、まとめて**ボックスオフセット**とも呼ばれる。
 
 ```
  position:relative; top:20px; left:150px;
@@ -128,7 +128,19 @@ positionプロパティは、実際には単体で使うのではなく以下の
 
 では、positionプロパティの値にはどんなものがあるのか。
 
-ここでは、先ほどの文章を読み解くために必要な「`static`」「`relative`」について見ていく。
+positionプロパティの値には全部で以下の4つのある。
+
+```
+static
+
+relative
+
+absolute
+
+fixed
+```
+
+ここでは、まず先ほどの文章を読み解くために必要な3つの値「`static`」「`relative`」「`absolute`」について見ていく。
 
 #### static
 `static`は、positionプロパティの初期値(つまり、何も設定しない場合はこの`static`になっている)で、この値の時は、通常の動きで画面に配置される。
