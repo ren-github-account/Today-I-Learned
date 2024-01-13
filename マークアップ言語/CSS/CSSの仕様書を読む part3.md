@@ -54,7 +54,7 @@
 
 ```
 <div id="parent">
-  <p id="child">子ブロック margin-top: 40px;</p>
+  <p id="child">子ブロック</p>
 </div>
 ```
 
