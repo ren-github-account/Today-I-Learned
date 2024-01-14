@@ -123,7 +123,7 @@ p.two{
 
 以上をふまえて、話を戻すと、
 
-つまり、p.oneで設定した`margin-top:32px;`は、**body要素の生成したボックスに対して適用されている。**
+つまり、CSS内の「p.one」で設定した`margin-top:32px;`は、**body要素の生成したボックスに対して適用されている。**
 
 
 ### displayプロパティのinlineblockの仕様
