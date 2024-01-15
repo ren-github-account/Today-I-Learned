@@ -13,6 +13,7 @@
 * [ブロックフォーマットコンテキストが確立されるとどうなる？](#ブロックフォーマットコンテキストが確立されると)
 * [①body要素内にブロックレベル要素を配置](#普通にbody要素内にブロックレベル要素を配置)
 * [②body要素内で新しくブロックフォーマットコンテキストを確立](#新しくブロックフォーマットコンテキストを確立)
+* [インラインフォーマットコンテキストとは](#インラインフォーマットコンテキストとは)
 * [displayプロパティのinlineblockの仕様](#displayプロパティのinlineblockの仕様)
 * [inlineblock](#inlineblock)
 * [marginの相殺](#marginの相殺)
@@ -224,6 +225,42 @@ div{
 
 ・上下に隣あっているボックス間のマージンが重なっている場合、相殺が働く。
 ***
+
+### インラインフォーマットコンテキストとは
+
+次はインラインフォーマットコンテキストについて見ていく。
+
+仕様書CSS2.1には以下のように書かれている。
+
+>9.4.2 Inline formatting contexts
+>
+>In an inline formatting context, boxes are laid out horizontally, one after the other, beginning at the top of a containing block.
+>
+>Horizontal margins, borders, and padding are respected between these boxes.
+>
+>The boxes may be aligned vertically in different ways: their bottoms or tops may be aligned, or the baselines of text within them may be aligned.
+>
+>The rectangular area that contains the boxes that form a line is called a line box.
+>
+>The width of a line box is determined by a containing block and the presence of floats.
+>
+>The height of a line box is determined by the rules given in the section on line height calculations.
+>
+>9.4.2 インラインフォーマットコンテキスト
+>
+>インラインフォーマットコンテキストでは、ボックスは、含まれるブロックの先頭から順に水平方向にレイアウトされます。
+>
+>これらのボックス間では、水平方向のマージン、境界線、パディングが考慮されます。
+>
+>ボックスはさまざまな方法で垂直方向に整列できます。ボックスの底部または上部を整列させたり、ボックス内のテキストのベースラインを整列させたりできます。
+>
+>複数のボックスが並んでいる四角形の領域をラインボックスと呼びます。
+>
+>ラインボックスの幅は、包含ブロックとフロートの存在によって決まります。
+>
+>行ボックスの高さは、行の高さの計算に関するセクションに記載されている規則によって決定されます。
+
+
 
 ### displayプロパティのinlineblockの仕様
 
