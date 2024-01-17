@@ -368,7 +368,21 @@ div{
 
 `line-height`は「行間の高さ」を指定するプロパティと上の説明では書いた。
 
-実際その通りなのだけど、仕様書では「ラインボックス」を使って以下のように説明がなされている。
+実際その通りなのだけど、仕様書では「ラインボックス」という言葉を使って以下のように説明がなされている。
+
+>On a block container element whose content is composed of inline-level elements, 'line-height' specifies the minimal height of line boxes within the element.
+>
+>The minimum height consists of a minimum height above the baseline and a minimum depth below it, exactly as if each line box starts with a zero-width inline box with the element's font and line height properties.
+>
+>We call that imaginary box a "strut." (The name is inspired by TeX.).
+>
+>コンテンツがインラインレベルの要素で構成されるブロックコンテナー要素では、「line-height」は要素内の行ボックスの最小限の高さを指定します。
+>
+>最小限の高さは、各行ボックスが要素のフォントと行の高さのプロパティを持つ幅ゼロのインラインボックスで始まるのとまったく同じように、ベースラインより上の最小の高さとその下の最小の深さで構成されます。
+>
+>この想像上の箱を「ストラット」と呼びます。 (名前は TeX からインスピレーションを受けています。)
+
+
 
 ### displayプロパティのinlineblockの仕様
 
