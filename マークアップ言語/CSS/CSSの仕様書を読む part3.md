@@ -190,7 +190,7 @@ div{
 
 この時点では、p要素の間のマージンの色がdivの背景色に変わる以外の変化は起きない。
 
-それではCSSの`div`の部分を以下のように変更してみる。
+それではp要素を囲んでいる`div`のCSS部分を以下のように変更してみる。
 
 ```
 div{
@@ -479,6 +479,23 @@ displayプロパティの値`inline-block`について仕様書CSS2.1では以�
 「outside the scope of the CSS formatting model(CSS書式設定モデルの影響の外側)」とあるように、置換要素は独立した空間となっており、その外側にある空間の影響を受けない。
 
 つまり、マージンの相殺などが起きなくなる。
+
+「マージンの相殺が起きない」のは例えば以下ようなコードを書いてみると確認できる。
+
+```
+<body>
+<img src="https://1.bp.blogspot.com/-jlZlCg-8FAM/Xub_u8HTD1I/AAAAAAABZis/ZhUI05AZBEQpVinedZ6Xy-eIucmNuY2SQCNcBGAsYHQ/s1600/pose_pien_uruuru_man.png" alt="いらすとや「ぴえんのイラスト」">
+</body>
+
+/*CSS*/
+img{
+ margin-top:30px;
+}
+```
+
+
+
+
 
 そして、**インラインブロックとは、インラインレベルボックスであるブロックコンテナボックスであると解釈できる。**
 
