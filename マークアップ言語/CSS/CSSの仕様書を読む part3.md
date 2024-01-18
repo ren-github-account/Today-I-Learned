@@ -420,21 +420,21 @@ div{
 
 #### inlineblock
 
+displayプロパティの値`inline-block`について仕様書CSS2.1では以下のように書かれている。
+
 >inline-block
 >
 >This value causes an element to generate an inline-level block container. The inside of an inline-block is formatted as a block box, and the element itself is formatted as an atomic inline-level box.
 >
->インラインブロック
+>インライン-ブロック
 >
 >この値により、要素はインラインレベルのブロックコンテナーを生成します。インラインブロックの内部はブロックボックスとしてフォーマットされ、要素自体はアトミックインラインレベルボックスとしてフォーマットされます。
 
-「インラインブロック」という言葉が出てきたので、仕様書での意味を見てみる。
-
-インラインブロックについては、仕様書CSS2.1の「9.2.1 Block-level elements and block boxes」節に以下の記述があった。
+上記の引用の意味をよく理解するために「ブロックコンテナとインラインブロックの関係性」について書かれた以下の「9.2.1 Block-level elements and block boxes」節の記述もあわせて見てみる。
 
 >Not all block container boxes are block-level boxes: non-replaced inline blocks and non-replaced table cells are block containers but not block-level boxes.
 >
->すべてのブロック コンテナ ボックスがブロック レベル ボックスであるわけではありません。非置換インラインブロックと非置換テーブルセルはブロックコンテナですが、ブロックレベルボックスではありません。
+>すべてのブロックコンテナボックスがブロックレベルボックスであるわけではありません。非置換インラインブロックと非置換テーブルセルはブロックコンテナですが、ブロックレベルボックスではありません。
 
 ここで重要なのは、**非置換インラインブロックは、ブロックコンテナであるが、ブロックレベルボックスではない**の部分だ。
 
