@@ -568,13 +568,47 @@ img{
 >
 >インライン-ブロックボックスのマージンは折りたたまれません (フロー内の子であっても同様)。
 
-つまり、`display:inline-block`の要素の生成する「inline-blockボックス」において、marginの相殺は起きないことを意味している。(インラインブロックの要素自体はもちろんのこと、インラインブロックの内部においても相殺は起きない)
+つまり、`display:inline-block`の要素の生成する「inline-blockボックス」自体は、マージンの相殺は起きないことを意味している。
+
+ただし「inline-blockボックス」の中身に関しては、普通にブロックフォーマットコンテキストに従うため、通常通りマージンの相殺は発生する。
+
+実際に以下のコードを書いて確かめてみたけど、上記の通りの動きをした。
+
+```
+<body>
+<div class="one">
+<p class="one"></p>
+<p class="two"></p>
+</div>
+</body>
+
+/*CSS*/
+
+div.one{
+ background:#a0d8ef;
+ display:inline-block;　/*displayプロパティの値をinline-blockに変更*/
+ height:150px;
+ width:300px;
+ margin-top:30px;　/*body要素のマージンとの相殺が起きるか確認*/
+}
+
+p.one{
+ background:orange;
+ height:30px;
+ margin-bottom:30px; /*ボックスの中身でマージンの相殺が起きるか確認*/
+}
+
+p.two{
+ background:gray;
+ height:30px;
+}
+```
 
 #### marginの相殺ブロックフォーマットコンテキストの場合
 
-ブロックフォーマットコンテキストにおいても同様の仕様がある。
+新しいブロックフォーマットコンテキストを確立する場合においても同様の仕様がある。
 
-仕様書「8.3.1 Collapsing margins」節に以下のように書かれている。
+仕様書CSS2.1「8.3.1 Collapsing margins」節に以下のように書かれている。
 
 >Margins of elements that establish new block formatting contexts (such as floats and elements with 'overflow' other than 'visible') do not collapse with their in-flow children.
 >
