@@ -583,7 +583,6 @@ img{
 </body>
 
 /*CSS*/
-
 div.one{
  background:#a0d8ef;
  display:inline-block;　/*displayプロパティの値をinline-blockに変更*/
