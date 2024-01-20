@@ -633,10 +633,27 @@ p.two{
 
 **非置換インライン要素とは、** `display:inline`の非置換要素のことだ。
 
+非置換インライン要素には、例えば`span要素`がある。
 
+実際に、以下のコードを書いて確かめてみても、`width`と`height`は機能しないことがわかる。
 
+```
+<body>
+<span></span>
+</body>
 
+/*CSS*/
+span{
+ background:yellow;
+ width:100px;
+ height:150px;
+}
+```
 
+一方、`display:inline`でも置換要素である`img要素`は、`width`と`height`が指定できる。
 
+他にも、`display:inline-block`にしても`width`と`height`が指定可能となる。
 
+part4へ続く。
 
+次のpart4では、いよいよ`flaotプロパティ`とそれを制御する`clearプロパティ`について見ていく。
