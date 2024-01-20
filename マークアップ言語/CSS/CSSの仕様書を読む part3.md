@@ -625,11 +625,15 @@ p.two{
 
 **`width`と`height`は非置換インライン要素には適用できない。**
 
-実際に仕様書CSS2.1の`width`と`height`の説明部分に以下の記述がある。
+実際、仕様書CSS2.1の`width`と`height`の説明部分に以下の記述がある。
 
 >This property does not apply to non-replaced inline elements.
 >
 >このプロパティは、非置換インライン要素には適用されません。
+
+**非置換インライン要素とは、** `display:inline`の非置換要素のことだ。
+
+
 
 
 
