@@ -20,6 +20,7 @@
 * [非置換要素とは](#非置換要素とは)
 * [あらためてプロパティinlineblockを見てみる](#あらためてプロパティinlineblockを見てみる)
 * [marginの相殺](#marginの相殺)
+* [widthとheightと非置換の関係](#widthとheightと非置換の関係)
 
 
 ### ブロックフォーマットコンテキストとは
@@ -612,6 +613,23 @@ p.two{
 >Margins of elements that establish new block formatting contexts (such as floats and elements with 'overflow' other than 'visible') do not collapse with their in-flow children.
 >
 >新しいブロックフォーマットコンテキストを確立する要素のマージン (float や、「visible」以外の「overflow」を持つ要素など) は、フロー内の子と一緒に折りたたまれません。
+>
+
+#### widthとheightと非置換の関係
+
+先程、非置換要素の意味について書いた。
+
+ここでは、その非置換要素とプロパティの`width`と`height`にはどういう関係があるのかを見ていきたい。
+
+結論を書くと、以下の関係が成り立つ。
+
+**`width`と`height`は非置換インライン要素には適用できない。**
+
+実際に仕様書CSS2.1の`width`と`height`の説明部分に以下の記述がある。
+
+>This property does not apply to non-replaced inline elements.
+>
+>このプロパティは、非置換インライン要素には適用されません。
 
 
 
