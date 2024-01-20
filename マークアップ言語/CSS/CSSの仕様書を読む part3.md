@@ -187,7 +187,7 @@ p.two{
 }
 
 div{
- background:#a0d8ef;　/*変化わかりやすくするため背景を追加*/
+ background:#a0d8ef;/*変化わかりやすくするため背景を追加*/
 }
 ```
 
