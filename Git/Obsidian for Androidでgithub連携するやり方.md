@@ -1,3 +1,4 @@
+### 前提
 まず前提として、「Obsidian Git」というコミュニティプラグインを使用することで、Obsidianとgithubの連携をすることができる。
 
 連携を行うとどうなるかというと、Obsidian上からリモートリポジトリに直接プッシュしたり、コミットしたりすることができるようになる。
@@ -10,8 +11,8 @@ PC上のObsidianでは既に「Obsidian Git」を使用してgithubとの連携�
 
 ||手順|
 |-|-|
-|①|①PC上で行う操作|
-|②|②スマホ上(筆者の場合はAndroid)で行う操作|
+|①|PC上で行う操作|
+|②|スマホ上(筆者の場合はAndroid)で行う操作|
 
 順番に見ていく。
 
@@ -41,5 +42,19 @@ PC上のObsidianでは既に「Obsidian Git」を使用してgithubとの連携�
 githubにログインしたら画面右上のプロフィールアイコンをクリック。-> settings -> 画面をスクロールして左側の一番下にある「Developer Settings」をクリック。-> Personal access tokens -> Fine-grained tokens
 
 そうすると、右上に「Generate new token」というボタンがあるはずなので、そこをクリック。
+
+「New fine-grained personal access token」というが開いたら、Token nameを入力。好きな名前でok。
+
+次に同じページの「Repository access」の項目のOnly select repositoriesをクリック -> Select repositoryから最初に作成したリモートリポジトリを選択。
+
+ここまで完了したら、あとは、その他の設定はデフォルトのままで「Generate token」をクリック。
+
+そうすると、アクセストークンが発行される。このアクセストークンは後で使うのでコピーをして、どこかに保存しておく。
+
+### スマホ上で行う操作
+
+
+
+
 
 
