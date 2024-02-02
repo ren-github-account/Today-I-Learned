@@ -56,7 +56,41 @@ Permissionsの項目が変更できるようになっているはずなので、
 ### スマホ上で行う操作
 
 
+### エラー
 
+Checkout ConflictError: Your local changes to the following files would be overwritten by checkout: .obsidian/workspace-mobile.json
+
+エラーが発生した経緯
+
+リポジトリをcloneするときにこのエラーが発生した。
+
+### 原因と対処
+
+原因はclone元のリポジトリ内に、obsidianの設定ファイル「.obsidian」が入っていたため衝突が発生していたためだと考えられる。
+
+このclone元の「.obsidian」を削除することで対処できた。
+
+### gitignoreの設定
+
+今後、上記のようなエラーが起きるのを防ぐため、フォルダ「.obsidian」が置いてあるのと同じ階層に「.gitignore」置いた。　
+
+.gitignoreを設定することで、特定のディレクトリのpushやpullを無効化することができる。
+
+デフォルトの状態では、「obsidian git」の設定ファイルまでgithub上にpushされていたため、上記のようなエラーが発生した。そのため、設定ファイル等のpushを無効化することでエラーを防ぐことがねらいだ。
+
+.gitignoreファイルの中には、無視したいディレクトリのパスを入力する。
+
+「.gitignore」はメモ帳で、名前を「.gitignore」としたテキストファイルを作成することで作成できる。
+
+中身には以下を記載した。
+
+```
+.trash/
+.git/
+.obsidian/*
+```
+
+ワイルドカード「*」を使用することで、ディレクトリ直下にあるすべてをまとめて無視することができる。
 
 
 
