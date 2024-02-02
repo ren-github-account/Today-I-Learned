@@ -43,9 +43,11 @@ githubにログインしたら画面右上のプロフィールアイコンを�
 
 そうすると、右上に「Generate new token」というボタンがあるはずなので、そこをクリック。
 
-「New fine-grained personal access token」というが開いたら、Token nameを入力。好きな名前でok。
+「New fine-grained personal access token」というページが開いたら、Token nameを入力。好きな名前でok。
 
 次に同じページの「Repository access」の項目のOnly select repositoriesをクリック -> Select repositoryから最初に作成したリモートリポジトリを選択。
+
+Permissionsの項目が変更できるようになっているはずなので、その中から「Content」の項を探して、Accessの部分を「Read and write」へ変更。
 
 ここまで完了したら、あとは、その他の設定はデフォルトのままで「Generate token」をクリック。
 
