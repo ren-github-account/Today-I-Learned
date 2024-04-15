@@ -150,9 +150,11 @@ Checkout ConflictError: Your local changes to the following files would be overw
 
 ・pullボタンの隣の「↑」はpushを意味する。
 
-・「+」で上へ、「-」で下へディレクトリやファイルを移動する。
+・「+」で上へ(Stage)、「-」で下へディレクトリやファイルを移動する。
 
-・「✓」で確定。pushする時に使う。
+・「✓」で確定(Commit)。pushする時に使う。
+
+・一番左の、〇の中に「↑」マークは、pushとかをまとめて行う。(アクセストークンの期限が切れて再連携しなおした時、Stage&pushでうまくいかない時に使うとうまくいった)
 
 #### 具体例
 
