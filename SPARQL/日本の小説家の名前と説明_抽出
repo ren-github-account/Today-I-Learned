@@ -1,0 +1,16 @@
+dbpediaより
+
+```
+PREFIX dbpj: <http://ja.dbpedia.org/resource/>
+PREFIX dbp-owl: <http://dbpedia.org/ontology/>
+PREFIX dbp-prop: <http://ja.dbpedia.org/property/>
+
+SELECT DISTINCT ?pseudonym, ?abstract
+WHERE {
+    dbpj:日本の小説家一覧 dbp-owl:wikiPageWikiLink ?o .
+    ?o dbp-owl:abstract ?abstract;
+    dbp-owl:pseudonym ?pseudonym .
+}
+```
+
+一応表示されたけど、重複が多すぎてデータとして使いものにならない。あとで対策を考えよう。
