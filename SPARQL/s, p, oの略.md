@@ -8,7 +8,7 @@ o:対象 **Object**
 
 https://qiita.com/pika_shi/items/eb56fc205e2d670062ae
 
-日本大百科全書
+日本大百科全書  
 https://kotobank.jp/word/%E8%BF%B0%E8%AA%9E-77867#w-2000474
 
 
