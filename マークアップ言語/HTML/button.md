@@ -24,3 +24,8 @@ type属性を使ってボタンの機能を決めることができる。
 ```
 <button type=”button” onclick=”値”>ボタン</button>
 ```
+
+### ※注意点
+
+'”'
+
