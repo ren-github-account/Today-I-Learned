@@ -33,4 +33,6 @@ type属性を使ってボタンの機能を決めることができる。
 ```
 <button type="button" onclick="fncCall()">ボタン</button>
 ```
+解説
+
 `fncCall()`は関数名。
