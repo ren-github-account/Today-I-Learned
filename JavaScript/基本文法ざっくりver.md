@@ -1,7 +1,7 @@
 *目次*
 * [コメント](#コメント)
 * [alert](#alert)
-* [document.write](#document.write)
+* [document.write](#documentwrite)
 * [変数の宣言](#変数の宣言)
 * [定数](#定数)
 * [関数](#関数)
@@ -40,7 +40,7 @@ alertを使うことで画面に文字列や数値をポップアップで表示
 alert( "円周率は\n" + 3.14159 );  //文字列を改行させる
 ```
 
-### document.write
+### documentwrite
 
 ```
 document.write(*);
