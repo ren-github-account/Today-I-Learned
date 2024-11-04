@@ -12,3 +12,12 @@ Linuxの「L」をクロスの「X」に変更して現在の名称になって�
 ```
 引用:https://atmarkit.itmedia.co.jp/ait/articles/1403/07/news028.html
 
+### PHPを動かす手順メモ
+
+XAMPPのインストールフォルダの中から「htdocs」を探す。(htdocsはHyperText DocumentSの略)
+
+この「htdocs」フォルダのことを**ドキュメントルート**と呼ぶ。ドキュメントルートとは「ネットワークからアクセス可能なフォルダのこと」。
+
+ブラウザからアクセスしたいファイルは、全てこのドキュメントルートである「htdocs」の直下に配置する。
+
+
