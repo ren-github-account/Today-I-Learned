@@ -7,6 +7,8 @@ console.logは、コンソール画面に指定した文字列や変数の中身
 ```
 引用:https://webfrontend.ninja/js-console-object/
 
+要はオブジェクトの中身を表示するってことか。
+
 **具体例**
 
 ```
