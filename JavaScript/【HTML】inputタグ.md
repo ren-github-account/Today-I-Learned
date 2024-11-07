@@ -13,6 +13,7 @@ inputタグの属性の一つに`placeholder`がある。
 ### 参考
 
 ・inputタグの説明で参考になったサイト
+
 https://www.kanzaki.com/docs/html/htminfo31.html
 
 https://www.php-factory.net/trivia/17.php
