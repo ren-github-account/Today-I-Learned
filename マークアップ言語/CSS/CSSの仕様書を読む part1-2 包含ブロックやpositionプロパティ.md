@@ -193,6 +193,27 @@ div.child{
 
 この値を使うことで、スクロールしても追従してくる要素を実装できる。
 
+### 補足absoluteやfixdの挙動について
+
+仕様書には以下のように書かれている。
+
+>9.6 Absolute positioning
+>
+>In the absolute positioning model, a box is explicitly offset with respect to its containing block. It is removed from the normal flow entirely (it has no impact on later >siblings). An absolutely positioned box establishes a new containing block for normal flow children and absolutely (but not fixed) positioned descendants. However, the >contents of an absolutely positioned element do not flow around any other boxes. They may obscure the contents of another box (or be obscured themselves), depending on the >stack levels of the overlapping boxes.
+>
+>References in this specification to an absolutely positioned element (or its box) imply that the element's 'position' property has the value 'absolute' or 'fixed'. 
+>
+9.6 絶対位置決め  
+>  
+>絶対位置決めモデルでは、ボックスは、そのボックスを含むブロックに対して明示的にオフセットされます。これは通常のフローから完全に削除されます (後の兄弟には影響しません)。絶対配置ボックスは、通>常のフローの子と絶対 (ただし固定ではない) 配置の子孫を含む新しいブロックを確立します。ただし、絶対に配置された要素の内容は、他のボックスの周囲に流れません。重なり合うボックスのスタックレベルに応じて、別のボックスの内容が見えにくくなる (またはボックス自体が見えにくくなる) 場合があります。  
+>
+>この仕様における絶対位置要素 (またはそのボックス) への言及は、要素の 'position' プロパティの値が 'absolute' または 'fixed' であることを意味します。
+
+つまり、以下の記述にある通り、他から独立した動きをするということか。
+
+>これは通常のフローから完全に削除されます (後の兄弟には影響しません)。
+
+
 ### まとめ
 
 長くなった上に色々とっちらかってわかりずらくなったため、これまでの内容を整理してみる。
