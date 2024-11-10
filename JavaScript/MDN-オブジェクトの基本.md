@@ -240,14 +240,30 @@ person1.introduceSelf(); /* 出力結果:Hi! I'm Deepti.
 
 ```
 function createPerson(name){ /* 引数にnameを指定
-  const tanaka = {};　/* オブジェクトを作成
-  tanaka.userName = name;
-  tanaka.introduceSelf = function(){
+  const tanaka = {};　/* オブジェクトを作成 オブジェクト名のtanakaの部分はyamadaでもなんでも好きなやつでok
+  tanaka.userName = name; /* userNameプロパティを追加
+  tanaka.introduceSelf = function(){ /* introduceSelfメソッドを追加
     console.log(`Hi! I'm ${this.name}.`);
   };
-  return tanaka;
+  return tanaka;　/* ここでオブジェクトの中身を返す
 }
 ```
+上記で定義した`createPerson(name)`関数は、実際に実行してみるとわかるけど、シンプルに**オブジェクトの中身を戻り値として返すだけの関数。**
+
+そのことを確かめるには、以下のコードをコンソール画面に入力してみるとわかる。
+
+```
+createPerson(name); /* 出力結果:{userName: '', introduceSelf: ƒ}
+```
+
+このように上記の関数は`{}`で囲まれたオブジェクトの中身が表示される。
+
+上記のコードでオブジェクト名を`tanaka`としていることから、`tanaka`はどこへいったと疑問に思うかもだけど、この`createPerson(name) `関数がやっていることは、出力結果を見てもわかる通り、  
+単に「オブジェクトの中身」を返しているだけということが分かればOK。`tanaka`は`yamada`やその他の任意の文字列に変更しても同じように動作することから、そこまで気にする必要はない。
+
+
+
+
 
 
 
