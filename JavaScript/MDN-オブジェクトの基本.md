@@ -192,7 +192,32 @@ person.height; /* 出力結果:'1.75m'
 
 ### thisとは何か
 
-`this`はそのコードが現在所属しているオブジェクトを指している。
+`this`は**そのコードが現在所属しているオブジェクト自体**を指している。
+
+**具体例**
+```
+const person1 = {
+  name: "Chris",
+  introduceSelf() {
+    console.log(`Hi! I'm ${this.name}.`);　/* ここでthisはperson1オブジェクトを指している
+  },
+};
+
+const person2 = {
+  name: "Deepti",
+  introduceSelf() {
+    console.log(`Hi! I'm ${this.name}.`);　/* ここでthisはperson2オブジェクトを指している
+  },
+};
+
+```
+
+動作を確認するには以下のコードを入力。
+
+```
+person1.introduceSelf();　/* 出力結果:Hi! I'm Chris.
+person1.introduceSelf(); /* 出力結果:Hi! I'm Deepti.
+```
 
 
 
