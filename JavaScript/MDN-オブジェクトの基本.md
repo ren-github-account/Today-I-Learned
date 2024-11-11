@@ -339,11 +339,22 @@ function createPerson(name){
 
 ||変更内容|
 |-|-|
-|①|オブジェクト名を定義する行を削除。|
+|①|オブジェクト名を定義する`const オブジェクト名 =`の行を削除。|
 |②|オブジェクト名を記載していた個所をすべて`this`へと変更。|
 |③|`return`の行を削除。|
 
+実際に使用するには、まずJavaScriptのファイルに以下のコードを追記する。
 
+```
+const account = new createPerson("Sakuma"); /* ここではオブジェクト名はaccountとしている。
+　　　　　　　　　　　　　　　　　　　　　　　　引数の部分は「コンストラクターを使わないver」と同じだが、違う点は先頭に「new」を付けることに注意。
+　　　　　　　　　　　　　　　　　　　　　　　　「new」付けないとエラーになるので注意が必要。
+```
 
+動作を確認するには以下のコードを入力する。
 
+```
+account.userName; /* 出力結果:'Sakuma'
+account.introduceSelf(); /* 出力結果:Hi! I'm Sakuma.
+```
 
