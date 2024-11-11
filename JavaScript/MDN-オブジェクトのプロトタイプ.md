@@ -74,7 +74,9 @@ set __proto__: ƒ __proto__()
 実際にはすべてのブラウザーが __proto__ を使用しています。
 ```
 
-`Object.getPrototypeOf()`メソッドは`Object.prototype`と呼ばれるオブジェクトに属する。(これはObjectオブジェクトのprototypeプロパティってことなんだろうか。よくわからんな)
+### オブジェクトプロトタイプ
+
+`Object.getPrototypeOf()メソッド`は`Object.prototype`と呼ばれるオブジェクトに属する。(`Object.prototype`は、Objectオブジェクトのprototypeプロパティってことなんだろうか。よくわからんな)
 
 また、`Object.prototypeオブジェクト`は、すべてのオブジェクトがデフォルトで持つ、最も基本的なプロトタイプとのこと。
 
