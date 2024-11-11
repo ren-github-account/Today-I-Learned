@@ -270,14 +270,15 @@ createPerson(name); /* 出力結果:{userName: '', introduceSelf: ƒ}
 ```
 const account = createPerson("Sakuma"); /* オブジェクト名をaccountとしている。
 　　　　　　　　　　　　　　　　　　　　　　　createPerson(name)関数の引数に「"Sakuma"」を設定している。
-　　　　　　　　　　　　　　　　　　　　　　　(この引数の部分は文字列の場合は「"Sakuma"」のようにクォーテーションで囲まないとエラーとなる。
+　　　　　　　　　　　　　　　　　　　　　　　(この引数の部分は、文字列の場合「"Sakuma"」のようにクォーテーションで囲まないとエラーとなる。
 　　　　　　　　　　　　　　　　　　　　　　　　一方で1などのような数字ならば囲まなくてもエラーは出ない)
 ```
 
-あとは取り出す場合は簡単でいつものように以下のコードを入力する。
+あとは取り出す場合は簡単でいつもと同じだ。以下のコードをコンソール画面に入力する。
 
 ```
-
+account.userName;
+account.introduceSelf();
 ```
 
 
