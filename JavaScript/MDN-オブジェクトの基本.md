@@ -234,7 +234,7 @@ person1.introduceSelf(); /* 出力結果:Hi! I'm Deepti.
 
 ただ、いきなりコンストラクターのやり方を説明する前に、コンストラクターを使わずに同じことができないかをやってみる。そうすることでコンストラクターが何をやっているのかがよく理解できるし、そのありがたみもよくわかるというものだ。
 
-**コンストラクターを使わないver**
+**・コンストラクターを使わないver**
 
 まず、以下のコードを書いて「作成したいオブジェクトのテンプレート」を作る。
 
@@ -243,7 +243,7 @@ function createPerson(name){ /* 引数にnameを指定
   const tanaka = {};　/* オブジェクトを作成 オブジェクト名のtanakaの部分はyamadaでもなんでも好きなやつでok
   tanaka.userName = name; /* userNameプロパティを追加
   tanaka.introduceSelf = function(){ /* introduceSelfメソッドを追加
-    console.log(`Hi! I'm ${this.name}.`);
+    console.log(`Hi! I'm ${this.userName}.`);
   };
   return tanaka;　/* ここでオブジェクトの中身を返す
 }
@@ -258,10 +258,21 @@ createPerson(name); /* 出力結果:{userName: '', introduceSelf: ƒ}
 
 このように上記の関数は`{}`で囲まれたオブジェクトの中身が表示される。
 
-上記のコードでオブジェクト名を`tanaka`としていることから、`tanaka`はどこへいったと疑問に思うかもだけど、この`createPerson(name) `関数がやっていることは、出力結果を見てもわかる通り、  
-単に「オブジェクトの中身」を返しているだけということが分かればOK。`tanaka`は`yamada`やその他の任意の文字列に変更しても同じように動作することから、そこまで気にする必要はない。
+上記のコードでオブジェクト名を`tanaka`としていることから、`tanaka`はどこへいったのかと疑問に思うかもだけど、この`createPerson(name) `関数がやっていることは、出力結果を見てもわかる通り、  
+単に「オブジェクトの中身」を返しているだけだ。`tanaka`の部分は`yamada`やその他の任意の文字列に変更しても同じように動作することから、そこまで気にする必要はない。
 
+**使い方**
 
+上記で定義した「コンストラクターを使わないver」のオブジェクトのテンプレートを実際に使ってみる。
+
+まず、JavaScriptコードに以下を追記する。
+
+```
+const account = createPerson("Sakuma"); /* オブジェクト名をaccountとする。
+　　　　　　　　　　　　　　　　　　　　　　　createPerson(name)関数の引数に「"Sakuma"」を設定する。
+　　　　　　　　　　　　　　　　　　　　　　　(ここで文字列の場合は「"Sakuma"」のようにクォーテーションで囲まないとエラーとなる。
+　　　　　　　　　　　　　　　　　　　　　　　　一方で1などのような数字ならば囲まなくてもエラーは出ない)
+```
 
 
 
