@@ -274,11 +274,11 @@ const account = createPerson("Sakuma"); /* オブジェクト名をaccountとし
 　　　　　　　　　　　　　　　　　　　　　　　　一方で1などのような数字ならば囲まなくてもエラーは出ない)
 ```
 
-あとは取り出す場合は簡単でいつもと同じだ。以下のコードをコンソール画面に入力する。
+あとは取り出す場合は簡単で、いつもと同じだ。以下のコードをコンソール画面に入力する。
 
 ```
-account.userName;
-account.introduceSelf();
+account.userName; /* 出力結果:'Sakuma'
+account.introduceSelf(); /* 出力結果:Hi! I'm Sakuma.
 ```
 
 
