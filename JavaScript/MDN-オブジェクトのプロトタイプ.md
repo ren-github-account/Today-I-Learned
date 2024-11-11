@@ -39,3 +39,38 @@ JavaScript ですべてのオブジェクトは、そのプロトタイプと呼
 
 オブジェクトのプロトタイプにアクセスには`Object.getPrototypeOf()`メソッドを使用する。
 
+**使い方**
+
+以下のように入力する。
+```
+Object.getPrototypeOf(オブジェクト名);
+```
+
+実行すると以下のように、このオブジェクトで利用できるすべてのプロパティの一覧が表示される。
+
+```
+/* 実行結果
+
+constructor: ƒ Object()
+hasOwnProperty: ƒ hasOwnProperty()
+isPrototypeOf: ƒ isPrototypeOf()
+propertyIsEnumerable: ƒ propertyIsEnumerable()
+toLocaleString: ƒ toLocaleString()
+toString: ƒ toString()
+valueOf: ƒ valueOf()
+__defineGetter__: ƒ __defineGetter__()
+__defineSetter__: ƒ __defineSetter__()
+__lookupGetter__: ƒ __lookupGetter__()
+__lookupSetter__: ƒ __lookupSetter__()
+__proto__: (...)　　　/* ここにあった。これがこのオブジェクトのプロトタイプを指し示すプロパティか。
+get __proto__: ƒ __proto__()
+set __proto__: ƒ __proto__()
+```
+
+以下引用。
+```
+オブジェクトのプロトタイプを指し示すプロパティは prototype という名前ではありません。
+その名前は標準ではありませんが、
+実際にはすべてのブラウザーが __proto__ を使用しています。
+```
+
