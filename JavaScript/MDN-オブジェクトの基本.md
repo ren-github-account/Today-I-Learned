@@ -365,4 +365,4 @@ account.introduceSelf(); /* 出力結果:Hi! I'm Sakuma.
 
 >・新しいオブジェクトに `this` を結び付け、コンストラクターのコードで `this` を参照することができるようにする
 
-上記で書いた`const account = new createPerson("Sakuma"); `のコードに当てはめてみると、accountオブジェクトに`this`を結び付け、**コンストラクターで使う関数コードの完成系**で書いたコードで`accountオブジェクト`を参照できるようにするとなる。
+この引用文を、上記で書いた`const account = new createPerson("Sakuma"); `のコードに当てはめてみると、accountオブジェクトに`this`を結び付け、**コンストラクターで使う関数コードの完成系**で書いたコードで`accountオブジェクト`を参照できるようにするとなる。
