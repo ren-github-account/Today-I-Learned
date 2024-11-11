@@ -268,13 +268,17 @@ createPerson(name); /* 出力結果:{userName: '', introduceSelf: ƒ}
 まず、JavaScriptコードに以下を追記する。
 
 ```
-const account = createPerson("Sakuma"); /* オブジェクト名をaccountとする。
-　　　　　　　　　　　　　　　　　　　　　　　createPerson(name)関数の引数に「"Sakuma"」を設定する。
-　　　　　　　　　　　　　　　　　　　　　　　(ここで文字列の場合は「"Sakuma"」のようにクォーテーションで囲まないとエラーとなる。
+const account = createPerson("Sakuma"); /* オブジェクト名をaccountとしている。
+　　　　　　　　　　　　　　　　　　　　　　　createPerson(name)関数の引数に「"Sakuma"」を設定している。
+　　　　　　　　　　　　　　　　　　　　　　　(この引数の部分は文字列の場合は「"Sakuma"」のようにクォーテーションで囲まないとエラーとなる。
 　　　　　　　　　　　　　　　　　　　　　　　　一方で1などのような数字ならば囲まなくてもエラーは出ない)
 ```
 
+あとは取り出す場合は簡単でいつものように以下のコードを入力する。
 
+```
+
+```
 
 
 
