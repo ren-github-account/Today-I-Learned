@@ -347,7 +347,8 @@ function createPerson(name){
 
 ```
 const account = new createPerson("Sakuma"); /* ここではオブジェクト名はaccountとしている。
-　　　　　　　　　　　　　　　　　　　　　　　　引数の部分は「コンストラクターを使わないver」と同じだが、違う点は先頭に「new」を付けることに注意。
+　　　　　　　　　　　　　　　　　　　　　　　　引数の部分は「コンストラクターを使わないver」と同じだが、
+　　　　　　　　　　　　　　　　　　　　　　　　違う点は先頭に「new」を付けることに注意。
 　　　　　　　　　　　　　　　　　　　　　　　　「new」付けないとエラーになるので注意が必要。
 ```
 
