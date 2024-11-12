@@ -58,6 +58,8 @@ https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Object-oriented_p
 英語で`interface`は「何かと何かが出合い、お互いに相互作用しあう点」といった意味がある。(豆知識:CGIのIはここから来ている。参照:[CGIとは](https://github.com/ren-github-account/Today-I-Learned/blob/ad12fcba7e3cff4554893abb72741b624e53dd44/Perl/cgi%E3%81%A8%E3%81%AF.md))
 
 多くのオブジェクト指向言語では、**プロパティに`private`を付与することで外部から参照できないようにすることができる。**
+
+つまり、それが公開可能であるかどうかをコントロールできるってことか。
 ```
 多くの OOP 言語では、いくつかのプロパティを private としてマークすることで、
 他のコードがオブジェクトの内部状態にアクセスするのを防ぐことができます。
