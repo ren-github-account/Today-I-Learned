@@ -184,7 +184,7 @@ const personPrototype = {
 };
 
 function Person(name) {  /* この関数は「コンストラクター関数」といって、コンストラクター用の関数
-  this.name = name;
+  this.name = name;  /* この行の意味は、作成する人物の名前の初期化を行っている
 }
 
 Object.assign(Person.prototype, personPrototype);
