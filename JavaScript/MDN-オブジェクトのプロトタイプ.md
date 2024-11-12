@@ -183,7 +183,7 @@ const personPrototype = {
   },
 };
 
-function Person(name) {
+function Person(name) {  /* この関数は「コンストラクター関数」といって、コンストラクター用の関数
   this.name = name;
 }
 
