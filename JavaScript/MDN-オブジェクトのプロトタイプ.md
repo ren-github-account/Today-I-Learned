@@ -168,5 +168,6 @@ JavaScript では、すべての関数が prototype という名前のプロパ�
 
 **構文**
 ```
-Object.assign(target, source); /* sourceの部分にコピー元のオブジェクト名、targetの部分にコピー先のオブジェクト名を書く
+Object.assign(target, source); /* sourceの部分にコピー元のオブジェクト名を、targetの部分にコピー先のオブジェクト名を書く
+　　　　　　　　　　　　　　　　　　　つまり、右から「コピー元->コピー先」の順番
 ```
