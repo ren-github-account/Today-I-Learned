@@ -36,3 +36,7 @@ https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Object-oriented_p
 ```
 一般に、コンストラクターはクラス定義の一部として書き出され、通常はクラスそのものと同じ名前を持っています。
 ```
+
+### ポリモーフィズムとは
+
+**同じ名前のメソッドだが、クラスが異なるとその中身が異なること**をポリモーフィズムと呼ぶ。
