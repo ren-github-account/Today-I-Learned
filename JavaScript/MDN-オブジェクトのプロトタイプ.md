@@ -135,7 +135,7 @@ carl.greet(); /* 出力結果:hello!
 
 ||処理の内容|
 |-|-|
-|①|carlオブジェクトが作成され、`Object.create()メソッド`によってcarlオブジェクトのプロトタイプに`personPrototypeオブジェクト`が紐づけられる。|
+|①|まずcarlオブジェクトが作成され、`Object.create()メソッド`によってcarlオブジェクトのプロトタイプに`personPrototypeオブジェクト`が紐づけられる。|
 |②|呼び出す時に`carl.greet();`と書くことで、まずcarlオブジェクト内で`greet()メソッド`が検索され、見つからなかったので、carlオブジェクトのプロトタイプとして設定されている`personPrototypeオブジェクト`内で検索がなされ、無事見つかったので実行される。|
 
 
