@@ -78,7 +78,7 @@ set __proto__: ƒ __proto__()
 
 ### オブジェクトプロトタイプ
 
-`Object.getPrototypeOf()メソッド`は`Object.prototype`と呼ばれるオブジェクトに属する。(`Object.prototype`は、Objectオブジェクトのprototypeプロパティってことなんだろうか。よくわからんな)
+`Object.getPrototypeOf()メソッド`は`Object.prototype`と呼ばれるオブジェクトに属する。(`Object.prototype`は、Objectオブジェクトのprototypeプロパティ)
 
 また、`Object.prototypeオブジェクト`は、**すべてのオブジェクトがデフォルトで持つ、最も基本的なプロトタイプである。**
 
