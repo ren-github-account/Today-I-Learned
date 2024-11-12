@@ -79,7 +79,7 @@ set __proto__: ƒ __proto__()
 
 `Object.getPrototypeOf()メソッド`は`Object.prototype`と呼ばれるオブジェクトに属する。(`Object.prototype`は、Objectオブジェクトのprototypeプロパティってことなんだろうか。よくわからんな)
 
-また、`Object.prototypeオブジェクト`は、すべてのオブジェクトがデフォルトで持つ、最も基本的なプロトタイプとのこと。
+また、`Object.prototypeオブジェクト`は、**すべてのオブジェクトがデフォルトで持つ、最も基本的なプロトタイプである。**
 
 そして、`Object.prototypeオブジェクト`のプロトタイプは`null`であり、そこがプロトタイプの連鎖の終わりとなる。  
 (ここはMDNのページに図があってそれを見た方がわかりやすい。URL:[MDN-オブジェクトのプロトタイプ](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Object_prototypes))
