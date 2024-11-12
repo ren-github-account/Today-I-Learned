@@ -52,3 +52,5 @@ https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Object-oriented_p
 オブジェクトの内部状態を非公開にすること、そして一般に、
 その公開インターフェイスと非公開の内部状態を明確に分けることを、カプセル化と呼びます。
 ```
+
+英語で`interface`は「何かと何かが出合い、お互いに相互作用しあう点」といった意味がある。(豆知識:CGIのIはここから来ている。参照:[CGIとは](https://github.com/ren-github-account/Today-I-Learned/blob/ad12fcba7e3cff4554893abb72741b624e53dd44/Perl/cgi%E3%81%A8%E3%81%AF.md))
