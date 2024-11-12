@@ -96,4 +96,46 @@ JavaScriptではオブジェクトのプロトタイプを自由に設定する�
 |①|`Object.create()メソッド`を使用する|
 |②|コンストラクターを使用する|
 
+順番に見ていく。
+
+まず、`Object.create()メソッド`を使用する方法から。
+
+**・Object.create()メソッドを使用する**
+
+`Object.create()メソッド`は、**新しいオブジェクトを作成し、その新しいオブジェクトのプロトタイプとして使用するオブジェクトを指定することができる。**
+
+使うには以下のように書く。
+
+```
+Object.create(プロトタイプとして使用したいオブジェクト名);
+```
+
+実際に使ってみる。以下のコードを書く。
+
+```
+const personPrototype = {
+  greet() {
+    console.log("hello!");
+ }
+};
+
+const carl = Object.create(personPrototype); /* carlは人名。
+```
+
+動作を確認するには以下のコードを書く。
+
+```
+carl.greet(); /* 出力結果:hello!
+```
+
+
+**上記のコードで何が起こったのか**
+
+`const carl = Object.create(personPrototype);`を書くことで何が行われたのかを以下の表にまとめてみた。
+
+||処理の内容|
+|-|-|
+|①|carlオブジェクトが作成され、`Object.create()メソッド`によってcarlオブジェクトのプロトタイプに`personPrototypeオブジェクト`が紐づけられる。|
+|②|呼び出す時に`carl.greet();`を書くことで、まずcarlオブジェクト内で`greet()メソッド`が検索され、見つからなかったので、carlオブジェクトのプロトタイプとして設定されている`personPrototypeオブジェクト`内で検索がなされ、無事見つかったので実行される。|
+
 
