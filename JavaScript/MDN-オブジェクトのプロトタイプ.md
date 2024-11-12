@@ -190,4 +190,15 @@ function Person(name) {  /* この関数は「コンストラクター関数」�
 Object.assign(Person.prototype, personPrototype); /* 英語でassignは、allocate(割り当てる)という意味
 ```
 
+次にコンストラクター関数を使って、新しいオブジェクトを作成する。以下のコードを書く。
 
+```
+const account = new Person("Reuben");
+```
+
+動作確認には以下のコードを書く。
+```
+account.greet(); /* 出力結果:Hello, my name is Reuben!
+```
+`Hello, my name is Reuben!`と表示され、  
+無事`Object.assign()メソッド`での割り当てが成功していることがわかる。(ここで上の方でやった、「オブジェクトのプロパティにアクセスする時の検索順序」の部分を忘れている場合は合わせて復習されたし。この検索順序がわかっていないと何をやっているのかがよくわからなくなるので)
