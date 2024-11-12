@@ -171,3 +171,23 @@ JavaScript では、すべての関数が prototype という名前のプロパ�
 Object.assign(target, source); /* sourceの部分にコピー元のオブジェクト名を、targetの部分にコピー先のオブジェクト名を書く
 　　　　　　　　　　　　　　　　　　　つまり、右から「コピー元->コピー先」の順番
 ```
+
+それでは前提知識の解説が終わったので、ここから`Object.assign()メソッド`を使用して、コンストラクターで作成するすべてのオブジェクトに特定の機能(プロトタイプ)を付与していく。
+
+以下のコードを書く。
+
+```
+const personPrototype = {
+  greet() {
+    console.log(`hello, my name is ${this.name}!`);
+  },
+};
+
+function Person(name) {
+  this.name = name;
+}
+
+Object.assign(Person.prototype, personPrototype);
+```
+
+
