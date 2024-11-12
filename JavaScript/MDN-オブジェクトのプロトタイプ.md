@@ -81,7 +81,7 @@ set __proto__: ƒ __proto__()
 
 また、`Object.prototypeオブジェクト`は、**すべてのオブジェクトがデフォルトで持つ、最も基本的なプロトタイプである。**
 
-そして、`Object.prototypeオブジェクト`のプロトタイプは`null`であり、そこがプロトタイプの連鎖の終わりとなる。  
+そして、`Object.prototypeオブジェクト`のプロトタイプは`null`であり、そこが**プロトタイプの連鎖の終わり**となる。  
 (ここはMDNのページに図があってそれを見た方がわかりやすい。URL:[MDN-オブジェクトのプロトタイプ](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Object_prototypes))
 
 
