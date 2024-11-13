@@ -18,7 +18,8 @@ https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaSc
 class クラス名 {}　/* このように先頭にclassを付ける
 ```
 
-また、class内ではコンストラクターを定義することができ、その場合は`constructor`というキーワードを使って以下のように書く。
+また、class内ではコンストラクターを定義することができ、その場合は`constructor`というキーワードを使って以下のように書く。  
+**このコンストラクターの箇所は省略してもOK。**
 
 ```
 constructor(引数) {}
