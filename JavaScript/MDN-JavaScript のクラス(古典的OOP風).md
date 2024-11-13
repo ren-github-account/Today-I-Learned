@@ -95,7 +95,7 @@ constructor(name) {
 **メモ書きで書いたコード**
 ```
 function createPerson(name){
-  this.userName = name;
+  this.userName = name; /* ここで初期化処理を行っている
   this.introduceSelf = function(){
     console.log(`Hi! I'm ${this.userName}.`);
    };
