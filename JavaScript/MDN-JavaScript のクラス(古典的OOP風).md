@@ -1,0 +1,30 @@
+*目次*
+* [概要](#概要)
+* [古典的OOP風のクラス定義](#古典的OOP風のクラス定義)
+
+### 概要
+
+本ページは以下の記事の内容を自分なりにまとめたものである。
+
+https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+
+### 古典的OOP風のクラス定義
+
+このトピックでは、JavaやC++などの古典的なオブジェクト指向プログラミング(OOP)に近い形でJavaScriptのクラス定義する方法を学ぶ。
+
+古典的なOOPに近い形でクラスを宣言するには以下のように書く。
+
+```
+class クラス名 {}　/* このように先頭にclassを付ける
+```
+
+また、class内ではコンストラクターを定義することができ、その場合は`constructor`というキーワードを使って以下のように書く。
+
+```
+constructor(引数) {}
+```
+
+この`constructorキーワード`を使って定義されたコンストラクターは、  
+[MDN-オブジェクトの基本](https://github.com/ren-github-account/Today-I-Learned/blob/main/JavaScript/MDN-%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E5%9F%BA%E6%9C%AC.md#%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E5%B0%8E%E5%85%A5)のところでやったのと同じように以下の処理が行われる。
+
+
