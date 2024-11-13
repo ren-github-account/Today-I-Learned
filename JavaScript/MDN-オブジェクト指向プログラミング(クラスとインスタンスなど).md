@@ -31,7 +31,7 @@ https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Object-oriented_p
 
 そしてその **「クラスを使って作られた具体的なオブジェクトのこと」** を、そのクラスの**インスタンス**と呼ぶ。
 
-加えて、**インスタンスの作成にはコンストラクターが使われる。**
+加えて、**インスタンスを作成する処理には、コンストラクターが使われる。**(※ここは[MDN-JavaScript のクラス(古典的OOP風)](https://github.com/ren-github-account/Today-I-Learned/blob/main/JavaScript/MDN-JavaScript%20%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%B9(%E5%8F%A4%E5%85%B8%E7%9A%84OOP%E9%A2%A8).md#%E5%8F%A4%E5%85%B8%E7%9A%84OOP%E9%A2%A8%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%B9%E5%AE%9A%E7%BE%A9)で重要となる)
 ```
 インスタンスを作成する処理は、コンストラクターと呼ばれる特別な関数によって実行されます。
 コンストラクターには、新しいインスタンスで初期化したい内部状態を表す値を渡します。
