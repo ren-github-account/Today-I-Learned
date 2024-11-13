@@ -27,4 +27,13 @@ constructor(引数) {}
 この`constructorキーワード`を使って定義されたコンストラクターは、  
 [MDN-オブジェクトの基本](https://github.com/ren-github-account/Today-I-Learned/blob/main/JavaScript/MDN-%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E5%9F%BA%E6%9C%AC.md#%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E5%B0%8E%E5%85%A5)のところでやったのと同じように以下の処理が行われる。
 
+```
+・新しいオブジェクトを生成する
+
+・新しいオブジェクトに this を結びつけ、コンストラクターのコードで this を参照することができるようにする
+
+・コンストラクターでコードを実行する
+
+・新しいオブジェクトを返す
+```
 
