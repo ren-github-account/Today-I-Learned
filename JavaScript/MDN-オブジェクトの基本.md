@@ -344,7 +344,7 @@ function createPerson(name){
 |②|オブジェクト名を記載していた個所をすべて`this`へと変更。|
 |③|`return`の行を削除。|
 
-実際に使用するには、まずJavaScriptのファイルに以下のコードを追記する。(コンストラクター関数の**先頭にnewを付ける点に注意**)
+実際に使用するには、まずJavaScriptのファイルに以下のコードを追記する。(ここでコンストラクター関数の**先頭にnewを付ける点に注意**)
 
 ```
 const account = new createPerson("Sakuma"); /* ここではオブジェクト名はaccountとしている。
