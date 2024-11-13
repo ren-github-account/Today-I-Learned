@@ -77,13 +77,13 @@ const オブジェクト名 = new クラス名(引数); /* 引数の箇所には
 コンストラクターには、新しいインスタンスで初期化したい内部状態を表す値を渡します。
 ```
 
-上記の引用文のうち以下の記述の意味が、今やっと理解できた。
+上記の引用文のうち**以下の記述の意味**が、今やっと理解できた。
 
 >コンストラクターには、新しいインスタンスで初期化したい内部状態を表す値を渡します。
 
 つまり、コンストラクターを使って**新しくオブジェクト(インスタンス)を作成するたびに初期化したい値を、コンストラクター関数内に記述すれば良い**ということか。
 
-実際、以下に引用した[MDNのページ](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)にある具体例のコードを見ても、新しくオブジェクトを作成するごとに初期化する必要のあるnameプロパティの値が代入されているし、[メモ書き-コンストラクターの代入](https://github.com/ren-github-account/Today-I-Learned/blob/main/JavaScript/MDN-%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E5%9F%BA%E6%9C%AC.md#%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E5%B0%8E%E5%85%A5)のところで書いたコードでも同じように初期化処理が行われている。
+実際、以下に引用した[MDNのページ](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)にある具体例のコードを見ても、新しくオブジェクトを作成するごとに**初期化する必要のあるnameプロパティの値**が代入されているし、[メモ書き-コンストラクターの代入](https://github.com/ren-github-account/Today-I-Learned/blob/main/JavaScript/MDN-%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E5%9F%BA%E6%9C%AC.md#%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E5%B0%8E%E5%85%A5)のところで書いたコードでも同じように**初期化処理**が行われている。
 
 **MDNのページにある具体例のコード**
 ```
