@@ -67,3 +67,38 @@ class クラス名 {
 ```
 const オブジェクト名 = new クラス名(引数); /* 引数の箇所には「"人名"」などを入力する
 ```
+
+つまり、クラスを使ってインスタンスを作成する時も結局はコンストラクターを使用するため、使う時もコンストラクターの時と同じになるということだね。
+
+実際、MDNのページ[オブジェクト指向プログラミング](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Object-oriented_programming)に以下の記述がある。(この記述は[メモ書き](https://github.com/ren-github-account/Today-I-Learned/blob/main/JavaScript/MDN-%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0(%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%A8%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%81%AA%E3%81%A9).md#%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%A8%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%81%A8%E3%81%AF)の箇所でも引用していた)
+
+```
+インスタンスを作成する処理は、コンストラクターと呼ばれる特別な関数によって実行されます。
+コンストラクターには、新しいインスタンスで初期化したい内部状態を表す値を渡します。
+```
+
+上記の引用文のうち以下の記述の意味が、今やっと理解できた。
+
+>コンストラクターには、新しいインスタンスで初期化したい内部状態を表す値を渡します。
+
+つまり、コンストラクターを使って**新しくオブジェクト(インスタンス)を作成するたびに初期化したい値を、コンストラクター関数内に記述すれば良い**ということか。
+
+実際、以下に引用した[MDNのページ](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)にある具体例のコードを見ても、新しくオブジェクトを作成するごとに初期化する必要のあるnameプロパティの値が代入されているし、[メモ書き-コンストラクターの代入](https://github.com/ren-github-account/Today-I-Learned/blob/main/JavaScript/MDN-%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E5%9F%BA%E6%9C%AC.md#%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E5%B0%8E%E5%85%A5)のところで書いたコードでも同じように初期化処理が行われている。
+
+**MDNのページにある具体例のコード**
+```
+constructor(name) {
+    this.name = name;
+  }
+```
+
+**メモ書きで書いたコード**
+```
+function createPerson(name){
+  this.userName = name;
+  this.introduceSelf = function(){
+    console.log(`Hi! I'm ${this.userName}.`);
+   };
+ }
+
+```
