@@ -190,7 +190,10 @@ function Person(name) {  /* この関数は「コンストラクター関数」�
   this.name = name;  /* この行の意味は、作成する人物の名前の初期化を行っている
 }
 
-Object.assign(Person.prototype, personPrototype); /* 英語でassignは、allocate(割り当てる)という意味 ここの行でpersonPrototypeの持つgreet()メソッドをPerson.prototypeへと代入している。こうすることでコンストラクターのPerson(name)を使って新しく作成したオブジェクトでもgreet()メソッドが呼び出せるようになる。
+Object.assign(Person.prototype, personPrototype); /* 英語でassignは、allocate(割り当てる)という意味
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　ここの行でpersonPrototypeの持つgreet()メソッドをPerson.prototypeへと代入している。
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　こうすることでコンストラクターのPerson(name)を使って新しく作成したオブジェクトでも
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　greet()メソッドが呼び出せるようになる。
 ```
 
 次にコンストラクター関数を使って、新しいオブジェクトを作成する。以下のコードを書く。
