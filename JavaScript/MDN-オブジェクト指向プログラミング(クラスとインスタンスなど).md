@@ -78,7 +78,7 @@ https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Object-oriented_p
 
 コンストラクターとプロトタイプはJavaScriptの中核となる機能である。
 
-**コンストラクターはクラス定義のようなもの。**
+**クラス定義はコンストラクターのようなもの。**
 ```
 JavaScript のコンストラクターは、クラス定義のようなもので、オブジェクトの「形状」を定義することができ、
 そのオブジェクトに格納するメソッドも含めて、単一の場所で定義することができます。
