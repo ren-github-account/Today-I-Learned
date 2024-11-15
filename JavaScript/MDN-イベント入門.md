@@ -111,6 +111,7 @@ querySelectorメソッドの**戻り値**は、「指定された**CSSセレク�
 |Document|Documentは**ブラウザで読み込まれたwebページを表す。** そしてDocumentはDOMツリーであるウェブページのコンテンツへの**入口**としての役割を果たす。**DOMツリーとは**ブラウザがHTML文書を解釈する時に構築するものだが、**DocumentはこのDOMツリーの一番上に位置する。**(参照:[DOMツリーのイメージ図](https://developer.mozilla.org/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#dom_%e3%83%84%e3%83%aa%e3%83%bc%e3%81%a8%e3%81%af%ef%bc%9f))つまり、平たくいえば、**DocumentはDOMツリーへの入り口を意味する。**|
 |Elementオブジェクト|上述のElementクラスを使って作成されたオブジェクトのこと。Elementオブジェクトのプロパティの具体例には**innerHTMLプロパティ**(詳しくは[こちら]
 (https://developer.mozilla.org/ja/docs/Web/API/Element/innerHTML))などがある。|
+|Node(ノード)|Node機能(HTML内にあるテキストや`<p></p>`などのタグそれ自体などを置き換えたり取得したりできる機能)を持つすべてのオブジェクトは、DocumentオブジェクトやElementオブジェクトのクラスから派生したサブクラスがベースとなっている。(つまり、Node機能を持つオブジェクトの親クラスにはDocumentクラスやElementクラスが存在する)|
 |innerHTMLプロパティ||
 |CSSセレクター||
 
