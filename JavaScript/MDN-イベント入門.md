@@ -78,6 +78,7 @@ btn.addEventListener("click", () => {
 
 しかし、上記の直接記述パターンは個人的に見づらいと感じる。そういう時は以下のように、関数名のみを記述するやり方でもOK。
 
+**関数名のみ記述パターン**
 ```
 const btn = document.querySelector("button");
 
