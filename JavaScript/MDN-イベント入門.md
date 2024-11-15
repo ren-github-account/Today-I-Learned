@@ -50,5 +50,5 @@ https://developer.mozilla.org/ja/docs/Learn/JavaScript/Building_blocks/Events
 
 ||違い|
 |-|-|
-|イベントリスナー||
-|イベントハンドラー||
+|イベントリスナー|イベントの発生に耳を傾ける。|
+|イベントハンドラー|発生したイベントに応答して動作するコードのこと。|
