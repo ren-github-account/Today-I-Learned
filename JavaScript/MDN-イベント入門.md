@@ -38,3 +38,5 @@ https://developer.mozilla.org/ja/docs/Learn/JavaScript/Building_blocks/Events
 ### イベントハンドラーとは
 
 イベントハンドラーとは、**イベントが発生した時に実行するコードのまとまり(通常はJavaScript関数)のこと。**
+
+イベントハンドラーがイベントに反応して実行するように設定されていることを、**イベントハンドラーを登録**していると言う。
