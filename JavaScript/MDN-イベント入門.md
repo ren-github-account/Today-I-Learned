@@ -110,8 +110,8 @@ querySelectorメソッドの**戻り値**は、「指定された**CSSセレク�
 |Element|Elementオブジェクトを理解するには、そもそもElementとは何かを理解する必要がある。Elementとは、Document内のすべての要素オブジェクト (つまり、要素を描画するオブジェクト) がinherit(継承する)最も一般的で**ベース(基礎)となるクラスのこと。**(クラスについて詳しくは[こちら](https://github.com/ren-github-account/Today-I-Learned/blob/main/JavaScript/MDN-%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0(%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%A8%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%81%AA%E3%81%A9).md#%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%A8%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%81%A8%E3%81%AF)と[こちら](https://github.com/ren-github-account/Today-I-Learned/blob/main/JavaScript/MDN-%E3%82%AF%E3%83%A9%E3%82%B9(%E5%8F%A4%E5%85%B8%E7%9A%84OOP%E9%A2%A8).md)を参照)|
 |Document|Documentは**ブラウザで読み込まれたwebページを表す。** そしてDocumentはDOMツリーであるウェブページのコンテンツへの**入口**としての役割を果たす。**DOMツリーとは**ブラウザがHTML文書を解釈する時に構築するものだが、**DocumentはこのDOMツリーの一番上に位置する。**(参照:[DOMツリーのイメージ図](https://developer.mozilla.org/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#dom_%e3%83%84%e3%83%aa%e3%83%bc%e3%81%a8%e3%81%af%ef%bc%9f))つまり、平たくいえば、**DocumentはDOMツリーへの入り口を意味する。**|
 |Elementオブジェクト|上述のElementクラスを使って作成されたオブジェクトのこと。Elementオブジェクトのプロパティの具体例には**innerHTMLプロパティ**などがある。詳しくは[こちら](https://developer.mozilla.org/ja/docs/Web/API/Element/innerHTML)|
-|Node(ノード)|NodeとはブラウザがHTMLを解釈する時に作られるもの。このNode機能を持つすべてのオブジェクトは、例えばDocumentオブジェクトやElementオブジェクトのクラスから派生したサブクラスがベースとなっている。(つまり、Node機能を持つオブジェクトの親クラスにはDocumentクラスやElementクラスが存在する)|
-|innerHTMLプロパティ|(HTML内にあるテキストや`<p></p>`などのタグそれ自体などを置き換えたり取得したりできる機能|
+|Node(ノード)|**NodeとはブラウザがHTMLを解釈する時に作られるもの。** このNode機能を持つすべてのオブジェクトは、例えばDocumentオブジェクトやElementオブジェクトのクラスから派生したサブクラスがベースとなっている。(つまり、Node機能を持つオブジェクトの親クラスにはDocumentクラスやElementクラスが存在する)|
+|innerHTMLプロパティ|HTML内にあるテキストや`<p></p>`などのタグそれ自体などを置き換えたり取得したりできる機能を持つ。(参照:[innerHTMLの使い方](http://javascriptmania.blog111.fc2.com/blog-entry-18.html))|
 |CSSセレクター||
 
 ### リスナーを削除する
