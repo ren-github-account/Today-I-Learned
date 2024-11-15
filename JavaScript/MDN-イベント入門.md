@@ -3,6 +3,7 @@
 * [イベントとは](#イベントとは)
 * [イベントハンドラーとは](#イベントハンドラーとは)
 * [イベントリスナーの使い方](#イベントリスナーの使い方)
+* [querySelectorメソッド](#querySelectorメソッド)
 * [リスナーを削除する](#リスナーを削除する)
 
 ### 概要
@@ -95,6 +96,12 @@ function changeBackground() {
 
 btn.addEventListener("click", changeBackground); /* 関数名のみを記述している。ここで使用する関数は上で定義している。
 ```
+
+### querySelectorメソッド
+
+よく`addEventListener()`と合わせて使われるメソッド。
+
+意味は、「Elementオブジェクトで、文書内で指定されたCSSセレクターに最初に一致する要素を示すオブジェクトを返す。一致する要素がない場合はnullを返す。」
 
 ### リスナーを削除する
 
