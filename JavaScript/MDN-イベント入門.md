@@ -52,8 +52,10 @@ https://developer.mozilla.org/ja/docs/Learn/JavaScript/Building_blocks/Events
 
 ||違い|
 |-|-|
-|イベントリスナー|イベントの発生に耳を傾ける。(つまり認識する的な意味)|
+|イベントリスナー|イベントの発生に耳を傾ける。(つまりperceive(知覚する)的な意味)|
 |イベントハンドラー|発生したイベントに応答して動作するコードのこと。|
+
+Listenの意味については、[この](https://www.grammar-monster.com/easily_confused/hear_listen.htm)サイトが図解付きでわかりやすかった。
 
 ### イベントリスナーの使い方
 
