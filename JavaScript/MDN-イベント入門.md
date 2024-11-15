@@ -107,8 +107,8 @@ btn.addEventListener("click", changeBackground); /* 関数名のみを記述し�
 
 ||意味|
 |-|-|
-|Element|Elementオブジェクトを理解するには、そもそもElementとは何かを理解する必要がある。Elementとは、Document内のすべての要素オブジェクト (つまり、要素を描画するオブジェクト) が継承する最も一般的でベース(基礎)となる**クラスのこと。**|
-|||
+|Element|Elementオブジェクトを理解するには、そもそもElementとは何かを理解する必要がある。Elementとは、Document内のすべての要素オブジェクト (つまり、要素を描画するオブジェクト) がinherit(継承する)最も一般的で**ベース(基礎)となるクラスのこと。**|
+|Document|Documentは**ブラウザで読み込まれたwebページを表す。** そしてDocumentはDOMツリーであるウェブページのコンテンツへの**入口**としての役割を果たす。|
 |Elementオブジェクト||
 |CSSセレクター||
 
