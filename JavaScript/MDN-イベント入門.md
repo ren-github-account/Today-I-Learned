@@ -2,6 +2,7 @@
 * [概要](#概要)
 * [イベントとは](#イベントとは)
 * [イベントハンドラーとは](#イベントハンドラーとは)
+* [イベントリスナーの使い方](#イベントリスナーの使い方)
 * [リスナーを削除する](#リスナーを削除する)
 
 ### 概要
@@ -53,6 +54,44 @@ https://developer.mozilla.org/ja/docs/Learn/JavaScript/Building_blocks/Events
 |-|-|
 |イベントリスナー|イベントの発生に耳を傾ける。(つまり認識する的な意味)|
 |イベントハンドラー|発生したイベントに応答して動作するコードのこと。|
+
+### イベントリスナーの使い方
+
+イベントハンドラーを追加するには、`addEventListener()メソッド`を使用する。
+
+`addEventListener()`の使い方をググると、以下のコードのように`addEventListener()`内に直接、関数の処理を記述しているパターンをよく見かける。
+
+**直接記述パターン**
+```
+const btn = document.querySelector("button");
+
+function random(number) {
+  return Math.floor(Math.random() * (number + 1));
+}
+
+btn.addEventListener("click", () => {
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`; /* 上で定義したrandom関数を参照してはいるが、
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　関数の処理をaddEventListener()内に直接記述している
+  document.body.style.backgroundColor = rndCol;
+});
+```
+
+しかし、上記の直接記述パターンは個人的に見づらいと感じる。そういう時は以下のように、関数名のみを記述するやり方でもOK。
+
+```
+const btn = document.querySelector("button");
+
+function random(number) {
+  return Math.floor(Math.random() * (number + 1));
+}
+
+function changeBackground() {
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+  document.body.style.backgroundColor = rndCol;
+}
+
+btn.addEventListener("click", changeBackground); /* 関数名のみを記述している。ここで使用する関数は上で定義している。
+```
 
 ### リスナーを削除する
 
