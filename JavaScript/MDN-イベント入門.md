@@ -111,7 +111,7 @@ querySelectorメソッドの**戻り値**は、「指定された**CSSセレク�
 |Document|Documentは**ブラウザで読み込まれたwebページを表す。** そしてDocumentはDOMツリーであるウェブページのコンテンツへの**入口**としての役割を果たす。**DOMツリーとは**ブラウザがHTML文書を解釈する時に構築するものだが、**DocumentはこのDOMツリーの一番上に位置する。**(参照:[DOMツリーのイメージ図](https://developer.mozilla.org/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#dom_%e3%83%84%e3%83%aa%e3%83%bc%e3%81%a8%e3%81%af%ef%bc%9f))つまり、平たくいえば、**DocumentはDOMツリーへの入り口を意味する。**|
 |Elementオブジェクト|上述のElementクラスを使って作成されたオブジェクトのこと。Elementオブジェクトのプロパティの具体例には**innerHTMLプロパティ**などがある。その他にも**id**や**classname**や**子要素**などがある。詳しくは[こちら](https://developer.mozilla.org/ja/docs/Web/API/Element/innerHTML)|
 |Node(ノード)|**NodeとはブラウザがHTMLを解釈する時に作られるもの。** このNode機能を持つすべてのオブジェクトは、例えばDocumentオブジェクトやElementオブジェクトのクラスから派生したサブクラスがベースとなっている。(つまり、Node機能を持つオブジェクトの親クラスにはDocumentクラスやElementクラスが存在する)|
-|innerHTMLプロパティ|HTML内にあるテキストや`<p></p>`などのタグそれ自体などを置き換えたり取得したりできる機能を持つ。(参照:[innerHTMLの使い方](http://javascriptmania.blog111.fc2.com/blog-entry-18.html)) **innerHTMLで値を代入すると、その値として与えられたHTMLを解釈して構築されたノードに置き換える。** **注意点**としてinnerHTMLはXSS防止の観点から非推奨で、代わりに`textContentプロパティ`の使用が推奨される。|
+|innerHTMLプロパティ|HTML内にあるテキストや`<p></p>`などのタグそれ自体などを置き換えたり取得したりできる機能を持つ。(参照:[innerHTMLの使い方](http://javascriptmania.blog111.fc2.com/blog-entry-18.html)) **innerHTMLで値を代入すると、その値として与えられたHTMLを解釈して構築されたノードに置き換える。** **注意点**としてinnerHTMLはXSS防止の観点から非推奨で、**代わりに`textContentプロパティ`の使用が推奨される。**|
 |Serialization (シリアライズ)|オブジェクトやデータ構造が転送に適したフォーマットに変換されること。(参照:MDN用語集より)|
 |CSSセレクター|CSSを使って**どのHTML要素に変更を加えるかをブラウザーに伝えるもの。** ここで選択された要素にはCSSプロパティ値 (property value)が適用される。参照:[CSSセレクター](https://developer.mozilla.org/ja/docs/Learn/CSS/Building_blocks/Selectors)|
 
