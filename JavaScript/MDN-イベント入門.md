@@ -4,6 +4,7 @@
 * [イベントハンドラーとは](#イベントハンドラーとは)
 * [イベントリスナーの使い方](#イベントリスナーの使い方)
 * [querySelectorメソッド](#querySelectorメソッド)
+* [DOMとインターフェイスの関係](#DOMとインターフェイスの関係)
 * [リスナーを削除する](#リスナーを削除する)
 
 ### 概要
@@ -137,6 +138,12 @@ querySelectorメソッドの**戻り値**は、「指定された**CSSセレク�
 |innerHTMLプロパティ|HTML内にあるテキストや`<p></p>`などのタグそれ自体などを置き換えたり取得したりできる機能を持つ。(参照:[innerHTMLの使い方](http://javascriptmania.blog111.fc2.com/blog-entry-18.html)) **innerHTMLで値を代入すると、その値として与えられたHTMLを解釈して構築されたノードに置き換える。** **注意点**としてinnerHTMLはXSS防止の観点から非推奨で、**代わりに`textContentプロパティ`の使用が推奨される。**|
 |Serialization (シリアライズ)|オブジェクトやデータ構造が転送に適したフォーマットに変換されること。(参照:MDN用語集より)|
 |CSSセレクター|CSSを使って**どのHTML要素に変更を加えるかをブラウザーに伝えるもの。** ここで選択された要素にはCSSプロパティ値 (property value)が適用される。参照:[CSSセレクター](https://developer.mozilla.org/ja/docs/Learn/CSS/Building_blocks/Selectors)|
+
+### DOMとインターフェイスの関係
+
+上記でDOMとそのインターフェイスについて細かな仕様を見てきた。
+
+DOMとインターフェイスについて
 
 ### リスナーを削除する
 
