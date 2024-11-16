@@ -113,7 +113,7 @@ querySelectorメソッドの**戻り値**は、「指定された**CSSセレク�
 |Node(ノード)|**NodeとはブラウザがHTMLを解釈する時に作られるもの。** このNode機能を持つすべてのオブジェクトは、例えばDocumentオブジェクトやElementオブジェクトのクラスから派生したサブクラスがベースとなっている。(つまり、Node機能を持つオブジェクトの親クラスにはDocumentクラスやElementクラスが存在する)|
 |innerHTMLプロパティ|HTML内にあるテキストや`<p></p>`などのタグそれ自体などを置き換えたり取得したりできる機能を持つ。(参照:[innerHTMLの使い方](http://javascriptmania.blog111.fc2.com/blog-entry-18.html)) **innerHTMLで値を代入すると、その値として与えられたHTMLを解釈して構築されたノードに置き換える。** **注意点**としてinnerHTMLはXSS防止の観点から非推奨で、代わりに`textContentプロパティ`の使用が推奨される。|
 |Serialization (シリアライズ)|オブジェクトやデータ構造が転送に適したフォーマットに変換されること。(参照:MDN用語集より)|
-|CSSセレクター||
+|CSSセレクター|CSSを使ってどのHTML要素に変更を加えるかをブラウザーに伝えるもの。ここで選択された要素にはCSSプロパティ値 (property value)が適用される。参照:[CSSセレクター](https://developer.mozilla.org/ja/docs/Learn/CSS/Building_blocks/Selectors)|
 
 ### リスナーを削除する
 
