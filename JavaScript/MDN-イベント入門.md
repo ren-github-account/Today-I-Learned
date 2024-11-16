@@ -99,9 +99,16 @@ btn.addEventListener("click", changeBackground); /* 関数名のみを記述し�
 
 ### querySelectorメソッド
 
-`addEventListener()`と一緒によく使われるメソッド。
+`addEventListener()`と一緒によく使われるメソッド。DOMツリー内をCSSセレクターを指定することで**検索**できるみたいなイメージ。
 
-querySelectorメソッドの**戻り値**は、「指定された**CSSセレクター**のset(まとまり)に一致するドキュメント内の最初の要素を表現する**Elementオブジェクト**を返す。一致するものがない場合は`null`を返す」。  
+**構文**
+```
+querySelector(selectors)
+```
+
+ querySelectorメソッドで指定できるselectorの部分には、CSSでプロパティを設定する時に使うセレクターが指定できるが、**結合子などと組み合わせることで複雑な条件付きの検索が可能となる。** ( 参照:[こちら](https://swfz.hatenablog.com/entry/2023/07/15/183739) )
+
+querySelectorメソッドの**戻り値**は、「指定された**CSSセレクター**のset(まとまり)に一致するオブジェクトのうち、ドキュメント内の最初にある(要素を描画している)**Elementオブジェクト**を返す。一致するものがない場合は`null`を返す」。  
 
 この`null`を返すという特性から、**if文と組み合わせて判定に使うことができる。**( 参照:[こちら](https://coding-memo.work/javascript/988/) )
 
