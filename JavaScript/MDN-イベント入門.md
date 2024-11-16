@@ -108,6 +108,14 @@ querySelector(selectors)
 
  querySelectorメソッドで指定できるselectorの部分には、CSSでプロパティを設定する時に使うセレクターが指定できるが、**結合子などと組み合わせることで複雑な条件付きの検索が可能となる。** ( 参照:[こちら](https://swfz.hatenablog.com/entry/2023/07/15/183739) )
 
+**使い方**
+
+以下の例は、class名に"myclass" を持つ文書内の要素の内、最初のものを返す。
+```
+const el = document.querySelector(".myclass");
+```
+
+**戻り値**
 querySelectorメソッドの**戻り値**は、「指定された**CSSセレクター**のset(まとまり)に一致するオブジェクトのうち、ドキュメント内の最初にある(要素を描画している)**Elementオブジェクト**を返す。一致するものがない場合は`null`を返す」。  
 
 この`null`を返すという特性から、**if文と組み合わせて判定に使うことができる。**( 参照:[こちら](https://coding-memo.work/javascript/988/) )
