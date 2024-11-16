@@ -101,7 +101,8 @@ btn.addEventListener("click", changeBackground); /* 関数名のみを記述し�
 
 `addEventListener()`と一緒によく使われるメソッド。
 
-querySelectorメソッドの**戻り値**は、「指定された**CSSセレクター**のset(まとまり)に一致するドキュメント内の最初の要素を表現する**Elementオブジェクト**を返す。一致するものがない場合は`null`を返す」。この`null`を返すという特性から、if文と組み合わせて判定に使うことができる。( 参照:[こちら](https://coding-memo.work/javascript/988/) )
+querySelectorメソッドの**戻り値**は、「指定された**CSSセレクター**のset(まとまり)に一致するドキュメント内の最初の要素を表現する**Elementオブジェクト**を返す。一致するものがない場合は`null`を返す」。  
+**この`null`を返すという特性から、if文と組み合わせて判定に使うことができる。**( 参照:[こちら](https://coding-memo.work/javascript/988/) )
 
 上記の説明文でわからない単語が2つ出てきたので以下の表にまとめる。(2つの単語以外にもその前提となる単語をまとめている)
 
