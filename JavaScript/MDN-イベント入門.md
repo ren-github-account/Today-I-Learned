@@ -99,7 +99,7 @@ btn.addEventListener("click", changeBackground); /* 関数名のみを記述し�
 
 ### querySelectorメソッド
 
-`addEventListener()`と一緒によく使われるメソッド。イメージとしてはDOMツリー内をCSSセレクターを指定することで**検索**できるみたいな感じ。
+`addEventListener()`と一緒によく使われるメソッド。イメージとしてはDOMツリー内をCSSセレクターで**検索**できるみたいな感じ。
 
 **構文**
 ```
