@@ -113,12 +113,20 @@ querySelector(selectors)
 
 **使い方**
 
-以下の例は、class名に"myclass" を持つ文書内の要素の内、最初のものを返す。
+以下の例は、class名に"myclass" を持つ文書内の要素の内、**最初のものを返す。**
 ```
 const el = document.querySelector(".myclass");
 ```
+**最初のものを返す**という点に注意。なのでHTMLに以下ように書かれていた場合、「💩でごんすごんす」とかかれた要素のみが戻り値として返される。
 
-豆知識:CSSのセレクターの部分を以下のように`.myclass`のみ記述しても反映される。( 参照:[ドットでつなげるやつ](https://github.com/ren-github-account/Today-I-Learned/blob/main/%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E8%A8%80%E8%AA%9E/CSS/%E3%83%89%E3%83%83%E3%83%88%E3%81%A7%E3%81%A4%E3%81%AA%E3%81%92%E3%82%8B%E3%82%84%E3%81%A4.md) )
+```
+<body>
+   <div class="myclass">💩でごんすごんす</div>  
+   <div class="myclass">うへへ</div>
+</body>
+```
+
+**・豆知識**:CSSのセレクターの部分を以下のように`.myclass`のみ記述しても反映される。( 参照:[ドットでつなげるやつ](https://github.com/ren-github-account/Today-I-Learned/blob/main/%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E8%A8%80%E8%AA%9E/CSS/%E3%83%89%E3%83%83%E3%83%88%E3%81%A7%E3%81%A4%E3%81%AA%E3%81%92%E3%82%8B%E3%82%84%E3%81%A4.md) )
 
 ```
 .myclass {
