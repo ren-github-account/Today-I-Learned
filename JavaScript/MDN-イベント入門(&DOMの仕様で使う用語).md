@@ -175,9 +175,15 @@ querySelectorメソッドの**戻り値**は、「指定された**CSSセレク�
 
 まず前提として**CSSを構成する要素はDOMでは全てオブジェクト**で表される。
 
-そのDOMのオブジェクトの一つが**CSSStyleSheet**となる。
+その**DOM持つオブジェクトの一つがCSSStyleSheet**となる。
 
 CSSStyleSheetは、CSSそのもので最も大きなまとまりを表す。具体的には、**CSSファイルに記述されたCSS全体(HTMLに直接記述している場合は、`<style>～</style>`の間の全て)** を表している。
+
+もし、**`<style>〜</style>`が2つ以上あった場合、それぞれのstyle要素ごとにCSSStyleSheetが存在する。** 
+
+つまり、CSSファイルの数だけ、もしくは`<style>`タグの数の分だけCSSStyleSheetは存在するってことだな。
+
+
 
 ### リスナーを削除する
 
