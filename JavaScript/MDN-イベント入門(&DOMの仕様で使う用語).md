@@ -4,6 +4,7 @@
 * [イベントハンドラーとは](#イベントハンドラーとは)
 * [イベントリスナーの使い方](#イベントリスナーの使い方)
 * [querySelectorメソッド](#querySelectorメソッド)
+* [DOMの基礎知識](#DOMの基礎知識)
 * [DOMとインターフェイスの関係](#DOMとインターフェイスの関係)
 * [CSSStyleSheetとは](#CSSStyleSheetとは)
 * [CSSStyleSheetを取得](#CSSStyleSheetを取得)
