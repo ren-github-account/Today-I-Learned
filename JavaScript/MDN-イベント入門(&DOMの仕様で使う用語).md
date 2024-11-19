@@ -8,6 +8,7 @@
 * [DOMとインターフェイスの関係](#DOMとインターフェイスの関係)
 * [CSSStyleSheetとは](#CSSStyleSheetとは)
 * [CSSStyleSheetを取得](#CSSStyleSheetを取得)
+* [CSSRule](#CSSRule)
 * [リスナーを削除する](#リスナーを削除する)
 * [複数のハンドラーを追加する](#複数のハンドラーを追加する)
 
@@ -205,7 +206,7 @@ CSSStyleSheetは、CSSそのもので最も大きなまとまりを表す。具�
 
 それには、**documentオブジェクトが持つstyleSheetsプロパティ**を使用することで取得できる。
 
-**使い方**は以下のように書く。**注意点**として、**末尾の`[0]`は一番最初の最初のCSSStyleSheetを表しており、付けないとエラーになる。**
+**使い方**は以下のように書く。**注意点**として、**末尾の`[0]`は一番最初の最初のCSSStyleSheetのことを表しており、付けないとエラーになる。**
 
 ```
 document.styleSheets[0]
@@ -213,6 +214,44 @@ document.styleSheets[0]
 /* 一方、以下のように末尾に添字を書かないで実行しようとしたらエラーが出た  */
 document.stylesheets
 ```
+
+### CSSRule
+
+上述のCSSStyleSheetは、**CSSファイルに記述されたCSS全体(HTMLに直接記述している場合は、`<style>～</style>`の間の全て)のこと**を表すのだった。
+
+そのCSSStyleSheetはさらに、**CSS内のセレクタごとに細かく分けることができる。**
+
+例えば、以下のCSSがあったとする。
+
+```
+.myclass {
+ background:#fffaf0;
+}
+
+div.change-color {
+ background:#7fffd4;
+ width:200px;
+ height:200px;
+}
+```
+
+上記のコード内でセレクタを数えてみると、`.myclass `と`div.change-color`という2つのセレクタが存在する。
+
+今述べた**それぞれのセレクタは、CSSStyleSheetの持つCSSRulesというプロパティによって管理されており、セレクタごとに添字(例:`[0]`)が付与されている。** ( 参照:[CSSの構造](https://uhyohyo.net/javascript/5_2.html) )
+
+例えば、上記のコードでいえば、セレクタ`.myclass`は、`[0]`の添字を持つCSSRulesプロパティに格納されており、`div.change-color`は`[1]`といった具合になる。
+
+**使い方**
+
+CSSRulesを実際に使うには、変数と組み合わせて以下のように使う。つまづきポイントしては、CSSRulesを直接使うのではなく、変数と組み合わせて **変数[添字]** という形で使うことに最初は違和感を覚えるかもしれないがそのうち慣れる。
+
+```
+let stylesheetInfo = document.styleSheets[0].cssRules;
+stylesheetInfo[1].style.backgroundColor = "#00bfff";　/* 変数stylesheetInfo[1]とすることで、
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　上述のCSSコードでいえばセレクタ`div.change-color`のCSSを呼び出している
+```
+
+
 
 
 ### リスナーを削除する
