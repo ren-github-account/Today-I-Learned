@@ -262,7 +262,7 @@ stylesheetInfo[1].style.backgroundColor = "#00bfff";　/* 変数stylesheetInfo[1
 
 ローカル環境(何もせずにPC内のhtmlファイルをダブルクリックするやり方)で、以下のCSSStyleSheetオブジェクトのCSSRulesプロパティを含んだコードを実行しようとしたら出た。
 ```
- const stylesheetInfo = document.styleSheets[0].cssRules;
+ const stylesheetInfo = document.styleSheets[0].cssRules; /* エラーメッセージによると末尾のcssRulesの部分で引っかかっていた
  stylesheetInfo[1].style.backgroundColor = "#00bfff";
 ```
 
