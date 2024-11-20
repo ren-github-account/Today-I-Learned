@@ -251,7 +251,7 @@ stylesheetInfo[1].style.backgroundColor = "#00bfff";　/* 変数stylesheetInfo[1
 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　上述のCSSコードでいえばセレクタ`div.change-color`のCSSを呼び出している
 ```
 
-上記のコードのうち**`style.backgroundColor`**となっている部分の解説をしておくと、この部分は、**DOMのstyleオブジェクトのbackgroundColorプロパティを指定している。**
+上記のコードのうち **`style.backgroundColor`** となっている部分の解説をしておくと、この部分は、**DOMのstyleオブジェクトのbackgroundColorプロパティを指定している。**
 
 **styleオブジェクトとは、CSSを扱うことができるオブジェクトのこと。**
 
