@@ -237,9 +237,9 @@ div.change-color {
 
 上記のコード内でセレクタを数えてみると、`.myclass `と`div.change-color`という2つのセレクタが存在する。
 
-今述べた**それぞれのセレクタは、CSSStyleSheetの持つCSSRulesというプロパティによって管理されており、セレクタごとに添字(例:`[0]`)が付与されている。** ( 参照:[CSSの構造](https://uhyohyo.net/javascript/5_2.html) )
+今述べた**それぞれのセレクタは、CSSStyleSheetの持つCSSRulesというプロパティによって管理されており、各セレクタごとに添字(例:`[0]`)が付与されている。** ( 参照:[CSSの構造](https://uhyohyo.net/javascript/5_2.html) )
 
-例えば、上記のコードでいえば、セレクタ`.myclass`は、`[0]`の添字を持つCSSRulesプロパティに格納されており、`div.change-color`は`[1]`といった具合になる。
+例えば上記のコードでいえば、一番目のセレクタ`.myclass`は、`[0]`の添字を持つCSSRulesプロパティに格納されており、`div.change-color`は`[1]`といった具合になる。
 
 **使い方**
 
