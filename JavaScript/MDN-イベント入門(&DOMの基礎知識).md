@@ -9,6 +9,7 @@
 * [CSSStyleSheetとは](#CSSStyleSheetとは)
 * [CSSStyleSheetを取得](#CSSStyleSheetを取得)
 * [CSSRule](#CSSRule)
+* [エラー対処](#エラー対処)
 * [リスナーを削除する](#リスナーを削除する)
 * [複数のハンドラーを追加する](#複数のハンドラーを追加する)
 
@@ -256,6 +257,31 @@ stylesheetInfo[1].style.backgroundColor = "#00bfff";　/* 変数stylesheetInfo[1
 **styleオブジェクトとは、CSSを扱うことができるオブジェクトのこと。**
 
 **backgroundColorプロパティ**は、そのstyleオブジェクトが持つ**背景色を指定することができるプロパティ**となる。参照:[styleオブジェクトのプロパティ一覧](http://alphasis.info/javascript/dom/styleobject/)
+
+### エラー対処
+
+ローカル環境(何もせずにPC内のhtmlファイルをダブルクリックするやり方)で、以下のCSSStyleSheetオブジェクトのCSSRulesプロパティを含んだコードを実行しようとしたら出た。
+```
+ const stylesheetInfo = document.styleSheets[0].cssRules;
+ stylesheetInfo[1].style.backgroundColor = "#00bfff";
+```
+
+エラーメッセージを読むと、**セキュリティエラー**と書いてある。
+
+**対処法**
+
+XAMPPでサーバーを立ててそのサーバー上で実行するとエラーが回避できた。
+
+**エラーメッセージ**
+```
+Uncaught SecurityError: Failed to read the 'cssRules' property from 'CSSStyleSheet': Cannot access rules
+
+【翻訳】
+キャッチされないセキュリティ エラー: 'CSSStyleSheet' から 'cssRules' プロパティを読み取ることができませんでした: ルールにアクセスできません
+```
+
+参考
+[Google Chromeはローカル環境でlinkタグのスタイルシートのcssRulesにアクセスできなかった](https://qiita.com/querykuma/items/930b20758b06c31d2af5)
 
 
 ### リスナーを削除する
