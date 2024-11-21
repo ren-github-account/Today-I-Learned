@@ -71,7 +71,7 @@ p{
 
 ` document.body.addEventListener("click",listener);`の部分では、documentオブジェクトのbodyインスタンスプロパティ( 参照:[Document](https://developer.mozilla.org/ja/docs/Web/API/Document) )に対して、addEventListenerを適用している。
 
-`console.log`の引数に**複数指定する**場合は上記のコードのように **カンマ(,)** で区切って入力する。
+`console.log`の引数に**複数指定する**場合は上記のコードのように **カンマ(,)** で区切って入力する。( 参照:[コンソールログへ出力](https://www.javadrive.jp/javascript/console/index5.html) )
 
 上記のコードを実行してみると、p要素をクリックした時には、targetプロパティの値が`<p>test</p>`となり、div要素をクリックすると**targetプロパティは**`<div>…</div>`となり**変化するが、**  
 一方で**currentTargetプロパティの値**はずっと`<body>…</body>`のままで**変化しない。** 変化しない理由は、currentTargetプロパティの中には**イベントハンドラーが登録された要素**が入っているから。
