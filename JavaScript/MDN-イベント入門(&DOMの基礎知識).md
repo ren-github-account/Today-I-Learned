@@ -123,6 +123,12 @@ querySelector(selectors)
 ```
 const el = document.querySelector(".myclass");
 ```
+
+また、class名ではなく**idも指定することができる。** idの場合は先頭に **#** を付ける。( 参照:[id属性の指定](https://www.javadrive.jp/javascript/dom/index8.html#section2_3) )
+```
+const el = document.querySelector("#myclass");
+```
+
 **最初のものを返す**という点に注意。なのでHTMLに以下ように書かれていた場合、「💩でごんすごんす」とかかれた要素のみが戻り値として返される。
 
 ```
