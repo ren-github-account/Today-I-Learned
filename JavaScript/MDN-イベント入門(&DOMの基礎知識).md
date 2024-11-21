@@ -314,3 +314,4 @@ myElement.addEventListener("click", functionA);
 myElement.addEventListener("click", functionB);
 ```
 
+長くなったのでその2へ続く。
