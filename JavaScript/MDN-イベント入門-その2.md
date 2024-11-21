@@ -27,3 +27,43 @@
 |-|-|
 |currentTargetプロパティ|イベントハンドラーが**登録されている**HTML要素を表す|
 |targetプロパティ|実際にイベントが**発生した**HTML要素を表す|
+
+**使い方**
+
+実際に使うには、以下のように使う。
+
+HTMLとJavaScript
+```
+<body>
+
+   <div>
+      <p>test</p>
+      <p>test</p>
+      <p>test</p>
+    </div> 
+
+<script>
+
+ var listener = function(ev){
+          console.log("target:" ,ev.target, "relatedTarget:" ,ev.currentTarget);
+      }
+
+      document.body.addEventListener("click",listener);
+
+ </script>
+  </body>
+
+```
+
+CSS
+```
+div{
+    background-color:ebe3d5;
+   }
+      
+p{
+   background-color:#f3eeea;
+ }
+```
+
+
