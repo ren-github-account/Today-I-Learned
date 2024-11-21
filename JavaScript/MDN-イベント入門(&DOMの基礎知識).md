@@ -314,4 +314,4 @@ myElement.addEventListener("click", functionA);
 myElement.addEventListener("click", functionB);
 ```
 
-長くなったのでその2へ続く。
+長くなったのでその2へ続く。[その2](https://github.com/ren-github-account/Today-I-Learned/blob/main/JavaScript/MDN-%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%85%A5%E9%96%80-%E3%81%9D%E3%81%AE2.md)
