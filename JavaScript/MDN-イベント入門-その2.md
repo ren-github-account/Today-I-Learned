@@ -117,6 +117,36 @@ p{
 
 **英語でelse**は「その代わり」といった意味。
 
+**応用**
+
+上記のコードでは、tagNameプロパティを使用したけど、それ以外にも**クラス名を取得するclassNameプロパティやidを取得するidプロパティ**も同じように使用することができる。というか、こちらの方が実用性が高いと思う。
+
+**注意点**として、classNameプロパティは**class「Name」** と**Name**の先頭は大文字にする点に注意。そうしないとうまく動かない。
+
+上記のコードのJavaScriptの部分を改良してclassName使って以下のコードを書いてみた。
+
+```
+<script>
+
+ const listener = function(ev){
+       if(ev.target.className == "tanaka"){
+          console.log("こんにちわtanakaです");
+       } else {
+          console.log("ﾌﾞﾌﾞﾌﾞｯぅー! tanakaじゃないよ");
+       }
+      
+      }
+
+      document.body.addEventListener("click",listener);
+
+ </script>
+
+```
+
+**解説**
+
+上記のコードを実行すると、body内の要素をクリックした時、要素のクラス名が「tanaka」なら「こんにちわtanakaです」と表示され、そうではない場合「ﾌﾞﾌﾞﾌﾞｯぅー! tanakaじゃないよ」と表示される。
+
 
 
 
