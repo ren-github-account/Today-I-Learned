@@ -32,7 +32,7 @@
 
 実際に使うには、以下のように使う。
 
-HTMLとJavaScript
+【HTMLとJavaScript】
 ```
 <body>
 
@@ -55,7 +55,7 @@ HTMLとJavaScript
 
 ```
 
-CSS
+【CSS】
 ```
 div{
     background-color:ebe3d5;
@@ -65,5 +65,15 @@ p{
    background-color:#f3eeea;
  }
 ```
+
+**解説**
+
+` document.body.addEventListener("click",listener);`の部分では、documentオブジェクトのbodyインスタンスプロパティ( 参照:[Document](https://developer.mozilla.org/ja/docs/Web/API/Document) )に対して、addEventListenerを適用している。
+
+`console.log`の引数に**複数指定する**場合は上記のコードのように **カンマ(,)** で区切って入力する。
+
+上記のコードを実行してみると、p要素をクリックした時には、targetプロパティの値が`<p>test</p>`となり、div要素をクリックするとtargetプロパティは`<div>…</div>`となり変化するが、  
+一方でcurrentTargetプロパティの値はずっと`<body>…</body>`のままで変化しない。変化しない理由は、currentTargetプロパティの中にはイベントハンドラーが登録された要素が入っているから。
+
 
 
