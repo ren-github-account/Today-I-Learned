@@ -2,6 +2,7 @@
 * [概要](#概要)
 * [イベントオブジェクト](#イベントオブジェクト)
 * [イベントオブジェクトの持つプロパティ](#イベントオブジェクトの持つプロパティ)
+* [targetプロパティの活用法](#targetプロパティの活用法)
 
 ### 概要
 
@@ -74,6 +75,46 @@ p{
 
 上記のコードを実行してみると、p要素をクリックした時には、targetプロパティの値が`<p>test</p>`となり、div要素をクリックすると**targetプロパティは**`<div>…</div>`となり**変化するが、**  
 一方で**currentTargetプロパティの値**はずっと`<body>…</body>`のままで**変化しない。** 変化しない理由は、currentTargetプロパティの中には**イベントハンドラーが登録された要素**が入っているから。
+
+### targetプロパティの活用法
+
+イベントオブジェクトの持つプロパティのうち、**targetプロパティは、if文の判定に使用することができる**のでとても便利。
+
+具体的には以下のように使用する。
+
+```
+
+  <body>
+
+   <div>
+      <p>test</p>
+      <p>test</p>
+      <p>test</p>
+    </div> 
+
+<script>
+
+ const listener = function(ev){
+       if(ev.target.tagName == "P"){
+          console.log("p");
+       } else if(ev.target.tagName == "DIV"){
+          console.log("div");
+       }
+          
+      }
+
+      document.body.addEventListener("click",listener);
+
+ </script>
+  </body>
+```
+
+**解説**
+
+上記のコードで新しく出てきた`tagNameプロパティ`は、**HTML要素のタグ名を返すプロパティ。**(具体的には、div要素なら`DIV`、p要素なら`P`と返す)
+
+**注意点**として、**HTML文書でtagNameプロパティを使用する場合、タグ名は常に大文字で返される点に注意。** なので、
+
 
 
 
