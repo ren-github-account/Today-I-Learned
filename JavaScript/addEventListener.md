@@ -22,14 +22,14 @@ button.addEventListener('click', function() {
 
 ### 使い方
 
-構文
+**構文**
 ```
 ターゲット.addEventListener("event", listener, options)
 ```
 
 **説明**
 
-上記のコードにある**ターゲット**とは、イベントターゲットのことで、`addEventListener`の対象としたい要素やオブジェクトを記述する。詳しくは[EventTargetインターフェースの項目](https://github.com/ren-github-account/Today-I-Learned/blob/main/JavaScript/MDN-%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%85%A5%E9%96%80(&DOM%E3%81%AE%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98).md#%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%83%8F%E3%83%B3%E3%83%89%E3%83%A9%E3%83%BC%E3%81%A8%E3%81%AF)を参照。
+上記のコードにある**ターゲット**とは、イベントターゲットのことで、`addEventListener`の対象としたい要素やオブジェクトを記述する。詳しくは[EventTargetインターフェースの項目](https://github.com/ren-github-account/Today-I-Learned/blob/main/JavaScript/MDN-%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%85%A5%E9%96%80(&DOM%E3%81%AE%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98).md#DOM%E3%81%AE%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98)を参照。
 
 ||意味|
 |-|-|
