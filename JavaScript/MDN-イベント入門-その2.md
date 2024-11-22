@@ -161,7 +161,27 @@ idプロパティを使っても同じように動作する。
 そして、KeyboardEventオブジェクトは**イベントオブジェクトの一つ**でもあるため、そのKeyboardEventオブジェクトに属する`keyプロパティ`は、`event.key`のように記述することができる。
 
 **具体例**
+
+HTMLとJavaScript
 ```
+<body>
+
+   <input id="textBox" type="text">
+   <div id="output"></div>
+<script>
+
+const textBox = document.querySelector("#textBox");
+const output = document.querySelector("#output");
+
+function keyboard(event){
+ output.textContent = `"${event.key}" が押されました。`;
+ 
+}
+
+textBox.addEventListener("keydown",keyboard);
+
+ </script>
+  </body>
 
 ```
 
