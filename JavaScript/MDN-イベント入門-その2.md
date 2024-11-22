@@ -123,7 +123,7 @@ p{
 
 **注意点**として、classNameプロパティは**class「Name」** と**Name**の先頭は大文字にする点に注意。そうしないとうまく動かない。
 
-上記のコードのJavaScriptの部分を改良してclassName使って以下のコードを書いてみた。
+上記のコードのJavaScriptの部分を改良してclassNameプロパティを使って以下のコードを書いてみた。
 
 ```
 <script>
