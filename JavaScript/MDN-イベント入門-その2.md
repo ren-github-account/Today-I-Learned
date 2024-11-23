@@ -298,7 +298,7 @@ mdn-learning.html?sei=tanaka&mei=tarou
 /* 名前欄しか入力しなかった場合 */
 mdn-learning.html?sei=tanaka&mei=
 ```
-こうなってしまっては、サービスの運営側としては困ったことになるという訳である。こういった問題を未然に防ぐために`preventDefault()メソッド`は使える。
+こうなってしまっては、サービスの運営側としては困ったことになるという訳である。こういった問題を未然に防ぐために`preventDefault()メソッド`は使用できる。
 
 
 
