@@ -203,6 +203,56 @@ textBox.addEventListener("keydown",keyboard);
 
 **デフォルトアクションとは**、具体的には、リンクをクリックしたら「リンク先」へ飛ぶことや、フォームの送信ボタンを押すとフォームが送信されることなどを指し、特別なことをしなくともデフォルトで備わっている動作のこと。参照:[イベントオブジェクトのメソッド](https://uhyohyo.net/javascript/3_5.html)
 
+**具体例**
+
+HTMLとJavaScript
+```
+<body>
+
+<form action="mdn-learning.html" method = "get">
+  <div>
+    <label for="fname">姓: </label>
+    <input id="fname" name = "sei" type="text" />
+  </div>
+  <div>
+    <label for="lname">名: </label>
+    <input id="lname" name = "mei" type="text" />
+  </div>
+  <div>
+    <input id="submit" type="submit" />
+  </div>
+</form>
+<p></p>
+
+<script>
+const form = document.querySelector("form");
+const fname = document.getElementById("fname");
+const lname = document.getElementById("lname");
+const para = document.querySelector("p");
+
+const formCheck = function(e) {
+  if(fname.value === "" || lname.value === ""){
+    e.preventDefault();
+    para.textContent = "名前が空っぽですよ!";
+ }
+}
+
+form.addEventListener("submit",formCheck);
+
+ </script>
+  </body>
+```
+
+**解説**
+
+まず、body内の最初の部分で、`<form action="mdn-learning.html" method = "get">`と記述してある。これは、ユーザーが送信したデータを処理するために使う2つの属性、`action属性`と`method属性`を付与している。
+
+この2つの属性の違いは以下の表にまとめた。
+
+||意味|
+|-|-|
+|action属性|どこにデータを送信するかを定義する。|
+|||
 
 
 
