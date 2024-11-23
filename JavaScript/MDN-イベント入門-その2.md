@@ -249,7 +249,7 @@ form.addEventListener("submit",formCheck);
 
 これは<form>要素に対して、ユーザーがデータを送信した時の処理方法を設定するための2つの属性、`action属性`と`method属性`を付与している。
 
-この2つの属性の違いは以下の表にまとめた。
+この2つの属性の違いは以下の表にまとめた。( 参照:[フォームデータの送信](https://developer.mozilla.org/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)、[フォームデータの確認](https://www.webword.jp/xhtml/form/index2.html) )
 
 ||意味|
 |-|-|
@@ -259,6 +259,18 @@ form.addEventListener("submit",formCheck);
 上記のコードでは、`method属性`のうち`GETメソッド`を設定している。
 
 **`GETメソッド`では、フォームで送信されたデータがaction属性で指定したURL(もしくはhtmlファイル)の末尾に追加される。**
+
+フォームデータの送信前と送信後では、URLの末尾は以下のように変化する。
+
+```
+/* 送信前  */
+mdn-learning.html
+
+/* 送信後 */
+mdn-learning.html?sei=tanaka&mei=tarou
+```
+
+変化の内容をまとめると、まずURLの先頭に`?`が追加され、その後に**<input>要素のname属性で指定した値=フォームで送信した値**という形が続き、その間が`&`で区切られている。
 
 
 
