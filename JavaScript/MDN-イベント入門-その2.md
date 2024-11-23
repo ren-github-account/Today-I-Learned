@@ -305,6 +305,45 @@ mdn-learning.html?sei=tanaka&mei=
 
 ### イベントのバブリング
 
+イベントのバブリングでは、**HTML文書が入れ子構造(親要素と子要素が存在する構造)になっていた場合に、イベントをどのように処理するのか**を定めている。
+
+**具体例**として以下のコードを見ていく。
+
+```
+ <body>
+<div id="container">
+  <button>クリックしてください</button>
+</div>
+<pre id="output"></pre>
+
+<script>
+
+const output = document.querySelector("#output");
+function handleClick(e) {
+  output.textContent += `${e.target.tagName} 要素をクリックしました\n`;
+}
+
+const container = document.querySelector("#container");
+
+container.addEventListener("click", handleClick);
+
+ </script>
+  </body>
+```
+
+上記のコードで**重要な点**は以下の2点。
+||重要な点|
+|-|-|
+|①|`<div>要素`の中に`<button>要素`があるという点。|
+|②|`<button>要素`の親要素である`<div>要素`に、addEventListener`を使ってイベント付与したという点。|
+
+上記のコードを実行してみると、どうなるかというと、以下のことが起こる。
+
+・`<div>要素`の**子要素である`<button>要素`をクリックしたのに、`<div>要素`に登録したイベントが実行された。**
+
+つまり、これは次のことを意味している。**要素同士が親子関係にある場合、親要素にイベント処理を登録しても、子要素をクリックすると、親要素に登録したイベント処理が実行される。**
+
+
 **解説**
 
 `<pre>要素`は、文字を入力した時のスペースや改行をそのまま表示させることができる。HTMLでは通常、改行を入れたい時はその場所に`<br>`を入れないと改行できないが、`<pre>要素`を使うと`<br>`を使わずとも改行を反映させることができる。
