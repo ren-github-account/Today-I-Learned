@@ -247,7 +247,7 @@ form.addEventListener("submit",formCheck);
 
 まず、body内の最初の部分で、`<form action="mdn-learning.html" method = "get">`と記述してある。
 
-これは <form>要素に対して、ユーザーがデータを送信した時の処理方法を設定するための2つの属性、`action属性`と`method属性`を付与している。
+これは `<form>要素`に対して、ユーザーがデータを送信した時の処理方法を設定するための2つの属性、`action属性`と`method属性`を付与している。
 
 この2つの属性の違いは以下の表にまとめた。( 参照:[フォームデータの送信](https://developer.mozilla.org/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)、[フォームデータの確認](https://www.webword.jp/xhtml/form/index2.html) )
 
