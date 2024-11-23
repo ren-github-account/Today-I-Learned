@@ -245,14 +245,20 @@ form.addEventListener("submit",formCheck);
 
 **解説**
 
-まず、body内の最初の部分で、`<form action="mdn-learning.html" method = "get">`と記述してある。これは<form>要素に対して、ユーザーがデータを送信した時の処理方法を設定するための2つの属性、`action属性`と`method属性`を付与している。
+まず、body内の最初の部分で、`<form action="mdn-learning.html" method = "get">`と記述してある。
+
+これは<form>要素に対して、ユーザーがデータを送信した時の処理方法を設定するための2つの属性、`action属性`と`method属性`を付与している。
 
 この2つの属性の違いは以下の表にまとめた。
 
 ||意味|
 |-|-|
-|action属性|どこにデータを送信するかを定義する。|
-|||
+|action属性|どこにデータを送信するかを定義する。上記のコードでは<form>要素を記述しているhtmlファイルである`mdn-learning.html`を指定している。|
+|method属性|どのようにデータを送信するかというその方法を定義する。`GETメソッド`と`POSTメソッド`がよく使われる。|
+
+上記のコードでは、`method属性`のうち`GETメソッド`を設定している。
+
+**`GETメソッド`では、フォームで送信されたデータがaction属性で指定したURL(もしくはhtmlファイル)の末尾に追加される。**
 
 
 
