@@ -388,6 +388,11 @@ container.addEventListener("click", handleClick);
 うんちはくさいが          そうでもないかも
 ```
 
+イベント関数の中のコードをよく見ると`output.textContent += `${e.target.tagName} 要素をクリックしました\n`;`の部分の演算子が`+=`となっている。
+
+こうすることで、**ボタンを押すごとに`<pre>要素`内で文字列が増えていく**という動作が可能となる。
+
+
 
 
 
