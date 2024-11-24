@@ -7,6 +7,7 @@
 * [デフォルトのアクションを停止する](#デフォルトのアクションを停止する)
 * [イベントのバブリング](#イベントのバブリング)
 * [stopPropagationメソッド](#stopPropagationメソッド)
+* [for-of文](#for-of文)
 
 ### 概要
 
@@ -493,6 +494,46 @@ BUTTON 要素をクリックしました
 
 `stopPropagation()メソッド`により、イベントバブリングが`button要素`のイベント処理が終わった時点で停止されたことがわかる。
 
+### for-of文
+
+for-of文とは、**イテレータの中身を1つずつ取り出して処理する文**のこと。
+
+イテレータ（iterator）とは、ざっくり言うと**一連の複数のデータからなるものを指す。**
+
+for-of文に渡す配列や文字列のことを**iterable**と呼ぶ。
+
+そして**for-of文にiterableが渡されると、それに対応するイテレータが作られ、そのイテレータにより値が順番に取り出される。** 参照:[イテレータ](https://uhyohyo.net/javascript/16_2.html)
+
+**使い方**
+
+以下のように書く。下記のコードで`of "Hello!"`となっている部分を、配列名の`arr`にしても動く。
+
+```
+ <body>
+
+<pre id="output"></pre>
+
+<script>
+
+let arr=[0,1,2,3];
+const output = document.querySelector("#output");
+
+for(let value of "Hello!"){
+ output.textContent += value;
+ 
+}
+
+ </script>
+  </body>
+```
+
+```
+/* 実行結果 */
+Hello!
+
+/* ofの後をarrにした場合の実行結果 */
+0123
+```
 
 
 
