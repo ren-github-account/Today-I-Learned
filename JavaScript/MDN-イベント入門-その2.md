@@ -432,7 +432,58 @@ BUTTON 要素をクリックしました
 
 つまり、メソッドの説明に当てはめると、**`stopPropagation()メソッド`はイベントの伝達を途中でstopする**機能を持つということになる。
 
+**具体例**
 
+まず比較のために`stopPropagation()メソッド`を使わない場合を見てみる。
+
+HTMLとJavaScript
+```
+  <body>
+
+<div id="container">
+  <button>クリックしてください</button>
+</div>
+<pre id="output"></pre>
+
+
+<script>
+
+const output = document.querySelector("#output");
+function handleClick(e) {
+  output.textContent += `${e.currentTarget.tagName} 要素をクリックしました\n`;
+  
+}
+
+const container = document.querySelector("#container");
+const button = document.querySelector("button");
+
+document.body.addEventListener("click", handleClick);
+container.addEventListener("click", handleClick);
+button.addEventListener("click", handleClick);
+
+
+ </script>
+```
+
+上記のコードを実行すると、イベントのバブリングによって以下のように表示される。
+
+```
+/* 実行結果 */
+BUTTON 要素をクリックしました
+DIV 要素をクリックしました
+BODY 要素をクリックしました
+```
+
+それでは次に`stopPropagation()メソッド`を追加することで、実行結果がどのように変わるのか見ていく。
+
+上記のコードのイベント関数内を以下のように変更する。
+```
+function handleClick(e) {
+  output.textContent += `${e.currentTarget.tagName} 要素をクリックしました\n`;
+　e.stopPropagation(); /* ここに追加 */
+  
+}
+```
 
 
 
