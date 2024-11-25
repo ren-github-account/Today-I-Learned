@@ -596,11 +596,11 @@ HTMLInputElement.onclick
 
 まず`onsubmit`はイベント属性の一つで、**送信処理がなされた時にどのような動作をするか**を決定する属性。
 
-ここで、onsubmit属性の値を`"return false;"`とすることで、フォームの送信処理がキャンセルできる。(つまり送信処理が行われなくなる) 参照:[onsubmit属性について](https://dtnavi.tcdigital.jp/cat_system/language_041/)
+ここで、onsubmit属性の値を`"return false;"`とすることで、**フォームの送信処理がキャンセルできる。** (つまり送信処理が行われなくなる) 参照:[onsubmit属性について](https://dtnavi.tcdigital.jp/cat_system/language_041/)
 
 この`return false`は、上の方で以前学んだ`preventDefault()メソッド`と同じ効果があるとのこと。参照:[return falseの意味や使い方](https://boukenki.info/javascript-return-false-imi-tukaikata/)
 
-
+フォームの送信処理自体が行われなくなるため、以下のようにURLの末尾も変化しない。
 
 ```
  <body>
