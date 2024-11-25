@@ -572,6 +572,14 @@ function hello() {
 </body>
 ```
 
+上記のコードを実行しようとすると以下のようなエラーメッセージが表示される。
+```
+ Uncaught TypeError: hello is not a function
+    at HTMLInputElement.onclick
+
+キャッチされない TypeError: hello は関数ではありません
+HTMLInputElement.onclick
+```
 
 ```
  <body>
