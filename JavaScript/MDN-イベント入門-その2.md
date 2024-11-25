@@ -573,7 +573,29 @@ function hello() {
 ```
 
 
+```
+ <body>
 
+<button>クリック</button>
+<button>クリック</button>
+<button>クリック</button>
+
+
+<script>
+
+const buttons = document.querySelectorAll("button");
+
+function buttonChange(){
+  alert("Hello! everybody");
+  }
+
+for (const button of buttons) {
+  button.addEventListener("click", buttonChange);
+}
+
+ </script>
+
+```
 
 
 
