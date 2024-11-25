@@ -577,9 +577,26 @@ function hello() {
  Uncaught TypeError: hello is not a function
     at HTMLInputElement.onclick
 
-キャッチされない TypeError: hello は関数ではありません
+訳:キャッチされない TypeError: hello は関数ではありません
 HTMLInputElement.onclick
 ```
+
+このエラーを解消するには、`input要素`のname属性の値を**関数名とは違う名前に変更すればok。**
+
+```
+/* name属性の値をhelloからhelloEverybodyへ変更した */
+<form onsubmit="return false;">
+  <input type="submit" name="helloEverybody" onclick="hello()">
+</form>
+```
+
+**補足解説**
+
+ちなみに、上記のコードの`<form onsubmit="return false;">`の記述の意味を解説しておく。
+
+まず`onsubmit`はイベント属性の一つで、**送信処理がなされた時にどのような動作をするか**を決定する属性。
+
+
 
 ```
  <body>
