@@ -612,7 +612,23 @@ mdn-learning.html?helloEverybody=送信
 一方、指定しなかった場合は上記のように末尾に`?helloEverybody=送信`(helloEverybodyはname属性名)が追加され、**送信処理が実行されたことがわかる。**
 ちなみに、`form要素`で`method属性`を**省略した場合はデフォルトで`GET`が適用される。** ( [method属性](https://web.havincoffee.com/html/tag/form/method.html)、[知見共有](https://job-info.hateblo.jp/entry/2024/08/19/235223) )
 
+**他にもonclick属性はstrictモードの時に動作しないことがある**
 
+JavaScriptには**strictモード**といって、**よろしくないコードを書いた時に厳格なチェックを行いエラーを返すことで実行できないようにするモードが存在する。** ( 参照:[uhyohyo.net](https://uhyohyo.net/javascript/11_9.html) ) 
+
+このモードを適用するには、JavaScriptコードの一番最初(HTML内に記述する場合は`<script>の直下`)か、関数内のみで適用したい場合は、その関数内の一番上に記述する。
+
+```
+/* HTML内で使用する場合 */
+<script>
+ "use strict";
+</script>
+
+/* 関数内で使用する場合 */
+function test(){
+  "use strict";
+}
+```
 
 ```
  <body>
