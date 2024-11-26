@@ -616,7 +616,7 @@ mdn-learning.html?helloEverybody=送信
 
 JavaScriptには**strictモード**といって、**よろしくないコードを書いた時に厳格なチェックを行いエラーを返すことで実行できないようにするモードが存在する。** ( 参照:[uhyohyo.net](https://uhyohyo.net/javascript/11_9.html) ) 
 
-このモードを適用するには、JavaScriptコードの一番最初(HTML内に記述する場合は`<script>の直下`)か、関数内のみで適用したい場合は、その関数内の一番上に記述する。
+**このモードを適用するには**、JavaScriptコードの一番最初 **(HTML内に記述する場合は`<script>の直下`)** か、関数内のみで適用したい場合は、その関数内の一番上に記述する。
 
 ```
 /* HTML内で使用する場合 */
