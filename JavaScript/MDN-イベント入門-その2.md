@@ -594,7 +594,7 @@ HTMLInputElement.onclick
 
 ちなみに、上記のコードの`<form onsubmit="return false;">`の記述の意味を解説しておく。
 
-まず**`onsubmit`はイベント属性の一つで、送信処理がなされた時にどのような動作をするか**を決定する属性。
+まず **`onsubmit`はイベント属性の一つで、送信処理がなされた時にどのような動作をするか** を決定する属性。
 
 ここで、onsubmit属性の値を`"return false;"`とすることで、**フォームの送信処理がキャンセルできる。** (つまり送信処理自体が行われなくなる) 参照:[onsubmit属性について](https://dtnavi.tcdigital.jp/cat_system/language_041/)
 
