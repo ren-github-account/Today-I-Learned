@@ -606,7 +606,7 @@ HTMLInputElement.onclick
 /* URLの末尾 onsubmit="return false;"を指定した場合 */
 mdn-learning.html
 
-/* 指定しなかった場合 */
+/* 指定しなかった場合は末尾が変化 */
 mdn-learning.html?helloEverybody=送信
 ```
 一方、指定しなかった場合は上記のように末尾に`?helloEverybody=送信`(helloEverybodyはname属性名)が追加され、**送信処理が実行されたことがわかる。**
