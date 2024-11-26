@@ -9,6 +9,7 @@
 * [stopPropagationメソッド](#stopPropagationメソッド)
 * [for-of文](#for-of文)
 * [onclick属性は使わない方が良い](#onclick属性は使わない方が良い)
+* [インラインイベントハンドラー](#インラインイベントハンドラー)
 
 ### 概要
 
@@ -629,6 +630,10 @@ function test(){
   "use strict";
 }
 ```
+
+### インラインイベントハンドラー
+
+onclick属性のことを別名
 
 ```
  <body>
