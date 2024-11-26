@@ -544,7 +544,7 @@ HTMLにJavaScriptを埋め込む時、`onclick属性`を使うやり方が紹介
 
 1つ目は、バグの原因となりやすいこと。( 参照:[iwb.jp](https://iwb.jp/javascript-html-onclick-attribute-dont-use/) )
 
-2つ目は、コードのメンテナンスのしやすさの観点から非効率となること。
+2つ目は、コードのメンテナンスのしやすさの観点から非効率となること。( 参照:[MDN](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Building_blocks/Events#%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%83%AA%E3%82%B9%E3%83%8A%E3%83%BC%E3%81%AE%E4%BB%96%E3%81%AE%E6%A9%9F%E6%A7%8B) )
 
 順番に詳しく見ていく。
 
@@ -603,7 +603,7 @@ HTMLInputElement.onclick
 フォームの送信処理自体が行われなくなるため、以下のようにURLの末尾も変化しない。
 
 ```
-
+/* onsubmit="return false;"を指定した場合 */
 mdn-learning.html
 ```
 
