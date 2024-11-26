@@ -600,12 +600,19 @@ HTMLInputElement.onclick
 
 この`return false`は、上の方で以前学んだ`preventDefault()メソッド`と同じ効果があるとのこと。参照:[return falseの意味や使い方](https://boukenki.info/javascript-return-false-imi-tukaikata/)
 
-フォームの送信処理自体が行われなくなるため、以下のようにURLの末尾も変化しない。
+フォームの送信処理自体が行われなくなるため、以下のように**URLの末尾も変化しない。**
 
 ```
-/* onsubmit="return false;"を指定した場合 */
+/* URLの末尾 onsubmit="return false;"を指定した場合 */
 mdn-learning.html
+
+/* 指定しなかった場合 */
+mdn-learning.html?helloEverybody=送信
 ```
+一方、指定しなかった場合は上記のように末尾に`?helloEverybody=送信`(helloEverybodyはname属性名)が追加され、**送信処理が実行されたことがわかる。**
+ちなみに、`form要素`で`method属性`を**省略した場合はデフォルトで`GET`が適用される。** ( [method属性](https://web.havincoffee.com/html/tag/form/method.html)、[知見共有](https://job-info.hateblo.jp/entry/2024/08/19/235223) )
+
+
 
 ```
  <body>
