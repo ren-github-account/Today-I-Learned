@@ -542,7 +542,7 @@ HTMLにJavaScriptを埋め込む時、`onclick属性`を使うやり方が紹介
 
 **理由は、大きく2つ。**
 
-1つ目は、バグの原因となりやすいこと。
+1つ目は、バグの原因となりやすいこと。( 参照:[iwb.jp](https://iwb.jp/javascript-html-onclick-attribute-dont-use/) )
 
 2つ目は、コードのメンテナンスのしやすさの観点から非効率となること。
 
