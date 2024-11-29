@@ -10,5 +10,5 @@ https://blog.goo.ne.jp/jeans201/e/3eb2b3a9303916b49175309f7d890f55
 
 ・`createTextNode()メソッド`を使ったXSS対策について
 
-https://upa-pc.blogspot.com/2015/02/javascript-dom-based-xss-protect-createTextNode.html#auto-generated-index_target3
+https://upa-pc.blogspot.com/2015/02/javascript-dom-based-xss-protect-createTextNode.html
 
