@@ -12,7 +12,7 @@ https://blog.goo.ne.jp/jeans201/e/3eb2b3a9303916b49175309f7d890f55
 
 https://upa-pc.blogspot.com/2015/02/javascript-dom-based-xss-protect-createTextNode.html
 
-### JS簡易実行環境のコード
+## JS簡易実行環境のコード
 
 HTMLとJavaScript
 ```
@@ -36,7 +36,9 @@ function JScodeRun() {
 </body>
 ```
 
-**解説**
+## 解説
+
+### textarea要素
 
 `<textarea>要素`は、**複数行のテキスト入力欄を作成することができる。**
 
@@ -56,7 +58,9 @@ It was a dark and stormy night...
 
 結び付け可能な要素として、`<textarea>要素`の他に **`<input>要素`をよく使う。**
 
-結び付けることのメリットは、例えばチェックボックスを作成した場合、チェックボックス自体ではなく**ラベル部分をクリックしてもチェックされるようになる。** ( 参照:[so-zou](https://so-zou.jp/web-app/tech/html/element/form/label/) )
+結び付けることの**メリット**は、例えばチェックボックスを作成した場合、チェックボックス自体ではなく**ラベル部分をクリックしてもチェックされるようになる。** ( 参照:[so-zou](https://so-zou.jp/web-app/tech/html/element/form/label/) )
+
+### eval
 
 
 
