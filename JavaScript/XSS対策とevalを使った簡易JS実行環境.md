@@ -54,3 +54,9 @@ It was a dark and stormy night...
 </textarea>
 ```
 
+結び付け可能な要素として、`<textarea>要素`の他に **`<input>要素`をよく使う。**
+
+結び付けることのメリットは、例えばチェックボックスを作成した場合、チェックボックス自体ではなく**ラベル部分をクリックしてもチェックされるようになる。** ( 参照:[so-zou](https://so-zou.jp/web-app/tech/html/element/form/label/) )
+
+
+
