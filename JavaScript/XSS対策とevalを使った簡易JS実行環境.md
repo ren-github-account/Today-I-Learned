@@ -62,5 +62,9 @@ It was a dark and stormy night...
 
 ### eval
 
+`eval()関数`は、**文字列として与えられたJavaScriptコードを解釈して、その実行結果を返す。**
+
+
+
 
 
