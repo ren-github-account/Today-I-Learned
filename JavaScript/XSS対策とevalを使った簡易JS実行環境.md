@@ -117,7 +117,7 @@ object
 ```
 <script>
 
-const result = 2 + 2;　// resultに変数結果の4が格納される。この時点のデータ型は'number'
+const result = 2 + 2;　// resultに計算結果の4が格納される。この時点のデータ型は'number'
 
 const b = String(result); // Stringを使用してresultを文字列型に変換している
 
