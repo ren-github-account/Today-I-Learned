@@ -108,7 +108,7 @@ object
 ||意味|
 |-|-|
 |`String(引数)`|引数を文字列型に変換する。|
-|`Symbol`|`Symbol`はJavaScriptの仕様のES2015にて新しく追加されたもの。言語の互換性を維持した状態でオブジェクトに新たな機能やプロパティを追加するために考案された。( 参照:[とほほの](https://www.tohoho-web.com/js/symbol.htm#useful) ) `Symbol`は、`Symbol()コンストラクター`を持ち、これを使って**シンボルプリミティブ**(**シンボル値**または単に**シンボルとも呼ばれる**)を量産することができる。`[Symbol.iterator]()`はイテレータ(iterator)を返す引数なしの関数のこと。|
+|`Symbol`|`Symbol`はJavaScriptの仕様のES2015にて新しく追加されたもの。言語の互換性を維持した状態でオブジェクトに新たな機能やプロパティを追加するために考案された。( 参照:[とほほの](https://www.tohoho-web.com/js/symbol.htm#useful) ) `Symbol`は、`Symbol()コンストラクター`を持ち、これを使って**シンボルプリミティブ**(**シンボル値**または単に**シンボルとも呼ばれる**)を量産することができる。( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol) )`[Symbol.iterator]()`は、**ウェルノウンシンボル**と呼ばれる`Symbolコンストラクター`のプロパティのひとつで、イテレータ(iterator)を返す引数なしの関数のこと。|
 
 **`String()`の使い方。**
 
