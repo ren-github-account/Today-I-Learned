@@ -227,7 +227,8 @@ console.log(...iterable1);
 
 ```
 
-注意点として、上記のコードでは**ブラケット記法が使われている。** つまり、iterable1オブジェクトに`Symbol.iteratorプロパティ`を新しく追加している。
+**注意点**として、上記のコードでは**ブラケット記法が使われている。** つまり、iterable1オブジェクトに`Symbol.iteratorプロパティ`を新しく追加している。
+
 ### 用語解説Symboliterator
 
 ここからは、上記の`[Symbol.iterator]`を使ったコードを理解するために必要な知識をまとめていく。
@@ -267,6 +268,36 @@ console.log(...iteratorObj);
 
 上記の1回目の入力文で表示された`iterable1.<computed> {<suspended>}`が本当にイテレータオブジェクトなのかを確かめる。
 
+まず、検証にあたって最初のコードに以下のように追記を行った。
+
+```
+<script>
+
+const iterable1 = {};
+
+iterable1[Symbol.iterator] = function* () {
+  yield 1;
+  yield 2;
+  yield 3;
+};
+
+iterable1["test"] = function(){ alert("hello!");}; //追加その1
+
+iterable1["foo"] = function* (){　//追加その2 
+  yield 1;
+  yield 2;
+  yield 3;
+};
+
+const iteratorObj = iterable1[Symbol.iterator]();
+ 
+const geneObj = iterable1["foo"]();
+
+</script>
+```
+
+**注意点**として、上記のコードの`iterable1["foo"]`の部分では条件を揃えるため関数名は付けていない。
+
 以下では、通常のジェネレータ関数と、`[Symbol.iterator]`を使って作られたジェネレータ関数を比較している。
 
 【通常のジェネレータ関数】
@@ -285,7 +316,7 @@ const geneObj = iterable1["foo"]();
 console.log(geneObj);
 
 /* 実行結果 */
-gen {<suspended>}
+iterable1.foo {<suspended>}
 [[GeneratorLocation]]: mdn-learning.html:25
 [[Prototype]]: Generator
 [[GeneratorState]]: "suspended"
@@ -304,7 +335,17 @@ const iteratorObj = iterable1[Symbol.iterator]();
 ```
 
 ```
+/* 入力文 */
+console.log(iteratorObj);
 
+/* 実行結果 */
+iterable1.<computed> {<suspended>}
+[[GeneratorLocation]]: mdn-learning.html:17
+[[Prototype]]: Generator
+[[GeneratorState]]: "suspended"
+[[GeneratorFunction]]: ƒ* ()
+[[GeneratorReceiver]]: Object
+[[Scopes]]: Scopes[3]
 ```
 
 
