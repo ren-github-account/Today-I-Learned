@@ -519,7 +519,7 @@ for-of文に渡す配列や文字列のことを**iterable**と呼ぶ。
 
 <script>
 
-let arr=[0,1,2,3];
+let arr = [0,1,2,3];
 const output = document.querySelector("#output");
 
 for(let value of "Hello!"){
