@@ -248,7 +248,7 @@ const iteratorObj = iterable1[Symbol.iterator]();
 
 【コンソール画面】
 ```
-/* 入力文 */
+/* 入力文その1 */
 console.log(iteratorObj);
 
 /* 実行結果 */
@@ -258,7 +258,7 @@ iterable1.<computed> {<suspended>}
 今度は先頭に`...`を付けてみる。すると…
 
 ```
-/* 入力文 */
+/* 入力文その2 */
 console.log(...iteratorObj);
 
 /* 実行結果 */
@@ -275,7 +275,7 @@ console.log(...iteratorObj);
 
 【▼検証開始】
 
-上記の1回目の入力文で表示された`iterable1.<computed> {<suspended>}`が本当にイテレータオブジェクトなのかを確かめる。
+上記の入力文その1で表示された`iterable1.<computed> {<suspended>}`が本当にイテレータオブジェクトなのかを確かめる。
 
 まず、検証にあたって最初のコードに以下のように追記を行った。
 
