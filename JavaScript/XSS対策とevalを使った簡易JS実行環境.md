@@ -9,7 +9,7 @@
 * [String関数の使い方](#String関数の使い方)
 * [Symbolの使い方](#Symbolの使い方)
 * [Symbol.iteratorの使い方](#Symboliteratorの使い方)
-* [解説](#解説)
+* [用語解説Symboliterator](#用語解説Symboliterator)
 
 ## やりたいこと
 
@@ -227,7 +227,7 @@ console.log(...iterable1);
 
 ```
 
-### 解説
+### 用語解説Symboliterator
 
 ここからは、上記の`[Symbol.iterator]`を使ったコードを理解するために必要な知識をまとめていく。
 
