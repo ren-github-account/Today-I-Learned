@@ -1,3 +1,13 @@
+*目次*
+* [やりたいこと](#やりたいこと)
+* [JS簡易実行環境のコード](#JS簡易実行環境のコード)
+* [解説](#解説)
+* [textarea要素](#textarea要素)
+* [eval](#eval)
+* [evalに関連する用語](#evalに関連する用語)
+* [関連する用語その2](#関連する用語その2)
+* [String関数の使い方](#String関数の使い方)
+
 ## やりたいこと
 
 `eval()`プロパティを使用してブラウザ上で動くJSの簡易実行環境を作成したのち、`createTextNode()メソッド`を使用したXSS対策を自分で確かめてみる。
@@ -64,7 +74,7 @@ It was a dark and stormy night...
 
 `eval()関数`は、**文字列として与えられたJavaScriptコードを解釈して、その実行結果を返す。**
 
-**用語**
+### evalに関連する用語
 
 `eval()関数`の仕様を読み解くにあたってわからない単語が出てきたので意味をまとめておく。
 
@@ -103,18 +113,20 @@ object
 
 **これは歴史的経緯のある有名なバグで仕様とのこと。** ( 参照:[データ型](https://jsprimer.net/basic/data-type/) )
 
+### 関連する用語その2
+
 その他の調べたことは以下の表にまとめた。
 
 ||意味|
 |-|-|
-|`String(引数)`|引数を文字列型に変換する。|
+|`String(引数)`|引数を文字列型に変換する関数。|
 |`Symbol`|`Symbol`はJavaScriptの仕様のES2015にて新しく追加されたもの。言語の互換性を維持した状態でオブジェクトに新たな機能やプロパティを追加するために考案された。( 参照:[とほほの](https://www.tohoho-web.com/js/symbol.htm#useful) ) `Symbol`は、`Symbol()コンストラクター`を持ち、これを使って**シンボルプリミティブ**(**シンボル値**または単に**シンボルとも呼ばれる**)を量産することができる。( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol) )`[Symbol.iterator]()`は、**ウェルノウンシンボル**と呼ばれる`Symbolコンストラクター`のプロパティのひとつで、イテレータ(iterator)を返す引数なしの関数のこと。( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator#%E8%A7%A3%E8%AA%AC) )|
 |イテレータ(iterator)|ざっくり言うと**一連の複数のデータからなるものを指す。** ( 参照:[for-of文メモ](https://github.com/ren-github-account/Today-I-Learned/blob/fd9148c0f27cd2951c83026e4d524d3329093e33/JavaScript/MDN-%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%85%A5%E9%96%80-%E3%81%9D%E3%81%AE2.md#for-of%E6%96%87) )|
 |iterable|オブジェクトを反復処理(iterated)する必要がある時に**渡す配列や文字列**のこと。反復処理とは、具体的にはfor-of文のループ開始時などを指す。|
 |iterable protocol|MDNの日本語訳では「反復可能プロトコル」と訳されている。このプロトコルによってJavaScriptのオブジェクトは、反復処理(iteration)の振る舞いを定義またはカスタマイズすることができる。具体的にはfor-of文の中でどの値がループに使われるかなど。( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Iteration_protocols#%E5%8F%8D%E5%BE%A9%E5%8F%AF%E8%83%BD%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB) )|
 |反復可能オブジェクト|**iterable**のこと。|
 
-**`String()`の使い方。**
+### String関数の使い方
 
 以下のように書く。
 
