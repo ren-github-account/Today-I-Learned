@@ -180,6 +180,34 @@ obj[s]="piyo";
 
 ここまで理解できれば後は[appendChild()メソッド](https://github.com/ren-github-account/Today-I-Learned/blob/main/JavaScript/%E7%94%BB%E9%9D%A2%E3%81%AB%E3%82%AB%E3%83%A9%E3%83%95%E3%83%AB%E3%81%AA%E8%89%B2%E3%82%92%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E7%94%9F%E6%88%90.md#appendchild%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89)のところで学習した`appendChild()メソッド`と`createTextNode()メソッド`を組み合わせるやり方を使って、**上記のコード4行目にて、objオブジェクトの`Symbolプロパティ`に代入した値を、ブラウザの画面に表示させることができる。**
 
+ブラウザの画面に表示させるには以下のコードを書く。
+
+```
+<body>
+<p id="p1"></p>
+
+<script>
+
+const obj = {};
+obj["foo"] = "hogehoge";
+
+const s = Symbol();
+obj[s] = "piyopiyo!";
+
+const newText = document.createTextNode(obj[s]);　/* ここで引数にobj[s]を設定している */
+const p1 = document.getElementById("p1");
+p1.appendChild(newText);
+
+</script>
+</body>
+```
+
+```
+/* 実行結果 */
+/* ブラウザ画面 */
+piyopiyo!
+```
+
 ```
 const iterable1 = {}; /* ここでオブジェクトを作成 */
 
