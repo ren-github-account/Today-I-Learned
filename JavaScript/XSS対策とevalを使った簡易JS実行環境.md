@@ -217,7 +217,7 @@ piyopiyo!
 ```
 const iterable1 = {}; /* ここでオブジェクトを作成 */
 
-iterable1[Symbol.iterator] = function* () {　/* ここでiterable1オブジェクトに[Symbol.iterator]キーを付与。
+iterable1[Symbol.iterator] = function* () {　/* ここではブラケット記法が使われている */
  yield 1;
  yield 2;
  yield 3;
@@ -227,6 +227,7 @@ console.log(...iterable1);
 
 ```
 
+注意点として、上記のコードでは**ブラケット記法が使われている。** つまり、iterable1オブジェクトに`Symbol.iteratorプロパティ`を新しく追加している。
 ### 用語解説Symboliterator
 
 ここからは、上記の`[Symbol.iterator]`を使ったコードを理解するために必要な知識をまとめていく。
@@ -262,6 +263,8 @@ console.log(...iteratorObj);
 1 2 3
 ```
 
+### 本当にイテレータオブジェクトなのか検証
+
 上記の1回目の入力文で表示された`iterable1.<computed> {<suspended>}`が本当にイテレータオブジェクトなのかを確かめる。
 
 以下では、通常のジェネレータ関数と、`[Symbol.iterator]`を使って作られたジェネレータ関数を比較している。
@@ -269,6 +272,11 @@ console.log(...iteratorObj);
 【通常のジェネレータ関数】
 
 まずは通常のジェネレータ関数の場合はどうなるかを見てみる。
+
+前準備として以下のコードをJavaScriptに追記。
+```
+const geneObj = iterable1["foo"]();
+```
 
 以下のコードの説明をしておくと、まず`[Symbol.iterator]`を使わない通常のジェネレータ関数を作成したのち、その関数を呼び出し`geneObj変数`に代入してからコンソール画面にて`console.log();`を使用して中身を表示させている。
 
@@ -286,6 +294,18 @@ gen {<suspended>}
 [[Scopes]]: Scopes[3]
 ```
 
+【`[Symbol.iterator]`を使ったジェネレータ関数】
+
+同様にして、次は`[Symbol.iterator]`を使って作られたジェネレータ関数の場合はどうなるかを見てみる。
+
+まず、前準備としてJavaScript内に以下のコードを追記。
+```
+const iteratorObj = iterable1[Symbol.iterator]();
+```
+
+```
+
+```
 
 
 
