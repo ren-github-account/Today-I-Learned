@@ -10,6 +10,7 @@
 * [Symbolの使い方](#Symbolの使い方)
 * [Symbol.iteratorの使い方](#Symboliteratorの使い方)
 * [用語解説Symboliterator](#用語解説Symboliterator)
+* [本当にイテレータオブジェクトなのか検証](#本当にイテレータオブジェクトなのか検証)
 
 ## やりたいこと
 
