@@ -167,6 +167,18 @@ const s = Symbol();
 obj[s]="piyo";
 ```
 
+```
+const iterable1 = {}; /* ここでオブジェクトを作成 */
+
+iterable1[Symbol.iterator] = function* () {　/* ここでiterable1オブジェクトに[Symbol.iterator]キーを付与。
+ yield 1;
+ yield 2;
+ yield 3;
+};
+
+console.log(...iterable1);
+
+```
 
 
 
