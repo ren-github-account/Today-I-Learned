@@ -126,7 +126,7 @@ object
 |イテレータ(iterator)|ざっくり言うと**一連の複数のデータからなるものを指す。** ( 参照:[for-of文メモ](https://github.com/ren-github-account/Today-I-Learned/blob/fd9148c0f27cd2951c83026e4d524d3329093e33/JavaScript/MDN-%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%85%A5%E9%96%80-%E3%81%9D%E3%81%AE2.md#for-of%E6%96%87) )|
 |iterable|オブジェクトを反復処理(iterated)する必要がある時に**渡す配列や文字列**のこと。反復処理とは、具体的にはfor-of文のループ開始時などを指す。|
 |iterable protocol|MDNの日本語訳では「反復可能プロトコル」と訳されている。このプロトコルによってJavaScriptのオブジェクトは、反復処理(iteration)の振る舞いを定義またはカスタマイズすることができる。具体的にはfor-of文の中でどの値がループに使われるかなど。( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Iteration_protocols#%E5%8F%8D%E5%BE%A9%E5%8F%AF%E8%83%BD%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB) )|
-|反復可能オブジェクト|まず前提として、配列を表す`Arrayオブジェクト`や、`test.set(キー名, 値);`のように記述することで**キーと値のペアを保存**することのできる`Mapオブジェクト`などは**デフォルトで反復動作を持っているため、「組み込み反復可能オブジェクト」と呼ばれる。** しかし、それ以外の**通常のオブジェクトはそうではなく、デフォルトでは反復動作を持たない。** このため、このような通常のオブジェクトを反復可能とするためには、**ブラケット記法を用いて`オブジェクト名[Symbol.iterator]`と記述することでプロパティ名に`Symbol.iterator`を付与し、** 反復動作を定義している**反復可能プロトコル**が探せるようにする必要がある。( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator#%E8%A7%A3%E8%AA%AC) )|
+|反復可能オブジェクト|まず前提として、配列を表す`Arrayオブジェクト`や、`test.set(キー名, 値);`のように記述することで**キーと値のペアを保存**することのできる`Mapオブジェクト`などは**デフォルトで反復動作を持っているため、「組み込み反復可能オブジェクト」と呼ばれる。** しかし、それ以外の**通常のオブジェクトはそうではなく、デフォルトでは反復動作を持たない。** このため、このような通常のオブジェクトを反復可能とするためには、**ブラケット記法を用いて`オブジェクト名[Symbol.iterator]`と記述することでプロパティ名に`Symbol.iterator`を付与する必要がある。** こうすることで、反復動作を定義している**反復可能プロトコル**が、`Symbol.iterator`を付与したオブジェクトを認識してくれるようになる。( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator#%E8%A7%A3%E8%AA%AC) )|
 
 ### String関数の使い方
 
