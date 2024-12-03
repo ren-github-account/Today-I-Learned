@@ -211,6 +211,8 @@ piyopiyo!
 
 ### Symboliteratorの使い方
 
+以下のコードを書く。
+
 ```
 const iterable1 = {}; /* ここでオブジェクトを作成 */
 
@@ -224,6 +226,15 @@ console.log(...iterable1);
 
 ```
 
+### 解説
+
+ここからは、上記の`[Symbol.iterator]`を使ったコードを理解するために必要な知識をまとめていく。
+
+||意味|
+|-|-|
+|イテレータオブジェクト|イテレータは以前学習したように「一連の複数のデータからなるもの」だが、このイテレータ自体も**イテレータオブジェクト**というオブジェクトである。そしてこのイテレータオブジェクトは`next()メソッド`を持つ。|
+|`next()メソッド`|valueプロパティとdoneプロパティの2つのプロパティを持った`{}`で囲まれたオブジェクトを戻り値として返すメソッド。( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator/next) )|
+|||
 
 
 
