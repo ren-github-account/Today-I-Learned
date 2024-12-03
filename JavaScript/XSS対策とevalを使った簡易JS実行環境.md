@@ -8,7 +8,7 @@
 * [関連する用語その2](#関連する用語その2)
 * [String関数の使い方](#String関数の使い方)
 * [Symbolの使い方](#Symbolの使い方)
-* [Symbol.iterator](#Symbol.iterator)
+* [Symbol.iteratorの使い方](#Symboliteratorの使い方)
 
 ## やりたいこと
 
@@ -209,7 +209,7 @@ p1.appendChild(newText);
 piyopiyo!
 ```
 
-### Symbol.iterator
+### Symboliteratorの使い方
 
 ```
 const iterable1 = {}; /* ここでオブジェクトを作成 */
