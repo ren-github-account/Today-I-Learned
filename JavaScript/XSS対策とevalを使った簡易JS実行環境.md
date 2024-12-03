@@ -233,8 +233,8 @@ console.log(...iterable1);
 ||意味|
 |-|-|
 |イテレータオブジェクト|イテレータは以前学習したように「一連の複数のデータからなるもの」だが、このイテレータ自体も**イテレータオブジェクト**というオブジェクトである。そしてこのイテレータオブジェクトは`next()メソッド`を持つ。|
-|`next()メソッド`|valueプロパティとdoneプロパティの2つのプロパティを持った`{}`で囲まれたオブジェクトを戻り値として返すメソッド。( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator/next) )|
-|||
+|`next()メソッド`|valueプロパティとdoneプロパティの2つのプロパティを持ち、`{}`で囲まれたオブジェクトを戻り値として返すメソッド。( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator/next) )|
+|ジェネレータ関数|functionの後に **`*`(アスタリスク)を付けて宣言された関数は、ジェネレータ関数となる。** この関数の変わった点は、**`変数名();`と書いて関数を呼び出しただけでは関数は実行されないことにある。** 呼び出されると関数が実行されない代わりに、関数の実行を制御するためのオブジェクトである**Generatorオブジェクトが生成されて戻り値として返される。** このGeneratorオブジェクトは`nextメソッド`を持ち、**この`nextメソッド`を呼び出すことで初めて関数が実行される。**|
 
 
 
