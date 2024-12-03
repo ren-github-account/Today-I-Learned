@@ -9,6 +9,7 @@
 * [String関数の使い方](#String関数の使い方)
 * [Symbolの使い方](#Symbolの使い方)
 * [Symbol.iteratorの使い方](#Symboliteratorの使い方)
+* [解説](#解説)
 
 ## やりたいこと
 
