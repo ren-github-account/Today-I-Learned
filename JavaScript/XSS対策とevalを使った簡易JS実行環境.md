@@ -262,6 +262,19 @@ console.log(...iteratorObj);
 1 2 3
 ```
 
+```
+/* 入力文 */
+console.log(geneObj);
+
+/* 実行結果 */
+gen {<suspended>}
+[[GeneratorLocation]]: mdn-learning.html:25
+[[Prototype]]: Generator
+[[GeneratorState]]: "suspended"
+[[GeneratorFunction]]: ƒ* gen()
+[[GeneratorReceiver]]: Object
+[[Scopes]]: Scopes[3]
+```
 
 
 
