@@ -243,7 +243,7 @@ console.log(...iterable1);
 const iteratorObj = iterable1[Symbol.iterator]();
 ```
 
-コンソール画面
+【コンソール画面】
 ```
 /* 入力文 */
 console.log(iteratorObj);
