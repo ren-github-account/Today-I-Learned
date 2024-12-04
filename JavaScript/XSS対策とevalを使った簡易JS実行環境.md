@@ -320,7 +320,7 @@ for(const value of iterable1){
 101112
 ```
 
-**`yield 値;`の値の部分を変更することで**、for-of文に渡す**iterable**を変更することができる。( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Iteration_protocols#%E5%8F%8D%E5%BE%A9%E5%8F%AF%E8%83%BD%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB) )例えば、以下のようにすると実行結果が変更できる。
+**`yield 値;`の値の部分を変更することで**、for-of文に渡す**iterable**を変更することができる。( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Iteration_protocols#%E5%8F%8D%E5%BE%A9%E5%8F%AF%E8%83%BD%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB) ) 例えば、以下のようにすると実行結果が変更できる。
 
 ```
 iterable1[Symbol.iterator] = function* () {
