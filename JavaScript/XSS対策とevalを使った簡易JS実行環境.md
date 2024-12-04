@@ -57,6 +57,18 @@ function JScodeRun() {
 
 `document.getElementById("JsView")`に`.value`を付けることで、`document.getElementById()`で**取得した要素内に存在する、テキストなどの値を取得できる。**
 
+例えば以下のコードのように`textarea`内に「test」と入力されていた場合、`.value`では「test」というテキストが取得される。
+
+```
+<textarea id="JsView" rows="20" cols="50">test</textarea>
+
+/* コンソール画面 */
+console.log(JS);
+
+/* 実行結果 */
+test
+```
+
 ### textarea要素
 
 `<textarea>要素`は、**複数行のテキスト入力欄を作成することができる。**
