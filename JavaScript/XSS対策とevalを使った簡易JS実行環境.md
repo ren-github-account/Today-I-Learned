@@ -332,6 +332,17 @@ iterable1[Symbol.iterator] = function* () {
 /* 実行結果 */
 456
 ```
+また、以下のように**テキストを渡すこともできる。**
+```
+iterable1[Symbol.iterator] = function* () {
+  yield "りんご, ";
+  yield "みかん, ";
+  yield "バナナ";
+};
+
+/* 実行結果 */
+りんご, みかん, バナナ
+```
 
 【▼検証開始】
 
