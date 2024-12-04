@@ -277,6 +277,7 @@ console.log(...iteratorObj);
 
 というより、より正確に言うならば、MDNの解説ページにある次の文章 **「反復可能オブジェクトにするには、オブジェクトは`[Symbol.iterator]()メソッド`を実装する必要があります。」** ( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Iterators_and_generators#%E5%8F%8D%E5%BE%A9%E5%8F%AF%E8%83%BD%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88) )とあるように、ブラケット記法で`オブジェクト名[Symbol.iterator]`と書くことで、**そのオブジェクト自体が「反復可能オブジェクト」となる。**
 
+反復機能を持たない通常のオブジェクトが反復可能オブジェクトとなることで、**for-of文において配列や文字列(これらは共にデフォルトで反復可能オブジェクト)と同じように扱うことが可能となる。**
 
 
 【▼検証開始】
