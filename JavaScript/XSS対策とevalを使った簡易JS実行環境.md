@@ -275,7 +275,9 @@ console.log(...iteratorObj);
 
 そして、`console.log`の引数を`...iterable1`, `...iteratorObj`, `...geneObj`のどれを書いても実行結果が`1 2 3`となって同じになるのは、**おそらく`...`が高機能でオブジェクト名の`iterable1`を書いたとしてもオブジェクト内にある`Symbol.iteratorプロパティ`を持ったジェネレータ関数を自動的に呼び出してくれて、そこからイテレータの値を取り出してくれるからだと考えられる。**
 
-というより、より正確に言うならば、MDNの解説ページに「反復可能オブジェクトにするには、オブジェクトは`[Symbol.iterator]()メソッド`を実装する必要があります。」( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Iterators_and_generators#%E5%8F%8D%E5%BE%A9%E5%8F%AF%E8%83%BD%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88) )とあるように、
+というより、より正確に言うならば、MDNの解説ページにある次の文章 **「反復可能オブジェクトにするには、オブジェクトは`[Symbol.iterator]()メソッド`を実装する必要があります。」** ( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Iterators_and_generators#%E5%8F%8D%E5%BE%A9%E5%8F%AF%E8%83%BD%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88) )とあるように、ブラケット記法で`オブジェクト名[Symbol.iterator]`と書くことで、**そのオブジェクト自体が「反復可能オブジェクト」となる。**
+
+
 
 【▼検証開始】
 
