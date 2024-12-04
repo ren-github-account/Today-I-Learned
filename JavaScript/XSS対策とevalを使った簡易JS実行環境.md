@@ -1,5 +1,6 @@
 *目次*
 * [やりたいこと](#やりたいこと)
+* [前知識](#前知識)
 * [JS簡易実行環境のコード](#JS簡易実行環境のコード)
 * [解説](#解説)
 * [value](#value)
@@ -26,6 +27,14 @@ https://blog.goo.ne.jp/jeans201/e/3eb2b3a9303916b49175309f7d890f55
 ・`createTextNode()メソッド`を使ったXSS対策について
 
 https://upa-pc.blogspot.com/2015/02/javascript-dom-based-xss-protect-createTextNode.html
+
+## 前知識
+### inputイベント
+
+ `<input>`, `<select>`, `<textarea>`の**各要素の値(`value`)が変更されたときに発生する。**
+
+ 
+
 
 ## JS簡易実行環境のコード
 
