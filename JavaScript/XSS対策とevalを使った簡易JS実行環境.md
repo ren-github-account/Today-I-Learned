@@ -279,6 +279,59 @@ console.log(...iteratorObj);
 
 反復可能オブジェクトとなることで**for-of文において配列や文字列(これらは共にデフォルトで反復可能オブジェクト)と同じように反復機能を持たない通常のオブジェクトを扱うことが可能となる。**
 
+具体的には以下のように書くことで、オブジェクト名を配列や文字列と同じように扱って実行することが可能となる。
+
+```
+for(const 変数名 of オブジェクト名){
+ 処理内容
+  
+}
+```
+
+実際にコードを書いてみると以下になる。
+
+```
+<body>
+<p id="outputID"></p>
+
+<script>
+
+const iterable1 = {};
+
+iterable1[Symbol.iterator] = function* () {
+  yield 10;
+  yield 11;
+  yield 12;
+};
+
+const output = document.getElementById("outputID")
+
+for(const value of iterable1){
+ output.textContent += value;
+  
+}
+
+</script>
+
+</body>
+```
+```
+/* 実行結果 */
+101112
+```
+
+**`yield 値;`の値の部分を変更することで**、for-of文に渡す**iterable**を変更することができる。例えば、以下のようにすると実行結果が変更できる。
+
+```
+iterable1[Symbol.iterator] = function* () {
+  yield 4;
+  yield 5;
+  yield 6;
+};
+
+/* 実行結果 */
+456
+```
 
 【▼検証開始】
 
