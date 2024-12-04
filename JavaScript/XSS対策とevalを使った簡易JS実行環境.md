@@ -241,8 +241,7 @@ console.log(...iterable1);
 |ジェネレータ関数|functionの後に **`*`(アスタリスク)を付けて宣言された関数は、ジェネレータ関数となる。** この関数の変わった点は、**`変数名();`と書いて関数を呼び出しただけでは関数は実行されないことにある。** 呼び出されると関数が実行されない代わりに、関数の実行を制御するためのオブジェクトである**Generatorオブジェクトが生成されて戻り値として返される。** このGeneratorオブジェクトは`nextメソッド`を持ち、**この`nextメソッド`を呼び出すことで初めて関数が実行される。**|
 |`...`|この点三つのことを**スプレッド構文**と呼ぶ。先頭に付けることで、**配列や文字列などの反復可能オブジェクトを展開することができる。** 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)|
 |`[]`|配列リテラル。文字列リテラルの`""`と同じように使うことができ、`[]`で囲むことで簡単に配列を作成できる。参照:[jsprimer](https://jsprimer.net/basic/data-type/)|
-
-
+|`*プロパティ名`|**ジェネレータ関数にも省力記法**が存在し、プロパティ名の先頭に`*`を付けることで使用できる。参照:[uhyohyo](https://uhyohyo.net/javascript/16_8.html), コードの具体例:[その1](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Iterators_and_generators#%E5%8F%8D%E5%BE%A9%E5%8F%AF%E8%83%BD%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88), [その2](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/function*#%E4%BE%8B)|
 
 上記のコードに以下のコードを追記して、`console.log();`でその中身を確認してみた。
 ```
