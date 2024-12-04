@@ -2,6 +2,7 @@
 * [やりたいこと](#やりたいこと)
 * [JS簡易実行環境のコード](#JS簡易実行環境のコード)
 * [解説](#解説)
+* [value](#value)
 * [textarea要素](#textarea要素)
 * [eval](#eval)
 * [evalに関連する用語](#evalに関連する用語)
@@ -51,6 +52,10 @@ function JScodeRun() {
 ```
 
 ## 解説
+
+### value
+
+`document.getElementById("JsView")に`.value`を付けることで、 **`document.getElementById()`で取得した要素内に存在するテキストなどの値を取得できる**
 
 ### textarea要素
 
