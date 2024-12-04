@@ -55,7 +55,7 @@ function JScodeRun() {
 
 ### value
 
-`document.getElementById("JsView")に`.value`を付けることで、 **`document.getElementById()`で取得した要素内に存在するテキストなどの値を取得できる**
+`document.getElementById("JsView")`に「.value」を付けることで、`document.getElementById()`で**取得した要素内に存在するテキストなどの値を取得できる。**
 
 ### textarea要素
 
