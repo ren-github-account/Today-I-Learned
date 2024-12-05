@@ -31,7 +31,7 @@ https://upa-pc.blogspot.com/2015/02/javascript-dom-based-xss-protect-createTextN
 ## 前知識
 ### inputイベント
 
- `<input>`, `<select>`, `<textarea>`の**各要素の値(`value`)が変更されたときに発生する。**
+ `<input>`, `<select>`, `<textarea>`の**各要素の値(`value`)が変更されたときに発生する。** (`value`の意味については後述)
 
  
 
