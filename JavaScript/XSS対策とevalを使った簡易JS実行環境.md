@@ -33,7 +33,33 @@ https://upa-pc.blogspot.com/2015/02/javascript-dom-based-xss-protect-createTextN
 
  `<input>`, `<select>`, `<textarea>`の**各要素の値(`value`)が変更されたときに発生する。** (`value`の意味については後述)
 
- 
+ 実際に使用するには以下のコードを書く。
+
+```
+<body>
+
+<input placeholder="Enter some text" name="name" />
+<p id="values"></p>
+
+<script>
+
+const input = document.querySelector("input");
+const logOutput = document.getElementById("values");
+
+input.addEventListener("input", updateValue);
+
+function updateValue(e) {
+  logOutput.textContent = e.target.value;
+} 
+
+</script>
+
+</body>
+```
+
+`e.target`はイベントが発生した要素を取得するプロパティ。( 参照:[メモ](https://github.com/ren-github-account/Today-I-Learned/blob/15d230cff3f1879750be707af573ddcef37c1a27/JavaScript/MDN-%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%85%A5%E9%96%80-%E3%81%9D%E3%81%AE2.md#%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E6%8C%81%E3%81%A4%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3) )　`.value`を付けることでその要素の中のテキストや数字を取得している。
+
+そして、`textContentプロパティ`を使うことで`e.target.value`にて取得したテキストや数字を要素内に表示させている。
 
 
 ## JS簡易実行環境のコード
