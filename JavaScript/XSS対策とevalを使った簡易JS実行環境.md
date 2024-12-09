@@ -1,6 +1,7 @@
 *目次*
 * [やりたいこと](#やりたいこと)
 * [完成コード](#完成コード)
+* [evalの挙動](#evalの挙動)
 * [前知識](#前知識)
 * [JS簡易実行環境のコード](#JS簡易実行環境のコード)
 * [解説](#解説)
@@ -65,13 +66,66 @@ input.addEventListener("click", testJScodeRun);
 </body>
 ```
 
-上記のコードのまま実行すると、下の「JS簡易実行環境のコード」の節で書いているコードと同じ動作になるがいくつか変更を加えると`eval`が実行されなくなる。
+**解説**
+
+上記のコードのまま実行すると、下の「JS簡易実行環境のコード」の節で書いているコードと同じ動作になるが以下の変更を加えると`eval`が実行されなくなる。
 
 変更を加えるのは、まず「コメントアウト部分」のコメントアウトを解除した後、evalの引数を`changeJS`に変更すればok。
 
 `console.log();`の部分は`eval`の挙動を確かめるために変数の中身を表示させている。
 
 **textarea要素**に`.value`を使用して値を取得すると、**その値は文字列で取得される。** ( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/API/HTMLTextAreaElement/value) )
+
+### evalの挙動
+
+上記の完成コードにてなぜ`eval`が実行されなくなるのかを考えていたところ、`eval`の挙動が気になったので以下のコードを書いて確かめてみた。
+
+```
+<body>
+
+JavaScriptコード:<br>
+
+<textarea id="JsView" rows="20" cols="50">"こんにちわ"</textarea><br>
+<input type="button" value="実行"/>
+
+<script>
+
+const testJScodeRun = function JScodeRun() {
+  
+  const JS = document.getElementById("JsView").value;
+  console.log("JS:",JS);
+  console.log("typeof:",typeof JS);
+  /* 
+  const changeJS = document.createTextNode(JS);
+  console.log(changeJS);
+　 */
+　
+  const test1 = eval(JS);　/* ここの戻り値に注目  */
+  console.log("test1:",test1);
+　console.log(typeof test1);
+  
+  const test2 = eval(test1);
+  console.log(test2);
+  console.log(typeof test2);
+　
+}
+
+const input = document.querySelector("input");
+input.addEventListener("click", testJScodeRun);
+
+</script>
+
+</body>
+```
+
+**解説**
+
+上記のコードでは、`textarea要素`内にデフォルトで`"こんにちわ"`とダブルクォーテーション付きの文字を設定している。
+
+このダブルクォーテーション付きの`"こんにちわ"`が変数`JS`に代入され、`eval`の引数として`const test1 = eval(JS);`の部分で実行されると、変数test1には`eval`の戻り値としてダブルクォーテーションが取れた形の`こんにちわ`が返される。
+
+この`こんにちわ`はただの文字なので、その後の行の`const test2 = eval(test1);`の部分で実行しようとするとエラーになるが、一方で`"const test2 = eval(test1);"`のようなスクリプトとして実行可能な文字列を`textarea要素`内に入力すると`const test2 = eval(test1);`の行で実行できてしまう。
+
 
 ## 前知識
 ### inputイベント
