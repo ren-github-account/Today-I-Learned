@@ -3,6 +3,7 @@
 * [完成コード](#完成コード)
 * [evalの挙動](#evalの挙動)
 * [createTextNodeはオブジェクトとなって実行されない](#createTextNodeはオブジェクトとなって実行されない)
+* [evalで文字を数値に変換](#evalで文字を数値に変換)
 * [前知識](#前知識)
 * [JS簡易実行環境のコード](#JS簡易実行環境のコード)
 * [解説](#解説)
@@ -171,6 +172,68 @@ input.addEventListener("click", testJScodeRun);
 </script>
 
 </body>
+```
+
+### evalで文字を数値に変換
+
+`eval`は古いコードだと以下のように、**文字列を数値に変換する**用途で使われることがある。( 参照:[はてなブログ](https://kuronekojima.hatenadiary.org/entry/20080207/1202450418) )
+
+```
+var leftValue = document.getElementById("left").value;
+var rightValue = document.getElementById("right").value;
+var totalValue = eval(leftValue) + eval(rightValue); /* ここで合計を計算している */
+```
+
+なぜこういった使い方ができるのかというと、`eval`はソースコードを評価した結果を返すため、引数にデータ型が文字列の数字を入力するとその数字が解釈され、**最終的に計算に扱える形の数値に変換されて返される。**
+
+このことを実際に確かめるには、以下のコードを入力してtextarea要素内に`4`とか`3`とか数字を入力して実行してみると良い。
+
+```
+<body>
+
+JavaScriptコード:<br>
+
+<textarea id="JsView" rows="20" cols="50"></textarea><br>
+<input type="button" value="実行"/>
+
+<script>
+
+const testJScodeRun = function JScodeRun() {
+  
+  const JS = document.getElementById("JsView").value;
+  console.log("JS:",JS);
+  console.log("typeof:",typeof JS);
+  
+  /* 
+  const changeJS = document.createTextNode(JS);
+  console.log("changeJS:",changeJS);
+  console.log(typeof changeJS);
+　 */
+　
+　
+  const test1 = eval(JS);
+  console.log("test1:",test1);
+  console.log(typeof test1);
+}
+
+const input = document.querySelector("input");
+input.addEventListener("click", testJScodeRun);
+
+</script>
+
+</body>
+```
+実行結果は以下になる。
+
+最初は文字列型だった値が、`eval`を通すことでソースコードとして評価がなされ、計算に使用できる **「数値型」** に変更されたことがわかる。
+
+```
+/* 実行結果 */
+
+JS: 4
+typeof: string
+test1: 4
+number
 ```
 
 ## 前知識
