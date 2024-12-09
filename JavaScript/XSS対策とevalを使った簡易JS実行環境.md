@@ -75,7 +75,7 @@ input.addEventListener("click", testJScodeRun);
 
 `console.log();`の部分は`eval`の挙動を確かめるために変数の中身を表示させている。
 
-**textarea要素**に`.value`を使用して値を取得すると、**その値は文字列で取得される。** ( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/API/HTMLTextAreaElement/value) )
+`.value`を使用して`textarea要素`の値を取得すると、**その値は文字列で取得される。** ( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/API/HTMLTextAreaElement/value) )
 
 ### evalの挙動
 
