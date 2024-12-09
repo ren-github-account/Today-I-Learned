@@ -126,6 +126,51 @@ input.addEventListener("click", testJScodeRun);
 
 この`こんにちわ`はただの文字なので、その後の行の`const test2 = eval(test1);`の部分で実行しようとするとエラーになるが、一方で`"const test2 = eval(test1);"`のようなスクリプトとして実行可能な文字列を`textarea要素`内に入力すると`const test2 = eval(test1);`の行で実行できてしまう。
 
+### createTextNodeはオブジェクトとなって実行されない
+
+`createTextNode`を使用した場合も上記の「evalの挙動」の節で書いたコードのようにすることで`eval`が実行できるのではないかと考え、以下のコードを書いて確かめてみた。
+
+**結果、実行されないことがわかった。**
+
+`typeof演算子`を使って確かめたところ、そもそもデータ型が`object`となっていて、MDNの`eval`説明にある **「`eval()`の引数が文字列でない場合、`eval()`は引数を変更せずに返します。」** ( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) )の通りの動作をした。
+
+つまり、`createTextNode`を使用するとデータ型が文字列型を表す`string`から変化して、プリミティブ以外のデータ型を表す`object`に変わった。**このことにより、`eval`で実行しようとしても引数が変更されずにそのまま返されるため実行できなくなっている。**　ここは流石によくできてるなw
+
+以上のことから、`createTextNode`はXSS対策に有効ということがわかる。
+
+```
+<body>
+
+JavaScriptコード:<br>
+
+<textarea id="JsView" rows="20" cols="50"></textarea><br>
+<input type="button" value="実行"/>
+
+<script>
+
+const testJScodeRun = function JScodeRun() {
+  
+  const JS = document.getElementById("JsView").value;
+  console.log("JS:",JS);
+  console.log("typeof:",typeof JS);
+
+  const changeJS = document.createTextNode(JS);
+  console.log("changeJS:",changeJS);
+  console.log(typeof changeJS);
+　
+　
+  const test1 = eval(changeJS);
+  console.log(test1);
+  console.log(typeof test1);
+}
+
+const input = document.querySelector("input");
+input.addEventListener("click", testJScodeRun);
+
+</script>
+
+</body>
+```
 
 ## 前知識
 ### inputイベント
