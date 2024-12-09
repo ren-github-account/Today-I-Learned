@@ -33,7 +33,7 @@ https://upa-pc.blogspot.com/2015/02/javascript-dom-based-xss-protect-createTextN
 
  `<input>`, `<select>`, `<textarea>`の**各要素の値(`value`)が変更されたときに発生する。** (`value`の意味については後述)
 
- 実際に使用するには以下のコードを書く。
+ 実際に使用するには以下のようにコードを書く。
 
 ```
 <body>
