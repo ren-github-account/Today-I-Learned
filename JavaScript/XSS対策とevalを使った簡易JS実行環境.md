@@ -1,5 +1,6 @@
 *目次*
 * [やりたいこと](#やりたいこと)
+* [完成コード](#完成コード)
 * [前知識](#前知識)
 * [JS簡易実行環境のコード](#JS簡易実行環境のコード)
 * [解説](#解説)
@@ -27,6 +28,48 @@ https://blog.goo.ne.jp/jeans201/e/3eb2b3a9303916b49175309f7d890f55
 ・`createTextNode()メソッド`を使ったXSS対策について
 
 https://upa-pc.blogspot.com/2015/02/javascript-dom-based-xss-protect-createTextNode.html
+
+### 完成コード
+
+```
+<body>
+
+JavaScriptコード:<br>
+
+<textarea id="JsView" rows="20" cols="50"></textarea><br>
+<input type="button" value="実行"/>
+
+<script>
+
+const testJScodeRun = function JScodeRun() {
+  
+  const JS = document.getElementById("JsView").value;
+  console.log(JS);
+
+  /*
+　コメントアウト部分
+  const changeJS = document.createTextNode(JS);
+  console.log(changeJS);
+　 */
+　
+  eval(JS);
+
+}
+
+const input = document.querySelector("input");
+input.addEventListener("click", testJScodeRun);
+
+
+</script>
+
+</body>
+```
+
+上記のコードのまま実行すると、下の「JS簡易実行環境のコード」の節で書いているコードと同じ動作になるがいくつか変更を加えると、`eval`が実行されなくなる。
+
+変更を加えるのは、まず「コメントアウト部分」のコメントアウトを解除した後、evalの引数を`changeJS`に変更すればok。
+
+`console.log();`の部分は`eval`の挙動を確かめるために変数の中身を表示させている。
 
 ## 前知識
 ### inputイベント
