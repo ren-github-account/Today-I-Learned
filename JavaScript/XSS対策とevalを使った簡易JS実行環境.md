@@ -2,6 +2,7 @@
 * [やりたいこと](#やりたいこと)
 * [完成コード](#完成コード)
 * [evalの挙動](#evalの挙動)
+* [createTextNodeはオブジェクトとなって実行されない](#createTextNodeはオブジェクトとなって実行されない)
 * [前知識](#前知識)
 * [JS簡易実行環境のコード](#JS簡易実行環境のコード)
 * [解説](#解説)
@@ -134,7 +135,7 @@ input.addEventListener("click", testJScodeRun);
 
 `typeof演算子`を使って確かめたところ、そもそもデータ型が`object`となっていて、MDNの`eval`説明にある **「`eval()`の引数が文字列でない場合、`eval()`は引数を変更せずに返します。」** ( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) )の通りの動作をした。
 
-つまり、`createTextNode`を使用するとデータ型が文字列型を表す`string`から変化して、プリミティブ以外のデータ型を表す`object`に変わった。**このことにより、`eval`で実行しようとしても引数が変更されずにそのまま返されるため実行できなくなっている。**　ここは流石によくできてるなw
+つまり、`createTextNode`を使用すると変数JSのデータ型が文字列型を表す`string`から変化して、プリミティブ以外のデータ型を表す`object`に変わった。**このことにより、`eval`で実行しようとしても引数が変更されずにそのまま返されるため実行できなくなっている。**　ここは流石によくできてるなw
 
 以上のことから、`createTextNode`はXSS対策に有効ということがわかる。
 
