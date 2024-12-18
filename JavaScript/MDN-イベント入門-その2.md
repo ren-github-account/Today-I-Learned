@@ -12,6 +12,7 @@
 * [インラインイベントハンドラー](#インラインイベントハンドラー)
 * [イベントキャプチャ](#イベントキャプチャ)
 * [イベントデリゲーション](#イベントデリゲーション)
+* [具体例](#具体例)
 
 ### 概要
 
@@ -707,8 +708,63 @@ el.addEventListener('click', 処理関数, true);
 
 例えば、**ユーザーが複数ある子要素のうちのいずれかを操作した時に何らかのコードを実行させたい場合、** その複数ある子要素に対して個別にイベントを設定するのではなく、親要素にまとめて設定することで子要素に対するイベントを一括で指定できる。
 
+### 具体例
+
+イベントデリゲーションを使用したコード例は以下になる。
+
+以下のコードは実行すると、class名に`tile`と名前を付けた`div要素`がクリックされた時に、その`div要素`にランダムな色がついて表示される。
+```
+<body>
+
+<script>
+
+// tileを入れるコンテナ
+const tileContainer = document.createElement("div");
+tileContainer.id = "container";
+
+// class名が"tile"のdiv要素を16個作ってコンテナの中に入れる
+for(let i=0; i<16; i++) {
+  // サイズは100px x 100px。
+  const tileBox = document.createElement("div");
+  tileBox.className = "tile";
+  tileBox.style.width = "25%";
+  tileBox.style.height = "100px";
+  tileBox.style.cssFloat = "left";
+
+  tileContainer.appendChild(tileBox);
+
+  }
+
+// コンテナをbodyに追加する。
+document.body.appendChild(tileContainer);
+
+//以下はイベントハンドラーの追加処理
+function random(number) {
+  return Math.floor(Math.random() * number);
+}
+
+function bgChange() {
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+  return rndCol;
+}
 
 
+const container = document.querySelector("#container");
+
+container.addEventListener("click", (event) => {
+  event.target.style.backgroundColor = bgChange();
+});
+
+</script>
+
+</body>
+```
+
+**解説**
+
+イベントハンドラーの処理のコードを理解するにはまず以下のことを押さえておく必要がある。
+
+それは「`Math.random()`は`0.0`から`1.0`までの間の値を生成するので、`255`をかけてやって、あとは四捨五入すれば`0`から`255`までの値が得られる」ということ。
 
 
 
