@@ -778,6 +778,30 @@ container.addEventListener("click", (event) => {
 
 ### アロー関数
 
+**OKな場合:アロー関数で即時関数**
+```
+(() => {
+ console.log("hello");
+})();
+```
+
+上記の書き方だと問題なく動くが、以下の書き方だとなぜかエラーとなる。
+
+```
+(() => {
+ console.log("hello");
+}());
+
+//SyntaxError
+```
+バグとの情報もあるし、とりあえずこういうものと覚えるほかなさそう。
+
+ググってみると報告例がいくつか見つかった。
+
+[報告例:その1](https://takamints.hatenablog.jp/entry/lambda-expression-must-be-enclosed-by-curly-brackets)
+
+[報告例:その2](https://analogic.jp/arrow-function/#immediate-function)
+
 **関連用語**
 ||意味|
 |-|-|
