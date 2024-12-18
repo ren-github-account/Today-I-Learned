@@ -778,6 +778,20 @@ container.addEventListener("click", (event) => {
 
 ### アロー関数
 
+アロー関数の基本の書き方は、無名関数から **「"function" という語を削除し、引数と中括弧の間に矢印を配置する」**。( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions) )
+
+```
+// 無名関数
+(function() {
+ console.log("hello");
+}());
+
+//アロー関数に直した場合
+(() => {
+ console.log("hello");
+})();
+```
+
 **OKな場合:アロー関数で即時関数**
 ```
 (() => {
