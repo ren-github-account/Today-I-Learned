@@ -772,6 +772,8 @@ container.addEventListener("click", (event) => {
 
 `event.target`はeventオブジェクトのtargetプロパティで、**「実際にイベントが発生したHTML要素を表す」**。
 
+つまり、この場合はclass名が`tile`の`div要素`を表している。
+
 
 
 
