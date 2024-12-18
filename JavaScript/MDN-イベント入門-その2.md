@@ -811,7 +811,27 @@ function () {
 //エラー: SyntaxError
 ```
 
+**ちょっと違った書き方**
 
+また即時関数には以下のように外側の`()`内に上記のコード末尾の`()`を入れ込む書き方もある。( 参照:[analogic.jp](https://analogic.jp/immediate-function/) )
+
+```
+(function() {
+  //...
+}()); //()を中に入れ込んだ
+```
+
+また、上記の書き方は以下のように行末のセミコロン`;`を省略しても動く。
+
+```
+
+(function () {
+　alert("hello");
+}())
+
+```
+
+この理由は、JavaScriptには**ASI**(Automatic Semicolon Insertion)と呼ばれる**自動セミコロン挿入機能**が備わっているから。( 参照:[tai2.net](https://blog.tai2.net/automatic_semilocon_insertion.html) )
 
 
 
