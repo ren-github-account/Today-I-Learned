@@ -798,6 +798,19 @@ container.addEventListener("click", (event) => {
 })();
 ```
 
+無名関数全体を`()`で囲む理由は、**式として認識させるため。**
+
+なので、以下のように`()`を外して書くとエラーとなる。
+
+```
+function () {
+　text = "foo";
+  console.log(text);
+}();
+
+//エラー: SyntaxError
+```
+
 
 
 
