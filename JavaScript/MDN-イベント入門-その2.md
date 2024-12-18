@@ -766,6 +766,13 @@ container.addEventListener("click", (event) => {
 
 それは「`Math.random()`は`0.0`から`1.0`までの間の値を生成するので、`255`をかけてやって、あとは四捨五入すれば`0`から`255`までの値が得られる」ということ。( 参照:[sbfl.net](https://sbfl.net/blog/2018/05/21/javascript-generate-better-color/) )
 
+それさえ理解できれば、あとは`function`で定義した関数の引数に`255`を設定しているだけなので難しくない。
+
+そして、`addEventListener`内の処理のポイントは`event.target`が使われていること。
+
+`event.target`はeventオブジェクトのtargetプロパティで、**「実際にイベントが発生したHTML要素を表す」**。
+
+
 
 
 
