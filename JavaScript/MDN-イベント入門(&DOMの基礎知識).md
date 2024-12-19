@@ -106,7 +106,7 @@ btn.addEventListener("click", changeBackground); /* 関数名のみを記述し�
 
 ### querySelectorメソッド
 
-`addEventListener()`と一緒によく使われるメソッド。イメージとしてはDOMツリー内をCSSセレクターで**検索**できるみたいな感じ。
+`addEventListener()`と一緒によく使われるメソッド。イメージとしてはDOMツリー内を**CSSセレクターで検索できる**みたいな感じ。
 
 英語でqueryには **「質問する」** といった意味がある。つまり、querySelectorメソッドは **「質問を投げかけ目的の情報を引っ張り出す」** といったイメージがしっくりくる。
 
@@ -164,6 +164,7 @@ querySelectorメソッドの**戻り値**は、「指定された**CSSセレク�
 
 そして、このプロパティやメソッド、イベントは、**インターフェイスと呼ばれる仕様によって定められている。**
 
+**用語**
 ||意味|
 |-|-|
 |Element|Elementオブジェクトを理解するには、そもそもElementとは何かを理解する必要がある。Elementとは、Document内のすべての要素オブジェクト (つまり、要素を描画するオブジェクト) がinherit(継承する)最も一般的で**ベース(基礎)となるクラスのこと。**(クラスについて詳しくは[こちら](https://github.com/ren-github-account/Today-I-Learned/blob/main/JavaScript/MDN-%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0(%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%A8%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%81%AA%E3%81%A9).md#%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%A8%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%81%A8%E3%81%AF)と[こちら](https://github.com/ren-github-account/Today-I-Learned/blob/main/JavaScript/MDN-%E3%82%AF%E3%83%A9%E3%82%B9(%E5%8F%A4%E5%85%B8%E7%9A%84OOP%E9%A2%A8).md)を参照) ただ、通常Elementといった場合、Elementクラスのインスタンスプロパティである**子要素やclassnameやidのことを指す**場合も多い。(参照:[こちら](https://qiita.com/tomokichi_ruby/items/c3ed6f6edbd5078ddf70) )   **Elementインターフェイスは、Nodeインターフェイスから継承される。** ElementインターフェイスとNodeインターフェイスの2つを組み合わせることで、個々の要素で使用するメソッドとプロパティの多くを提供する。参照:[DOMの紹介](https://developer.mozilla.org/ja/docs/Web/API/Document_Object_Model/Introduction)|
