@@ -17,6 +17,10 @@ JavaScriptを使ってブロック崩しゲームを作成するのに必要な�
 
 https://developer.mozilla.org/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 
+・MDN-ボールを動かす
+
+https://developer.mozilla.org/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
+
 
 ### canvas要素
 
