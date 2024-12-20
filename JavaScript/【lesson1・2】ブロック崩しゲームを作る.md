@@ -188,4 +188,4 @@ function draw() {
 }
 ```
 
-上記のコードのように変数を関数の外側で宣言すると、**現在の文書のどのコードからも使用できる**ようになる。このことから、このような変数は**グローバル（大域）変数**と呼ばれる。( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Grammar_and_types#%E5%A4%89%E6%95%B0%E3%81%AE%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%97) )
+上記のコードのように変数を関数の外側で宣言すると、**現在の文書のどのコードからも使用できる**ようになる。このことから、このような変数のことを**グローバル（大域）変数**と呼ぶ。( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Grammar_and_types#%E5%A4%89%E6%95%B0%E3%81%AE%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%97) )
