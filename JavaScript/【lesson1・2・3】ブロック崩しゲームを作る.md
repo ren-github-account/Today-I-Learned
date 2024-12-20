@@ -226,13 +226,38 @@ if (y + dy < 0) {
 どういうことか、実際のコードを見ながら見ていく。
 
 ```
+// 変数yの中身を表示するための要素を作成
+const yWatch = document.createElement("p");
+yWatch.id = "yWatch";
+document.body.appendChild(yWatch);
+
 // 描画する円の半径
 const ballRadius = 10;
 
+// y軸に加算
+y += dy;
+
 // 上端と下端への衝突を検出
+// dy = 0とすることで移動を停止
 if (y + dy > canvas.height - ballRadius || y + dy  < ballRadius) {
-  dy = -dy;
+  dy = 0;
 }
+
+// 変数yの中身に+1した結果を表示
+yWatch.textContent = y + 1;
 ```
+
+上記の実際のコードでは、まず変数`ballRadius`に半径`10`を代入した上で`y + dy < ballRadius`として判定に使用する。
+
+そして、この条件式の意味を分かりやすくするために、判定文の直後に`textContentプロパティ`を使用して`y`の中身を表示させている。
+
+`dy = 0;`は加算をやめて移動の停止を意味する。
+
+ここでもし`y < ballRadius`だと、`10 < ballRadius`が`false`となって`y += dy;`が1回分多く実行されてしまい`y = 8`となって上端が画面にめり込んでしまう。
+
+一方で`y + dy < ballRadius`だと、**`10 + (-2) < ballRadius`の時点で`true`となって`y += dy;`が実行されずにすみ**`y = 10`と上端にめり込む前に止まることが可能となる。
+
+
+
 
 
