@@ -34,7 +34,7 @@ https://developer.mozilla.org/ja/docs/Games/Tutorials/2D_Breakout_game_pure_Java
 具体的には以下のように書く。　
 
 ```
-const canvas = document.querySelector("canvas");
+const canvas = document.querySelector("#myCanvas");
 const ctx = canvas.getContext("2d");
 ```
 
@@ -51,7 +51,7 @@ const ctx = canvas.getContext("2d");
 実際に図形を描画するには、上記のコードにたいして以下のように追記する。
 
 ```
-const canvas = document.querySelector("canvas");
+const canvas = document.querySelector("myCanvas");
 const ctx = canvas.getContext("2d");
 
 // 図形を描画
@@ -137,9 +137,37 @@ ctx.closePath();
 ||意味|
 |-|-|
 |`setInterval()`|指定した秒数ごとに関数を繰り返し実行する。`setInterval(func, delay)`のように書き、`func`の部分には関数名を、`delay`には秒数を書く。秒数はミリ秒単位で表され、**1000ミリ秒が1秒に相当する**ので、1秒ごとに実行した場合は`1000`と書く。|
-|||
-|||
+|`.width`|このプロパティが`canvas要素`にたいして使用される時は、`canvas要素`の`width`を取得できる。|
+|`.height`|同様に`canvas要素`の`height`を取得する。|
 
+**コード**
+```
+<body>
+
+<canvas id="myCanvas" width="480" height="320"></canvas>
+
+<script>
+...(省略)
+let x = canvas.width / 2;
+let y = canvas.height - 160;
+
+let dx = 2;
+let dy = -2;
+
+function draw() {
+...(省略)
+x += dx;
+y += dy;
+}
+setInterval(draw, 10);
+</script>
+</body>
+```
+
+**解説**
+`let x = canvas.width / 2;`は数値を代入すると、`canvas要素`の幅の半分の`480 / 2 = 240`となり、**ボールを`canvas要素の`ちょうど半分の位置に指定**している。
+
+同様に`let y = canvas.height - 160;`は、`320-160 = 160`となり、**ボールをy軸(縦)のちょうど真ん中の位置に指定**している。
 
 
 
