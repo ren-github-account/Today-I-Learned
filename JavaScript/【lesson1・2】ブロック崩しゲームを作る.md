@@ -139,6 +139,7 @@ ctx.closePath();
 |`setInterval()`|指定した秒数ごとに関数を繰り返し実行する。`setInterval(func, delay)`のように書き、`func`の部分には関数名を、`delay`には秒数を書く。秒数はミリ秒単位で表され、**1000ミリ秒が1秒に相当する**ので、1秒ごとに実行した場合は`1000`と書く。|
 |`.width`|このプロパティが`canvas要素`にたいして使用される時は、`canvas要素`の`width`を取得できる。|
 |`.height`|同様に`canvas要素`の`height`を取得する。|
+|`clearRect()`|`canvas`の一部または全体を真っ白(厳密には透明な黒)にする。円や四角形を描画する直前に`ctx.clearRect(0, 0, canvas.width, canvas.height);`を記述することで**動いているように見せることができる。**|
 
 **コード**
 ```
