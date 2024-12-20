@@ -8,6 +8,7 @@
 * [縁にだけ色を塗る](#縁にだけ色を塗る)
 * [ボールを動かす](#ボールを動かす)
 * [変数のスコープ](#変数のスコープ)
+* [壁への衝突を検出](#壁への衝突を検出)
 
 ### 概要
 
@@ -22,6 +23,10 @@ https://developer.mozilla.org/ja/docs/Games/Tutorials/2D_Breakout_game_pure_Java
 ・MDN-ボールを動かす
 
 https://developer.mozilla.org/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
+
+・MDN-ボールを壁で跳ね返させる
+
+https://developer.mozilla.org/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 
 
 ### canvas要素
@@ -189,3 +194,25 @@ function draw() {
 ```
 
 上記のコードのように変数を関数の外側で宣言すると、**現在の文書のどのコードからも使用できる**ようになる。このことから、このような変数のことを**グローバル（大域）変数**と呼ぶ。( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Grammar_and_types#%E5%A4%89%E6%95%B0%E3%81%AE%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%97) )
+
+### 壁への衝突を検出
+
+壁への衝突を検出するため条件式として**もっとも基本となるのが以下のコード。**
+
+```
+if (y + dy < 0) {
+  dy = -dy;
+}
+```
+
+**解説**
+
+上記のコードは画面の4つの端のうち**上端への衝突を検出する**ためのもの。
+
+`y`が縦の位置を表し、`dy`には`-2`が入っている。
+
+指定したミリ秒数ごとに`y`に`dy`に入っている数値`-2`が足されていき、ボールがどんどん上側に移動していく仕組みになっている。
+
+そして`y + dy`の
+
+
