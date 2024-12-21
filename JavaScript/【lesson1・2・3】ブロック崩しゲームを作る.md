@@ -300,7 +300,7 @@ if (y + dy > canvas.height - ballRadius || y + dy  < ballRadius) {
 
 注意点として、衝突検出時に`h = Math.random() * 360;`を実行した後に、その値をhsl値として代入することを忘れずに。
 
-具体的には直後に`hslcolor = `hsl(${h}, 80%, 60%)`;`
+具体的には直後に`hslcolor = \`hsl(${h}, 80%, 60%)\`;`
 
 
 
