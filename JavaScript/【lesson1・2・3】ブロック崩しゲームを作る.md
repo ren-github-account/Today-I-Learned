@@ -9,6 +9,7 @@
 * [ボールを動かす](#ボールを動かす)
 * [変数のスコープ](#変数のスコープ)
 * [壁への衝突を検出](#壁への衝突を検出)
+* [画面端にぶつかる毎に色を変更](#画面端にぶつかる毎に色を変更)
 
 ### 概要
 
@@ -257,6 +258,49 @@ if文の中身の`dy = 0;`は加算をやめて移動の停止を意味する。
 
 一方で`y + dy < ballRadius`だと、**`10 + (-2) < ballRadius`の時点で`true`となって`y += dy;`が1回分多く実行されずにすみ**`y = 10`と上端にめり込む前に止まることが可能となる。
 
+### 画面端にぶつかる毎に色を変更
+
+衝突検出の応用編として、画面端にぶつかる毎にボールの色が変わるようにコードを改良してみる。
+
+以下は必要なコードを一部抜粋している。
+
+```
+// 色の情報を与えるための変数をグローバル変数として定義
+let h = Math.random() * 360;
+let hslcolor = `hsl(${h}, 80%, 60%)`;
+
+// fillStyleにhsl値を代入
+function colorChange(){
+ ctx.beginPath();
+ ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+ ctx.fillStyle = hslcolor;
+ ctx.fill();
+ ctx.closePath();
+}
+
+// 関数の呼び出し
+colorChange();
+
+// 衝突を検出する毎に色を計算して、hsl値を更新する
+if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+  dx = -dx;
+  h = Math.random() * 360;
+  hslcolor = `hsl(${h}, 80%, 60%)`;
+
+  }
+
+if (y + dy > canvas.height - ballRadius || y + dy  < ballRadius) {
+  dy = -dy;
+  h = Math.random() * 360;
+  hslcolor = `hsl(${h}, 80%, 60%)`;
+  }
+```
+
+**解説**
+
+注意点として、衝突検出時に`h = Math.random() * 360;`を実行した後に、その値をhsl値として代入することを忘れずに。
+
+具体的には直後に`hslcolor = `hsl(${h}, 80%, 60%)`;`
 
 
 
