@@ -86,7 +86,7 @@ function keyUpHandler(e) {
 
 使用する時は上記のコードのように`e.key`のように引数と組み合わせて使う。
 
-左右の矢印キーを押すとそれぞれ**`ArrowLeft`と`ArrowRight`が`e.key`**に渡される。
+左右の矢印キーを押すとそれぞれ **`ArrowLeft`と`ArrowRight`** が`e.key`に渡される。
 
 `Left`と`Right`に関してはブラウザ`IE/Edge`に対応するために指定している。
 
