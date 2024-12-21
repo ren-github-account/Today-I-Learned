@@ -95,9 +95,13 @@ function keyUpHandler(e) {
 
 ### パドルの移動
 
-以下のコードを書く。
+以下のコードを書く。(※以下は説明に必要な箇所のみを抜粋している)
 
 ```
+<body>
+
+<canvas id="myCanvas" width="480" height="320"></canvas>
+
 <script>
 
 // 変数の中身を表示するための要素を作成
@@ -108,6 +112,13 @@ document.body.appendChild(paddlexWatch);
 const paddlexWatch2 = document.createElement("p");
 paddlexWatch2.id = "padlexWatch2";
 document.body.appendChild(paddlexWatch2);
+
+//パドルの高さと幅と位置を指定
+const paddleHeight = 10;
+const paddleWidth = 150;
+let paddleX = (canvas.width - paddleWidth) / 2;
+
+...(省略)
 
 function draw(){
  ...(省略)
@@ -130,8 +141,21 @@ function draw(){
  }
 
 }
-
+</body>
 ```
+
+**解説**
+
+|||
+|-|-|
+|`Math.min()`|引数に渡された値の中から**最小の値を返す**メソッド。|
+|`Math.max()`|引数に渡された値の中から**最大の値を返す**。|
+
+`Math.min`の引数のうち`canvas.width - paddleWidth`は、具体的な数値を当てはめると`480 - 150 = 330`となって、**パドルが画面の左端から`330ピクセル`位置にある**ことを意味する。
+
+ここはパドルの最初の位置を指定する時に使用した`let paddleX = (canvas.width - paddleWidth) / 2;`の部分を理解していれば難しくない。
+
+つまり、`(canvas.width - paddleWidth) / 2`の計算結果は`330 / 2 = 165`となるので、パドル以外の空白の幅は`165 x 2 = 330`が限界値となる。
 
 
 
