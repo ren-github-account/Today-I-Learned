@@ -195,6 +195,35 @@ if (y + dy  < ballRadius) {
     }
 ```
 
+### パドルをボールに当てる
 
+```
+if (y + dy < ballRadius) {
+  dy = -dy;
+} else if (y + dy > canvas.height - ballRadius) {
+  if (x > paddleX && x < paddleX + paddleWidth) {
+    dy = -dy;
+  } else {
+    alert("GAME OVER");
+    document.location.reload();
+    clearInterval(interval);
+  }
+}
+```
 
+下端にボールが当たった時、`if (x > paddleX && x < paddleX + paddleWidth)`でパドルの左端から右端の間にボールがあるかどうかをチェックしている。
+
+もしそれが`true`であったなら符号を反転させボールが跳ね返る。
+
+しかし、もし`false`であったなら`GAME OVER`となる。
+
+if文の`paddleX + paddleWidth`の部分を理解するには以下のイメージを思い浮かべると良い。
+
+```
+| paddleX | paddlewidth | paddleX |
+```
+
+変数`paddleX`の値は最初に`let paddleX = (canvas.width - paddleWidth) / 2;`と定義しているため画面の幅のうち **`paddlewidth`以外の左右の2領域を表している。**
+
+ということは、`paddleX`でパドルの左端を表し、`paddleX + paddleWidth`でパドルの右端を表すことになる。
 
