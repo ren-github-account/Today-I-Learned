@@ -1,6 +1,7 @@
 *目次*
 * [概要](#概要)
 * [参考記事](#参考記事)
+* [パドルを描画](#パドルを描画)
 
 ## 概要
 
@@ -11,3 +12,46 @@ lesson1・2・3の続き
 ・MDN-パドルとキーボード操作
 
 https://developer.mozilla.org/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
+
+### パドルを描画
+
+ボールにぶつかるパドルを描画するには以下のコードを書く。
+
+```
+<body>
+
+<canvas id="myCanvas" width="480" height="320"></canvas>
+
+<script>
+// パドルの高さと幅と位置を定義
+const paddleHeight = 10;
+const paddleWidth = 150;
+let paddleX = (canvas.width - paddleWidth) / 2;
+
+// パドルの描画
+function drawPaddle() {
+  ctx.beginPath();
+  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+</script>
+
+</body>
+```
+
+**解説**
+
+`let paddleX = (canvas.width - paddleWidth) / 2;`では、パドルが**画面の左端から何ピクセルの位置にあるか**を指定している。
+
+なぜこの式になるのかというと、まず全体の幅が`canvas要素`で指定した`480`である点が重要。
+
+パドルの幅は必ず確保されるので、全体の幅`480`からパドルの幅`150`を引く。
+
+そして、残りの幅を2で割った値を画面の左端から何ピクセルの位置にあるかに指定することで、**右端からも同じ幅が確保されてパドルの位置がちょうど真ん中となる。**
+
+あとは`rect()`の`canvas.height - paddleHeight`の部分は、前回壁への衝突の節でやった考え方と同じ。**画面の上端から何ピクセルの位置にあるか**を指定している。
+
+
+
