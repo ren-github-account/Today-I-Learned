@@ -4,6 +4,7 @@
 * [パドルを描画](#パドルを描画)
 * [操作キーが押されているかどうかを判定](#操作キーが押されているかどうかを判定)
 * [パドルの移動](#パドルの移動)
+* [ゲームオーバーを実装](#ゲームオーバーを実装)
 
 ## 概要
 
@@ -14,6 +15,10 @@ lesson1・2・3の続き
 ・MDN-パドルとキーボード操作
 
 https://developer.mozilla.org/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
+
+・MDN-ゲームオーバーを実装する
+
+https://developer.mozilla.org/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 
 ### パドルを描画
 
@@ -166,7 +171,12 @@ function draw(){
 あとは、`Math.min`の`paddleX + 7`と、`Math.max`の`paddleX - 7`はどちらも **`paddleX`だけにしても問題なく動く。** なぜ`paddleX + 7`や`-7`としているのかはちょっとよく分からない。
 
 
+### ゲームオーバーを実装
 
+**用語**
+||意味|
+|-|-|
+|`location.reload()`|現在のURLを再読み込みするためのメソッド。つまり、ブラウザの再読み込みボタンと同じ。|
 
 
 
