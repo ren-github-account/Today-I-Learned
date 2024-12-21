@@ -59,27 +59,6 @@ function drawPaddle() {
 以下のコードを書く。
 
 ```
-// キーが押された時とおされ*目次*
-* [概要](#概要)
-* [参考記事](#参考記事)
-* [パドルを描画](#パドルを描画)
-* [操作キーが押されているかどうかを判定](#操作キーが押されているかどうかを判定)
-
-## 概要
-
-lesson1・2・3の続き
-
-## 参考記事
-
-・MDN-パドルとキーボード操作
-
-https://developer.mozilla.org/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
-
-### パドルを描画
-
-ボールにぶつかるパドルを描画するには以下のコードを書く。
-
-```
 <body>
 
 <canvas id="myCanvas" width="480" height="320"></canvas>
