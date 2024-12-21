@@ -3,6 +3,7 @@
 * [参考記事](#参考記事)
 * [パドルを描画](#パドルを描画)
 * [操作キーが押されているかどうかを判定](#操作キーが押されているかどうかを判定)
+* [パドルの移動](#パドルの移動)
 
 ## 概要
 
@@ -91,6 +92,46 @@ function keyUpHandler(e) {
 `Left`と`Right`に関してはブラウザ`IE/Edge`に対応するために指定している。
 
 `keydownイベント`は**キーが押されたときに発生**し、`keyup イベント`は**キーが離された時に発生**する。
+
+### パドルの移動
+
+以下のコードを書く。
+
+```
+<script>
+
+// 変数の中身を表示するための要素を作成
+const paddlexWatch = document.createElement("p");
+paddlexWatch.id = "padlexWatch";
+document.body.appendChild(paddlexWatch);
+
+const paddlexWatch2 = document.createElement("p");
+paddlexWatch2.id = "padlexWatch2";
+document.body.appendChild(paddlexWatch2);
+
+function draw(){
+ ...(省略)
+
+ // パドルを左右に移動させる
+ if (rightPressed) {
+  paddleX += 7;
+　paddlexWatch2.textContent = "Watch2:" + paddleX;　/* 変数paddleXの中身を画面に表示 */
+ } else if (leftPressed) {
+  paddleX -= 7;
+ }
+
+// パドルがそれぞれ画面の右端と左端で止まるようにする
+ if (rightPressed) {
+    paddleX = Math.min(paddleX + 7, canvas.width - paddleWidth);
+    paddlexWatch.textContent = "Watch1:" + paddleX; /* 右端で止まった時の変数paddleXの中身を表示 */
+
+   } else if (leftPressed) {
+  paddleX = Math.max(paddleX - 7, 0);
+ }
+
+}
+
+```
 
 
 
