@@ -181,7 +181,7 @@ function draw(){
 |`location.reload()`|現在のURLを再読み込みするためのメソッド。|
 |`clearInterval()`|`setInterval()`の繰り返し動作を停止する。使い方はまず`const interval = setInterval(draw, 10);`のようにして`setInterval()`の戻り値(識別子)を変数に代入した後に、その変数を引数に設定する。今あげた例だと`clearInterval(interval);`とすればok。|
 
-MDNの解説ページでは`document.location.reload();`が`clearInterval(interval);より先に記述されているが、**逆にした方が順番的何が起こっているか分かりやすい。**
+以下の部分のコードは、MDNの解説ページでは`document.location.reload();`が`clearInterval(interval);`より先に記述されているが、**逆にした方が順番的何が起こっているか分かりやすい。**
 
 ```
 
