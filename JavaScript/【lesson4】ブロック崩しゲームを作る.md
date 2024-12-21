@@ -163,7 +163,7 @@ function draw(){
 
 画面の右端にパドルが到達した時の変数`paddleX`の中身を見ると、`330`となっていて`Math.min`がしっかりと機能していることがわかる。
 
-あとは、`Math.min`の`paddleX + 7`と、`Math.max`の`paddleX - 7`はどちらも **`paddleX`だけにしても問題なく動く。** なぜ`paddleX + 7`や`-7`としているのかは今の段階ではよく分からない。
+あとは、`Math.min`の`paddleX + 7`と、`Math.max`の`paddleX - 7`はどちらも **`paddleX`だけにしても問題なく動く。** なぜ`paddleX + 7`や`-7`としているのかはちょっとよく分からない。
 
 
 
