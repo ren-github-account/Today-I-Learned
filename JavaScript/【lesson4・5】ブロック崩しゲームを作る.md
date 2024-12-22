@@ -7,6 +7,7 @@
 * [ゲームオーバーを実装](#ゲームオーバーを実装)
 * [パドルをボールに当てる](#パドルをボールに当てる)
 * [ブロックを記録する二次元配列を作成](#ブロックを記録する二次元配列を作成)
+* [ブロックを描画](#ブロックを描画)
 
 ## 概要
 
@@ -259,5 +260,38 @@ for (let c = 0; c < brickColumnCount; c++) {
 `{ x: 0, y: 0 }`の部分では、オブジェクトリテラル`{}`を使用している。
 
 そして、ブロックを描画位置を指定するための`x座標`と`y座標`を作成している。
+
+### ブロックを描画
+
+```
+function drawBricks() {
+  for (let c = 0; c < brickColumnCount; c++) {
+    for (let r = 0; r < brickRowCount; r++) {
+      const brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+      const brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+      bricks[c][r].x = brickX;
+      bricks[c][r].y = brickY;
+      ctx.beginPath();
+      ctx.rect(brickX, brickY, brickWidth, brickHeight);
+      ctx.fillStyle = "#0095DD";
+      ctx.fill();
+      ctx.closePath();
+    }
+  }
+}
+```
+
+**解説**
+
+`for (let c = 0; c < brickColumnCount; c++)`の中に`for (let r = 0; r < brickRowCount; r++)`が入っている。
+
+この実行の順番はどうなっているかというと、まず`for (let c = 0; c < brickColumnCount; c++)`が実行されて直下の`for (let r = 0; r < brickRowCount; r++)`が実行される。
+
+そして変数`brickRowCount`の値は`3`なので`for (let r = 0; r < brickRowCount; r++)`の処理が3回実行されてからやっとループから抜けて、再び外側にある`for (let c = 0; c < brickColumnCount; c++)`が実行され、再び直下の`for (let r = 0; r < brickRowCount; r++)`の処理が3回実行…(以下同じ)となる。
+
+なので描画のイメージは縦の
+
+
+
 
 
