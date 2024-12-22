@@ -211,7 +211,7 @@ if (y + dy < ballRadius) {
 }
 ```
 
-下端にボールが当たった時、`if (x > paddleX && x < paddleX + paddleWidth)`でパドルの左端から右端の間にボールがあるかどうかをチェックしている。
+`canvas`画面の下端にボールが当たった時、`if (x > paddleX && x < paddleX + paddleWidth)`でパドルの左端から右端の間にボールがあるかどうかをチェックしている。
 
 もしそれが`true`であったなら符号を反転させボールが跳ね返る。
 
