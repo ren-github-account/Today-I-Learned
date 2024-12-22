@@ -283,13 +283,19 @@ function drawBricks() {
 
 **解説**
 
-`for (let c = 0; c < brickColumnCount; c++)`の中に`for (let r = 0; r < brickRowCount; r++)`が入っている。
+縦の列を表す`for (let c = 0; c < brickColumnCount; c++)`の中に横の行を表す`for (let r = 0; r < brickRowCount; r++)`が入っている。
 
-この実行の順番はどうなっているかというと、まず`for (let c = 0; c < brickColumnCount; c++)`が実行されて直下の`for (let r = 0; r < brickRowCount; r++)`が実行される。
+この実行の順番はどうなっているかというと、まず縦列の`for (let c = 0; c < brickColumnCount; c++)`が実行されて直下の横の行を表す`for (let r = 0; r < brickRowCount; r++)`が実行される。
 
-そして変数`brickRowCount`の値は`3`なので`for (let r = 0; r < brickRowCount; r++)`の処理が3回実行されてからやっとループから抜けて、再び外側にある`for (let c = 0; c < brickColumnCount; c++)`が実行され、再び直下の`for (let r = 0; r < brickRowCount; r++)`の処理が3回実行…(以下同じ)となる。
+そして**横の行を表す**変数`brickRowCount`の値は`3`なので`for (let r = 0; r < brickRowCount; r++)`の処理が3回実行されてからやっとループから抜けて、再び外側にある`for (let c = 0; c < brickColumnCount; c++)`(**縦列を表す**)が実行され、再び直下の`for (let r = 0; r < brickRowCount; r++)`(**横の行を表す**)の処理が3回実行…(以下同じ)となる。
 
-なので描画のイメージは縦の
+なので描画のイメージは縦の列が全部で5列あって、その1列ごとに3つのブロックが描かれていくという風になる。
+
+そして、
+
+
+
+
 
 
 
