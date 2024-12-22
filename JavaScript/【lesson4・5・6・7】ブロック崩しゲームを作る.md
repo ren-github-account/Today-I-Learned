@@ -8,6 +8,7 @@
 * [パドルをボールに当てる](#パドルをボールに当てる)
 * [ブロックを記録する二次元配列を作成](#ブロックを記録する二次元配列を作成)
 * [ブロックを描画](#ブロックを描画)
+* [ブロックへの衝突を検出](#ブロックへの衝突を検出)
 
 ## 概要
 
@@ -22,6 +23,14 @@ https://developer.mozilla.org/ja/docs/Games/Tutorials/2D_Breakout_game_pure_Java
 ・MDN-ゲームオーバーを実装する
 
 https://developer.mozilla.org/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
+
+・MDN-ブロックのかたまりを作る
+
+https://developer.mozilla.org/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
+
+・MDN-衝突検出
+
+https://developer.mozilla.org/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 
 ### パドルを描画
 
@@ -361,6 +370,21 @@ bricks[0][1] = {x:0, y:0};
 bricks[0][2] = {x:0, y:0};
 ```
 
+### ブロックへの衝突を検出
+
+ブロックへの衝突を検出するには以下の4つ命題が全て`true`である必要がある。
+
+```
+・ボールの x 座標がブロックの x 座標より大きい
+
+・ボールの x 座標がブロックの x 座標とその幅の和より小さい
+
+・ボールの y 座標がブロックの y 座標より大きい
+
+・ボールの y 座標がブロックの y 座標とその高さの和より小さい
+```
+
+こうして並べて書くと何やらややこしく見えるが、言っていることは単純で**要はボールがブロックの左端と右端そして上端と下端の間の範囲にめり込んでいるかどうか**を判定すれば良い。
 
 
 
