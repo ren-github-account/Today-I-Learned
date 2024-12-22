@@ -319,6 +319,21 @@ const brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
 
 次は、画面の上端から何ピクセルの位置にあるかを表す2番目の式について見ていく。
 
+```
+// 画面の上端から何ピクセルの位置かを算出
+const brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+
+// 式に具体的に数値を当てはめてみる
+0 * (20 + 10) + 30
+1 * (20 + 10) + 30
+2 * (20 + 10) + 30
+```
+
+仕組みは1番目の式と同じで、今度は基準が上端に変わっただけ。
+
+やってることは同じなので説明は省略。
+
+
 
 
 
