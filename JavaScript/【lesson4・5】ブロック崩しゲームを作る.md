@@ -6,6 +6,7 @@
 * [パドルの移動](#パドルの移動)
 * [ゲームオーバーを実装](#ゲームオーバーを実装)
 * [パドルをボールに当てる](#パドルをボールに当てる)
+* [ブロックを記録する二次元配列を作成](#ブロックを記録する二次元配列を作成)
 
 ## 概要
 
@@ -226,4 +227,37 @@ if文の`paddleX + paddleWidth`の部分を理解するには以下のイメー�
 変数`paddleX`の値は最初に`let paddleX = (canvas.width - paddleWidth) / 2;`と定義しているため画面の幅のうち **`paddlewidth`以外の左右の2領域を表している。**
 
 ということは、`paddleX`でパドルの左端を表し、`paddleX + paddleWidth`でパドルの右端を表すことになる。
+
+### ブロックを記録する二次元配列を作成
+
+```
+// ブロックを描画するための変数を設定
+const brickRowCount = 3;
+const brickColumnCount = 5;
+const brickWidth = 75;
+const brickHeight = 20;
+const brickPadding = 10;
+const brickOffsetTop = 30;
+const brickOffsetLeft = 30;
+const bricks = [];
+
+// ブロックを記録する二次元配列を作成
+for (let c = 0; c < brickColumnCount; c++) {
+  bricks[c] = [];
+  for (let r = 0; r < brickRowCount; r++) {
+    bricks[c][r] = { x: 0, y: 0 };
+  }
+}
+```
+
+**解説**
+
+多次元配列は**配列の中に配列が格納されている状態のこと**を指し、**二次元配列はその多次元配列の一種。** ( 参照:[javadrive](https://www.javadrive.jp/javascript/array/index5.html) )
+
+上記のコードは、変数`brickColumnCount`で**縦の列**を設定し、変数`brickRowCount`で**横の行**を設定している。
+
+`{ x: 0, y: 0 }`の部分では、オブジェクトリテラル`{}`を使用している。
+
+そして、ブロックを描画位置を指定するための`x座標`と`y座標`を作成している。
+
 
