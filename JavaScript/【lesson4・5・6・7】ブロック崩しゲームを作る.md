@@ -404,11 +404,11 @@ yWatch.id = "yWatch";
 document.body.appendChild(yWatch);
 
 const byWatch = document.createElement("p");
-byWatch.id = "yWatch";
+byWatch.id = "byWatch";
 document.body.appendChild(byWatch);
 
 const heightWatch = document.createElement("p");
-heightWatch.id = "yWatch";
+heightWatch.id = "heightWatch";
 document.body.appendChild(heightWatch);
 
 // ブロックへの衝突を検出
