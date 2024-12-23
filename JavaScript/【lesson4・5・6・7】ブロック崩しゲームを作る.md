@@ -428,7 +428,7 @@ document.body.appendChild(heightWatch);
 
 上記のようにコードを変更して実行すると、見事4番目の条件を満たしていることが確認できる。
 
-比較用に上端の壁への衝突検出をブロックへの衝突検出に応用したやり方も載せておく。
+**比較用**に上端の壁への衝突検出をブロックへの衝突検出に応用したやり方も載せておく。
 
 ```
 // ブロックの数を1つだけにして幅と高さを大きくした
@@ -437,6 +437,7 @@ const brickColumnCount = 1;
 const brickWidth = 450;
 const brickHeight = 85;
 
+// y + dy < brickOffsetTop + brickHeightでブロックへの衝突を検出
 if (y + dy  < ballRadius || y + dy < brickOffsetTop + brickHeight) {
   /* 
   dy = -dy;
