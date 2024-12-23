@@ -392,6 +392,39 @@ bricks[0][2] = {x:0, y:0};
 
 このことは実際にMDNのページにある「ブロック崩しゲーム」の完成版をよく観察してみると確認できる。( 参照:[完成版のリンク](https://breakout.enclavegames.com/lesson10.html) )
 
+本当に4番目の条件を満たしているかどうか確認するには、以下のように衝突判定のコードを変更すれば良い。
+
+```
+// ボールのy座標、ブロックのy座標とその高さを表示するための要素を作成
+const yWatch = document.createElement("p");
+yWatch.id = "yWatch";
+document.body.appendChild(yWatch);
+
+const byWatch = document.createElement("p");
+byWatch.id = "yWatch";
+document.body.appendChild(byWatch);
+
+const heightWatch = document.createElement("p");
+heightWatch.id = "yWatch";
+document.body.appendChild(heightWatch);
+
+// ブロックへの衝突を検出
+ if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
+　　　　　// 衝突の瞬間にボールの動きを止める
+         clearInterval(interval);
+　　　　　// ボールのy座標、ブロックのy座標とその高さを表示
+         yWatch.textContent = "y:" + y;
+         byWatch.textContent = "b.y:" + b.y;
+         heightWatch.textContent = "brickHeight:" + brickHeight;
+
+        /* 
+        dy = -dy;
+　　　　 */
+      }
+```
+
+上記のようにコードを変更して実行すると、見事4番目の条件を満たしていることが確認できる。
+
 
 
 
