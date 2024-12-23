@@ -9,6 +9,7 @@
 * [ブロックを記録する二次元配列を作成](#ブロックを記録する二次元配列を作成)
 * [ブロックを描画](#ブロックを描画)
 * [ブロックへの衝突を検出](#ブロックへの衝突を検出)
+* [本当に4番目の条件を満たしているか](#本当に4番目の条件を満たしているか)
 
 ## 概要
 
@@ -392,6 +393,8 @@ bricks[0][2] = {x:0, y:0};
 
 このことは実際にMDNのページにある「ブロック崩しゲーム」の完成版をよく観察してみると確認できる。( 参照:[完成版のリンク](https://breakout.enclavegames.com/lesson10.html) )
 
+### 本当に4番目の条件を満たしているか
+
 本当に4番目の条件を満たしているかどうか確認するには、以下のように衝突判定のコードを変更すれば良い。
 
 ```
@@ -424,6 +427,39 @@ document.body.appendChild(heightWatch);
 ```
 
 上記のようにコードを変更して実行すると、見事4番目の条件を満たしていることが確認できる。
+
+比較用に上端の壁への衝突検出をブロックへの衝突検出に応用したやり方も載せておく。
+
+```
+// ブロックの数を1つだけにして幅と高さを大きくした
+const brickRowCount = 1;
+const brickColumnCount = 1;
+const brickWidth = 450;
+const brickHeight = 85;
+
+if (y + dy  < ballRadius || y + dy < brickOffsetTop + brickHeight) {
+  /* 
+  dy = -dy;
+　 */
+
+   // 衝突の瞬間にボールの動きを止める
+   clearInterval(interval);
+   // ボールのy座標、ブロックのy座標と高さを表示
+   yWatch.textContent = "y:" + y;
+   byWatch.textContent = "brickOffsetTop:" + brickOffsetTop;
+   heightWatch.textContent = "brickHeight:" + brickHeight;
+   
+
+ } else if (y + dy > canvas.height - ballRadius ) {
+  if (x > paddleX && x < paddleX + paddleWidth) {
+    dy = -dy;
+   } else {
+   alert("GAME OVER");
+   clearInterval(interval);
+   document.location.reload();
+    }
+ }
+```
 
 
 
