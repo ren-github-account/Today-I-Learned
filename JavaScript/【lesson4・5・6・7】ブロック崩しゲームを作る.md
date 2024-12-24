@@ -10,6 +10,7 @@
 * [ブロックを描画](#ブロックを描画)
 * [ブロックへの衝突を検出](#ブロックへの衝突を検出)
 * [本当に4番目の条件を満たしているか](#本当に4番目の条件を満たしているか)
+* [ブロックが消えるようにする](#ブロックが消えるようにする)
 
 ## 概要
 
@@ -488,4 +489,71 @@ brickHeight:90
 y:128
 brickOffsetTop:30
 brickHeight:97
+```
+
+### ブロックが消えるようにする
+
+まず、ブロックを画面に描画するかどうかを判定するためのプロパティを追加する。
+
+具体的には、以下のコードのようにオブジェクト内にプロパティとして`status:1`を新しく追加する。
+```
+const bricks = [];
+for (let c = 0; c < brickColumnCount; c++) {
+  bricks[c] = [];
+  for (let r = 0; r < brickRowCount; r++) {
+    bricks[c][r] = { x: 0, y: 0, status: 1 }; // status:1の部分を新しく追加
+  }
+}
+```
+
+そして、ブロックを描画する関数内の処理に以下のような追記を行う。(※ `}`を忘れないように注意する)
+
+すなわち`statusプロパティ`の値が`1`ならブロックの描画するが、そうでないなら描画しないとなる。
+
+```
+function drawBricks() {
+  for (let c = 0; c < brickColumnCount; c++) {
+    for (let r = 0; r < brickRowCount; r++) {
+      if (bricks[c][r].status === 1) { // 追記箇所
+        const brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+        const brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+        bricks[c][r].x = brickX;
+        bricks[c][r].y = brickY;
+        ctx.beginPath();
+        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+        ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+      }
+    }
+  }
+}
+
+```
+
+ここまで完了したらあとは、衝突検出の処理にいくつかの追記を行う。
+
+まず`b.status === 1`でブロックが描画されている状態かどうかを確認してそれが`true`ならば衝突検出を行う。
+
+そして衝突検出も`true`ならば`b.status = 0;`と設定し直すことで描画処理を停止する。
+
+```
+function collisionDetection() {
+  for (let c = 0; c < brickColumnCount; c++) {
+    for (let r = 0; r < brickRowCount; r++) {
+      const b = bricks[c][r];
+      if (b.status === 1) { // 追記1
+        if (
+          x > b.x &&
+          x < b.x + brickWidth &&
+          y > b.y &&
+          y < b.y + brickHeight
+        ) {
+          dy = -dy;
+          b.status = 0;　// 追記2
+        }
+      }
+    }
+  }
+}
 ```
