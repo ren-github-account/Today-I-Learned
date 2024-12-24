@@ -569,8 +569,38 @@ function collisionDetection() {
 
 このことはゲーム画面を眺めているだけでは分からない。
 
-そこで、
+そこで、ブロックが描画される毎にランダムに色を変えるようにコードを変更してみた。
 
+もし、**ブロックが同じ位置に永遠と上塗りされながら生成されている**という説が正しければ、色は指定したミリ秒ごとに変わるはずである。
 
+```
+// ブロックの数を1個にしてwidthとheightを大きくした
+const brickRowCount = 1;
+const brickColumnCount = 1;
+const brickWidth = 400;
+const brickHeight = 90;
 
+// ブロックを描画
+function drawBricks() {
+  for (let c = 0; c < brickColumnCount; c++) {
+    for (let r = 0; r < brickRowCount; r++) {
+      const brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+      const brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+      bricks[c][r].x = brickX;
+      bricks[c][r].y = brickY;
+      ctx.beginPath();
+      ctx.rect(brickX, brickY, brickWidth, brickHeight);
+      let h = Math.random() * 360; // ここからが変更箇所
+      let hslcolor = `hsl(${h}, 80%, 60%)`;
+      ctx.fillStyle = hslcolor;
+      ctx.fill();
+      ctx.closePath();
+    }
+  }
+}
 
+// 色の変化を分かりやすくためため再描画の間隔を0.5秒に
+const interval = setInterval(draw, 500);
+```
+
+上記のコードを実行すると仮説通り、ブロックの色が`0.5秒`ごとに上塗りされて変わることが確認できる。
