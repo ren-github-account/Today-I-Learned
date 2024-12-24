@@ -428,7 +428,7 @@ document.body.appendChild(heightWatch);
 
 上記のようにコードを変更して実行すると、見事4番目の条件を満たしていることが確認できる。
 
-**比較用**に上端の壁への衝突検出をブロックへの衝突検出に応用したやり方も載せておく。
+**比較用**に**上端の壁への衝突検出をブロックへの衝突検出に応用したやり方**も載せておく。
 
 ```
 // ブロックの数を1つだけにして幅と高さを大きくした
@@ -436,6 +436,7 @@ const brickRowCount = 1;
 const brickColumnCount = 1;
 const brickWidth = 450;
 const brickHeight = 85;
+const brickOffsetTop = 30;
 
 // y + dy < brickOffsetTop + brickHeightでブロックへの衝突を検出
 if (y + dy  < ballRadius || y + dy < brickOffsetTop + brickHeight) {
@@ -462,8 +463,29 @@ if (y + dy  < ballRadius || y + dy < brickOffsetTop + brickHeight) {
  }
 ```
 
+上記のコードは実行すると今度は、y座標の方が大きくなって**4番目の条件を満たさない**ことがわかる。
 
+これはブロックへのめり込み具合がこちらの方が少ないために起こる。
 
+あと`brickHeight`の高さを変更すると**奇妙なことが起きる。**
 
+`brickOffsetTop + brickHeight`の和より`y座標`の値の方が`1`大きくなったり、あるいは和と`y座標`の値が同数になったりする。
 
+この現象が起こる理由は以下のコードで検証したように、**偶数か奇数の違い**だと考えられる。
 
+```
+// 和が奇数の場合
+y:116
+brickOffsetTop:30
+brickHeight:85
+
+// 和が偶数の場合
+y:120
+brickOffsetTop:30
+brickHeight:90
+
+// 和が奇数の場合
+y:128
+brickOffsetTop:30
+brickHeight:97
+```
