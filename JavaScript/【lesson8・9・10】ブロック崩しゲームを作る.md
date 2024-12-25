@@ -64,3 +64,75 @@ console.log(yIncr); // 実行結果 4
   byWatch.textContent = "e.clientX:" + e.clientX;
   heightWatch.textContent = "canvas.offsetLeft:" + canvas.offsetLeft;
 ```
+・今度は上記の三行を **`button要素`あり**で`追加すると、**とうとう変化があった!**
+
+```
+// 変化内容
+// canvas要素の左側のmargin 変化前
+274.667
+
+// 変化後
+266.333
+```
+この原因はブラウザ画面の左側に**スクロールバーが表示されていたことが原因だった。**
+
+こんな単純なことなのに気づかずに2時間くらい経過してしまったw
+
+一応頑張って検証用のコードを書いたので以下に載せておく。
+```
+<body>
+// box
+<div id="test"></div>
+
+<button id="add">margin-topを追加</button><button id="reset">戻す-margin</button><button id="add2">変数追加</button><button id="reset2">戻す-変数</button>
+
+<script>
+// 変数yの中身を表示するための要素を作成
+const yWatch = document.createElement("p");
+yWatch.id = "yWatch";
+document.body.appendChild(yWatch);
+
+const byWatch = document.createElement("p");
+byWatch.id = "byWatch";
+document.body.appendChild(byWatch);
+
+const heightWatch = document.createElement("p");
+heightWatch.id = "heightWatch";
+document.body.appendChild(heightWatch);
+
+
+// ボタン
+const button = document.querySelector("#add");
+const test = document.getElementById("test");
+const reset = document.getElementById("reset");
+const add2 = document.getElementById("add2");
+const reset2 = document.getElementById("reset2")
+
+// margin-topを追加＆戻す
+function marginAdd() {
+ test.style.marginTop = "10px";
+}
+
+function marginReset(){
+ test.style.marginTop = "";
+}
+
+// 変数を表示させる行を追加＆戻す
+function VariableAdd(){
+ 
+  heightWatch.textContent = "canvas.offsetLeft:";
+}
+
+function VarReset() {
+  heightWatch.textContent = "";
+
+}
+
+button.addEventListener("click", marginAdd);
+reset.addEventListener("click", marginReset);
+add2.addEventListener("click", VariableAdd);
+reset2.addEventListener("click", VarReset);
+</script>
+
+</body>
+```
