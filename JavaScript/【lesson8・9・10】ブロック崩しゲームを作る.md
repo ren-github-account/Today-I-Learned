@@ -145,3 +145,38 @@ reset2.addEventListener("click", VarReset);
 |-|-|
 |`clientX`|ブラウザ画面上にあるマウスカーソルなどの`x座標`を表示するプロパティ。一方`clientY`は`y座標`を表示する。|
 |`offsetLeft`||
+
+```
+function mouseMoveHandler(e) {
+  const relativeX = e.clientX - canvas.offsetLeft;
+  if (relativeX > 0 && relativeX < canvas.width) {
+    paddleX = relativeX - paddleWidth / 2;
+  }
+}
+```
+
+**解説**
+
+`e.clientX - canvas.offsetLeft`は、マウスカーソルの`x座標`からゲーム画面(`canvas要素`)の左側にある空白部分の距離を引くことで、ゲーム画面の左端からマウスカーソルまでの位置を表している。
+
+具体的には以下になる。
+
+```
+// マウスカーソルのx座標(e.clientX)
+266
+
+// ゲーム画面左側の空白部分の距離(canvas.offsetLeft)
+266
+
+// 計算結果
+relativeX = e.clientX - canvas.offsetLeft = 266 - 266 = 0
+
+// つまり
+relativeX　= 0
+```
+
+上記の場合、`relativeX = 0`となって**マウスカーソルがゲーム画面(`canvas要素`)のちょうど左端に位置する**ことを意味している。
+
+`relativeX　= 0`の時点ではまだパドルの位置は最初に描画される画面の下端の真ん中の位置から動かないが`relativeX　= 1`となった瞬間、条件式より`paddleX = relativeX - paddleWidth / 2`が実行され**パドルは画面の左端にほとんど半分めり込む状態になる。**
+
+これは`paddleWidth`は`150`に設定しているため、パドルのx座標が`paddleX = 1 - 75 = -74`となるためだ。
