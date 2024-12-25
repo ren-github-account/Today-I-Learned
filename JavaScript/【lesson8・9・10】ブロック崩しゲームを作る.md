@@ -56,3 +56,11 @@ console.log(yIncr); // 実行結果 4
  background:blue;
 }
 ```
+・上記の`box`の直下に変数の中身を表示させる以下の三行を`p要素`で追加しても同様に変化は無い。
+
+```
+// 変数の中身を表示
+　yWatch.textContent = "relativeX:" + relativeX;
+  byWatch.textContent = "e.clientX:" + e.clientX;
+  heightWatch.textContent = "canvas.offsetLeft:" + canvas.offsetLeft;
+```
