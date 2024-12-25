@@ -43,7 +43,7 @@ console.log(yIncr); // 実行結果 4
 
 ### canvas要素とmargin
 
-・`canvas要素`の直下に以下のコードの`box`を作成して、`margin-top:10px;`を設定しても`canvas要素`の左側の`margin`に変化は無い
+・`canvas要素`の直下に以下のコードの`box`を作成し`margin-top:10px;`を設定しても`canvas要素`の左側の`margin`に変化は無い
 
 ```
 // HTML
