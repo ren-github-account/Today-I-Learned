@@ -2,6 +2,7 @@
 * [概要](#概要)
 * [参考記事](#参考記事)
 * [スコアをカウントする](#スコアをカウントする)
+* [canvas要素とmargin](#canvas要素とmargin)
 
 ## 概要
 
@@ -39,3 +40,19 @@ console.log(yIncr); // 実行結果 4
 ```
 
 上記のコードで検証した結果、どちらも実行結果は同じになるが**インクリメント演算子の方がシンプルに記述できる**。
+
+### canvas要素とmargin
+
+・`canvas要素`の直下に以下のコードの`box`を作成して、`margin-top:10px;`を設定しても`canvas要素`の左側の`margin`に変化は無い
+
+```
+// HTML
+<div id="test"></div>
+
+// CSS
+#test {
+ width:600px;
+ height:160px;
+ background:blue;
+}
+```
