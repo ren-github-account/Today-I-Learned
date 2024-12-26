@@ -205,7 +205,35 @@ if文の条件を`relativeX > 0 `から`relativeX > 74 `へ変更すると、`pa
 ||意味|
 |-|-|
 |`!`|if文などに登場するビックリマーク論理否定と呼ばれ、**`true`と`false`をひっくり返す機能を持つ。** つまり、`true`だったら`false`となり、`false`だったら`true`となる。|
-|`偽値(falsy)`|if文などで使用される時に`false`に変換される値のこと。具体例:`null`、`NaN`、`0`、空文字列 (`""`や`''`)、`undefined`など|
+|`偽値(falsy)`|if文などで使用されると`false`に変換される値のこと。具体例:`null`、`NaN`、`0`、空文字列 (`""`や`''`)、`undefined`など|
+
+```
+// ライフ用の変数を宣言
+let lives = 3;
+
+// ゲームオーバー処理を以下のように書き替える
+lives--;
+if (!lives) {
+  alert("GAME OVER");
+  document.location.reload();
+  clearInterval(interval); // クロームがゲームを終了するのに必要
+} else {
+  x = canvas.width / 2;
+  y = canvas.height - 30;
+  dx = 2;
+  dy = -2;
+  paddleX = (canvas.width - paddleWidth) / 2;
+}
+```
+
+**解説**
+
+`lives--`でボールが画面の下端に触れるごとにライフを`-1`していく。
+
+変数`lives`が`0`になると、`0`はif文などの条件式では`false`に変換される(上記の偽値の項を参照)。
+
+よって、`if (!lives)`は`if(!0)`となって`!0`は真偽がひっくり返るので`true`となりゲームオーバー処理が実行される。
+
 
 
 
