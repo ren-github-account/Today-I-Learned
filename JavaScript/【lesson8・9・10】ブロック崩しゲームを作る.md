@@ -146,7 +146,7 @@ reset2.addEventListener("click", VarReset);
 ||意味|
 |-|-|
 |`clientX`|ブラウザ画面上にあるマウスカーソルなどの`x座標`を表示するプロパティ。一方`clientY`は`y座標`を表示する。|
-|`offsetLeft`||
+|`offsetLeft`|親要素と指定した要素の左端までの距離表示するプロパティ。( 参照:[アルファシス](http://alphasis.info/2013/08/javascript-dom-elementobject-offsetleft/) )|
 
 ```
 function mouseMoveHandler(e) {
