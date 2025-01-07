@@ -11,6 +11,7 @@
 * [キーの省略](#キーの省略)
 * [echo](#echo)
 * [$_POST](#POST)
+* [endforeach](#endforeach)
 
 ## 概要
 
@@ -226,6 +227,25 @@ $_POST["name属性の値"]
 `form`の`method属性`を「post」にすると、送信されたデータは、`$_POST`という**連想配列（スーパーグローバル変数）に格納される。**
 
 送信ボタンの`name属性`が「send」をに設定した場合、スーパーグローバル変数`$_POST`のキーに「send」を指定して`$_POST["send"]`とする。( 参照:[webdesignleaves](https://www.webdesignleaves.com/pr/php/php_basic_06.php) )
+
+### endforeach
+
+`if文`や`foreach文`を書く時は、波括弧`{}`を使う代わりに以下のように書くことも可能。( 参照:[PHP公式マニュアル](https://www.php.net/manual/ja/control-structures.alternative-syntax.php) )
+
+```
+// endifを使用した場合
+<?php if ($a == 5): ?>
+Aは5に等しい
+<?php endif; ?>
+
+// 通常のif文
+
+if (条件) {
+  処理
+}
+```
+
+
 
 
 
