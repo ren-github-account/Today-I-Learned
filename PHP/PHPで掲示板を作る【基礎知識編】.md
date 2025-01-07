@@ -10,7 +10,7 @@
 * [多次元配列](#多次元配列)
 * [キーの省略](#キーの省略)
 * [echo](#echo)
-* [$_POST](#$_POST)
+* [$_POST](#POST)
 
 ## 概要
 
@@ -214,7 +214,18 @@ $arr[] = value;
 
 主にPHPで作成したデータをHTMLへ表示される時に使用する。
 
-### $_POST
+### POST
+
+**書き方**
+
+フォームで使用する時は以下のように`$_POST`のキーにname属性の値を入力すればok。
+```
+$_POST["name属性の値"]
+```
+
+`form`の`method属性`を「post」にすると、送信されたデータは、`$_POST`という**連想配列（スーパーグローバル変数）に格納される。**
+
+送信ボタンの`name属性`が「send」をに設定した場合、スーパーグローバル変数`$_POST`のキーに「send」を指定して`$_POST["send"]`とする。( 参照:[webdesignleaves](https://www.webdesignleaves.com/pr/php/php_basic_06.php) )
 
 
 
