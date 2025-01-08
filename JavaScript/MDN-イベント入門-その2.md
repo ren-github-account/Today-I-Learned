@@ -513,7 +513,7 @@ for-of文とは、**イテレータの中身を1つずつ取り出して処理�
 
 そして、for-of文に渡す配列や文字列のことを「**iterable**」と呼ぶ。
 
-そして**for-of文にiterableが渡されると、それに対応するイテレータが作られ、そのイテレータにより値が順番に取り出される。** 参照:[イテレータ](https://uhyohyo.net/javascript/16_2.html)
+**for-of文にiterableが渡されると、それに対応するイテレータが作られ、そのイテレータにより値が順番に取り出される。** 参照:[イテレータ](https://uhyohyo.net/javascript/16_2.html)
 
 **使い方**
 
