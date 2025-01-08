@@ -1,5 +1,6 @@
 *目次*
 * [概要](#概要)
+* [PHP](#PHP)
 * [三項演算子](#三項演算子)
 * [isset](#isset)
 * [fopen](#fopen)
@@ -12,6 +13,7 @@
 * [echo](#echo)
 * [$_POST](#POST)
 * [endforeach](#endforeach)
+* [JavaScript](#JavaScript)
 
 ## 概要
 
@@ -19,6 +21,7 @@
 
 https://web.archive.org/web/20240123041312/https://skill-up-engineering.com/gachinko/?p=650
 
+## PHP
 ### 三項演算子
 
 if文の代わりとして使用され、以下のように書く。
@@ -244,6 +247,26 @@ if (条件) {
 }
 ```
 
+## JavaScript
+
+### entries
+
+`entries()`は、配列内の各要素に対するキー/値のペアを含む新しい配列iterableオブジェクトを返す。( 参照:[MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/entries) )
+
+**具体例**
+
+```
+const a = ["a", "b", "c"];
+
+for (const [index, element] of a.entries()) {
+  console.log(index, element);
+}
+
+/* 実行結果 */
+// 0 'a'
+// 1 'b'
+// 2 'c'
+```
 
 
 
