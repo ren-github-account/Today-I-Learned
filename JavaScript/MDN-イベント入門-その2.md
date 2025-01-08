@@ -507,6 +507,13 @@ BUTTON 要素をクリックしました
 
 ### for-of文
 
+**基本**
+```
+for (variable of iterable) {
+    実行する文;
+}
+```
+
 for-of文とは、**イテレータの中身を1つずつ取り出して処理する文**のこと。
 
 イテレータ（iterator）とは、ざっくり言うと**一連の複数のデータからなるものを指す。**
@@ -514,6 +521,12 @@ for-of文とは、**イテレータの中身を1つずつ取り出して処理�
 そして、for-of文に渡す配列や文字列のことを「**iterable**」と呼ぶ。
 
 **for-of文にiterableが渡されると、それに対応するイテレータが作られ、そのイテレータにより値が順番に取り出される。** 参照:[イテレータ](https://uhyohyo.net/javascript/16_2.html)
+
+JavaScriptでは、`Symbol.iterator`という特別な名前のメソッドを実装したオブジェクトのことを`iterable`と呼びます。 `iterableオブジェクト`は、`for-of文`で反復処理できる。
+
+**iterableオブジェクトは具体的には、配列や文字列が該当する。** ( 参照:[jsprimer](https://jsprimer.net/basic/loop/#for-of-statement) )
+
+つまり、`for-of文`は`iterableオブジェクト`を反復処理している。
 
 **使い方**
 
